@@ -43,7 +43,7 @@ export default async function Home() {
                       activeMainTab === "info1" ? "bg-[#1A80F8] text-white" : ""
                     } rounded-md`}
                   >
-                    All(test.)
+                    All
                   </button>
                   <button
                     
