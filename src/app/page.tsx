@@ -2,24 +2,31 @@ import Layout from "./components/Layout";
 import WeeklySlider from "./components/WeeklySlider";
 import CardSlider from "./components/CardSlider";
 import Link from "next/link";
-import { completedMatches, liveMatches, upcomingMatches } from '@/controller/homeController'; 
- 
+import ChatComponent from "./components/websocket";
+
+
+import redis from "../config/redis";
+import {
+  completedMatches,
+  liveMatches,
+  upcomingMatches,
+} from "@/controller/homeController";
+
 export default async function Home() {
   const open = null;
-  const activeTab= "news2";
+  const activeTab = "news2";
   const activeMainTab = "info1";
-
-
-
-
 
   const completedMatch = await completedMatches();
   const upcomingMatch = await upcomingMatches();
   const liveMatch = await liveMatches();
 
+   
+  // const  matchData = ChatComponent();
 
   return (
     <Layout>
+      <ChatComponent></ChatComponent>
       <section className="lg:w-[1000px] mx-auto md:mb-0 mb-4 px-2 lg:px-0">
         <div className="mt-2 mb-2">
           <img src="/assets/img/home.png" className="w-[100%]" alt="" />
@@ -38,7 +45,7 @@ export default async function Home() {
                 >
                   <button
                     // className="font-medium py-2 px-5 whitespace-nowrap bg-[#1A80F8] text-white rounded-md"
-                    
+
                     className={`font-medium py-2 px-5 whitespace-nowrap ${
                       activeMainTab === "info1" ? "bg-[#1A80F8] text-white" : ""
                     } rounded-md`}
@@ -46,7 +53,6 @@ export default async function Home() {
                     All
                   </button>
                   <button
-                    
                     className={`font-medium py-2 px-5 whitespace-nowrap ${
                       activeMainTab === "live1" ? "bg-[#1A80F8] text-white" : ""
                     } rounded-md`}
@@ -56,7 +62,6 @@ export default async function Home() {
                     Live
                   </button>
                   <button
-                    
                     className={`font-medium py-2 px-5 whitespace-nowrap ${
                       activeMainTab === "finished1"
                         ? "bg-[#1A80F8] text-white"
@@ -68,7 +73,6 @@ export default async function Home() {
                     Finished
                   </button>
                   <button
-                    
                     className={`font-medium py-2 px-5 whitespace-nowrap ${
                       activeMainTab === "scorecard1"
                         ? "bg-[#1A80F8] text-white"
@@ -83,7 +87,8 @@ export default async function Home() {
               </div>
 
               <div className="tab-content-container">
-                <div id="info1"
+                <div
+                  id="info1"
                   className={`tab-content ${
                     activeMainTab === "info1" ? "" : "hidden"
                   }`}
@@ -189,7 +194,12 @@ export default async function Home() {
                                     {items.teama.short_name} -{" "}
                                   </span>
                                 </div>
-                                <p>
+                                <p
+                                  className={"flex items-center gap-[1px] match"+
+                                    items.match_id + "-" + items.teama.team_id
+                                  }
+                                >
+                                  
                                   {items.teama.scores === undefined ||
                                   items.teama.scores === null ||
                                   items.teama.scores === "" ? (
@@ -209,11 +219,7 @@ export default async function Home() {
                                     </>
                                   )}
                                 </p>
-                                <img
-                                  src="/assets/img/home/bat.png"
-                                  className="h-[13px]"
-                                  alt=""
-                                />
+                                
                               </div>
 
                               <div>
@@ -228,7 +234,11 @@ export default async function Home() {
                                       {items.teamb.short_name} -
                                     </span>
                                   </div>
-                                  <p>
+                                  <p
+                                    className={
+                                      "flex items-center gap-[1px] match"+items.match_id + "-" + items.teamb.team_id
+                                    }
+                                  >
                                     {items.teamb.scores === undefined ||
                                     items.teamb.scores === null ||
                                     items.teamb.scores === "" ? (
@@ -254,7 +264,9 @@ export default async function Home() {
 
                             <div className=" font-medium text-center">
                               <p
-                                className="text-[#2F335C] text-[14px]"
+                                className={
+                                  "text-[#2F335C] text-[14px] statusNote"+items.match_id
+                                }
                                 style={{
                                   whiteSpace: "break-word",
                                   width: "200px",
@@ -867,7 +879,7 @@ export default async function Home() {
                               <div className="text-[#144280]">
                                 <div className=" font-medium text-center">
                                   <p className="text-[#2F335C] text-[14px]">
-                                  {ucmatch.date_start_ist}
+                                    {ucmatch.date_start_ist}
                                     {/* 20th September - Fri, <br /> 5:30 PM GMT */}
                                   </p>
                                 </div>
@@ -2656,7 +2668,6 @@ export default async function Home() {
               <div className="tabs my-4">
                 <div className="flex text-1xl space-x-4 p-2 bg-[#ffffff] rounded-lg overflow-auto">
                   <button
-                    
                     className={`font-medium py-2 px-3 whitespace-nowrap ${
                       activeTab === "news2" ? "bg-[#1A80F8] text-white" : ""
                     } rounded-md`}
@@ -2668,7 +2679,7 @@ export default async function Home() {
                   <button
                     // onclick="handleTabClick(event, 'fantasytips2', this)"
                     //     className="font-medium py-2 px-3 whitespace-nowrap"
-                    
+
                     className={`font-medium py-2 px-3 whitespace-nowrap ${
                       activeTab === "fantasytips2"
                         ? "bg-[#1A80F8] text-white"
@@ -2678,7 +2689,6 @@ export default async function Home() {
                     Fantasy Tips
                   </button>
                   <button
-                    
                     className={`font-medium py-2 px-3 whitespace-nowrap ${
                       activeTab === "ipl2" ? "bg-[#1A80F8] text-white" : ""
                     } rounded-md`}
@@ -2690,7 +2700,7 @@ export default async function Home() {
                   <button
                     // onclick="handleTabClick(event, 'dailyquiz2', this)"
                     //     className="font-medium py-2 px-3 whitespace-nowrap"
-                    
+
                     className={`font-medium py-2 px-3 whitespace-nowrap ${
                       activeTab === "dailyquiz2"
                         ? "bg-[#1A80F8] text-white"
@@ -2700,7 +2710,6 @@ export default async function Home() {
                     Daily Quiz
                   </button>
                   <button
-                    
                     className={`font-medium py-2 px-3 whitespace-nowrap ${
                       activeTab === "pointstable2"
                         ? "bg-[#1A80F8] text-white"
@@ -2712,7 +2721,6 @@ export default async function Home() {
                     Points Table
                   </button>
                   <button
-                    
                     className={`font-medium py-2 px-3 whitespace-nowrap ${
                       activeTab === "socialtrends2"
                         ? "bg-[#1A80F8] text-white"
@@ -5676,10 +5684,7 @@ export default async function Home() {
                   { name: "Pakistan", flag: "/assets/img/flag/16.png" },
                 ].map((country, index) => (
                   <div key={index} className="border-b mb-4">
-                    <button
-                      
-                      className="w-full flex text-[14px] justify-between items-center pb-3"
-                    >
+                    <button className="w-full flex text-[14px] justify-between items-center pb-3">
                       <span className="flex items-center font-medium text-[#394351]">
                         <img
                           src={country.flag}
