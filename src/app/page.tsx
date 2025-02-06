@@ -46,25 +46,30 @@ interface MatchItem {
 
 interface PageProps {
   params: {
-    matchType: string;
+    matchType:  "live" | "upcoming" | "result";
   };
 }
 
-export default async function Home({ params }: PageProps) {
-  if (
-    params.matchType &&
-    !["live", "upcoming", "result"].includes(params.matchType)
-  ) {
+export default async function Home({params}: PageProps) {
+
+  const { matchType } = await params;
+  if (matchType && !["live", "upcoming", "result"].includes(matchType)) {
     notFound();
   }
+  // if (
+  //   params.matchType &&
+  //   !["live", "upcoming", "result"].includes(params.matchType)
+  // ) {
+  //   notFound();
+  // }
   const open = null;
   let activeTabValue = "";
 
-  if (params.matchType === "live") {
+  if (matchType === "live") {
     activeTabValue = "live1";
-  } else if (params.matchType === "upcoming") {
+  } else if (matchType === "upcoming") {
     activeTabValue = "scorecard1";
-  } else if (params.matchType == "result") {
+  } else if (matchType === "result") {
     activeTabValue = "finished1";
   } else {
     activeTabValue = "info1";
@@ -76,6 +81,7 @@ export default async function Home({ params }: PageProps) {
   const completedMatch: MatchItem[] = await completedMatches();
   const upcomingMatch: MatchItem[] = await upcomingMatches();
   const liveMatch: MatchItem[] = await liveMatches();
+  
 
   // const  matchData = ChatComponent();
 
