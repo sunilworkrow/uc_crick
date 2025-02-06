@@ -3,23 +3,56 @@ import WeeklySlider from "./components/WeeklySlider";
 import CardSlider from "./components/CardSlider";
 import Link from "next/link";
 import ChatComponent from "./components/websocket";
+import Image from "next/image";
 
-
-import redis from "../config/redis";
 import {
   completedMatches,
   liveMatches,
   upcomingMatches,
 } from "@/controller/homeController";
 
+interface MatchItem {
+  match_id: number;
+  status_str: string;
+  competition: {
+    title: string;
+    season: string;
+  };
+  teama: {
+    short_name: string;
+    logo_url: string;
+    scores?: string;
+    overs?: string;
+    team_id?:string;
+  };
+  teamb: {
+    short_name: string;
+    logo_url: string;
+    scores?: string;
+    overs?: string;
+    team_id?:string;
+  };
+  subtitle: string;
+  format_str: string;
+  venue: {
+    name: string;
+    location: string;
+  };
+  status_note: string;
+  result:string;
+  date_start_ist:string
+}
+
+
+
 export default async function Home() {
   const open = null;
-  const activeTab = "news2";
+
   const activeMainTab = "info1";
 
-  const completedMatch = await completedMatches();
-  const upcomingMatch = await upcomingMatches();
-  const liveMatch = await liveMatches();
+  const completedMatch: MatchItem[] = await completedMatches();
+  const upcomingMatch: MatchItem[] = await upcomingMatches();
+  const liveMatch: MatchItem[] = await liveMatches();
 
    
   // const  matchData = ChatComponent();
@@ -29,7 +62,7 @@ export default async function Home() {
       <ChatComponent></ChatComponent>
       <section className="lg:w-[1000px] mx-auto md:mb-0 mb-4 px-2 lg:px-0">
         <div className="mt-2 mb-2">
-          <img src="/assets/img/home.png" className="w-[100%]" alt="" />
+          <Image src="/assets/img/home.png" className="w-[100%]" alt="" width={100} height={50} />
         </div>
 
         <div className="md:grid grid-cols-12 gap-4">
@@ -43,44 +76,17 @@ export default async function Home() {
                                dark:[&::-webkit-scrollbar-track]:bg-neutral-700 
                                  dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500"
                 >
-                  <button
-                    // className="font-medium py-2 px-5 whitespace-nowrap bg-[#1A80F8] text-white rounded-md"
-
-                    className={`font-medium py-2 px-5 whitespace-nowrap ${
-                      activeMainTab === "info1" ? "bg-[#1A80F8] text-white" : ""
-                    } rounded-md`}
+                  <button className ="font-medium py-2 px-5 whitespace-nowrap bg-[#1A80F8] text-white rounded-md"
                   >
                     All
                   </button>
-                  <button
-                    className={`font-medium py-2 px-5 whitespace-nowrap ${
-                      activeMainTab === "live1" ? "bg-[#1A80F8] text-white" : ""
-                    } rounded-md`}
-                    // onclick="handleTabClick(event, 'live1', this)"
-                    //     className="font-medium py-2 px-5 whitespace-nowrap"
-                  >
+                  <button className = "font-medium py-2 px-5 whitespace-nowrap">
                     Live
                   </button>
-                  <button
-                    className={`font-medium py-2 px-5 whitespace-nowrap ${
-                      activeMainTab === "finished1"
-                        ? "bg-[#1A80F8] text-white"
-                        : ""
-                    } rounded-md`}
-                    // onclick="handleTabClick(event, 'finished1', this)"
-                    //     className="font-medium py-2 px-5 whitespace-nowrap"
-                  >
+                  <button className = "font-medium py-2 px-5 whitespace-nowrap" >
                     Finished
                   </button>
-                  <button
-                    className={`font-medium py-2 px-5 whitespace-nowrap ${
-                      activeMainTab === "scorecard1"
-                        ? "bg-[#1A80F8] text-white"
-                        : ""
-                    } rounded-md`}
-                    // onclick="handleTabClick(event, 'scorecard1', this)"
-                    //     className="font-medium py-2 px-3 whitespace-nowrap"
-                  >
+                  <button className = "font-medium py-2 px-5 whitespace-nowrap">
                     Scheduled
                   </button>
                 </div>
@@ -95,7 +101,9 @@ export default async function Home() {
                 >
                   {/* <!-- live match desktop view start --> */}
                   {liveMatch.map((items) => (
-                    <div className="lg:block hidden rounded-lg p-4 mb-4 bg-[#ffffff] hover:shadow-lg">
+
+                    <div  key={items.match_id} data-key={items.match_id} data-id="aaa" className="lg:block hidden rounded-lg p-4 mb-4 bg-[#ffffff] hover:shadow-lg">
+                     
                       <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center space-x-2">
                           <div
@@ -186,10 +194,10 @@ export default async function Home() {
                               </p>
                               <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
                                 <div className="flex items-center space-x-2">
-                                  <img
+                                  <Image
                                     src={items.teama.logo_url}
                                     className="h-[30px] rounded-full"
-                                    alt={items.teama.short_name}
+                                    width={30} height={30} alt={items.teama.short_name}
                                   />
                                   <span className="text-[#909090] font-semibold">
                                     {items.teama.short_name} -{" "}
@@ -226,10 +234,10 @@ export default async function Home() {
                               <div>
                                 <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
                                   <div className="flex items-center space-x-2">
-                                    <img
+                                    <Image
                                       src={items.teamb.logo_url}
                                       className="h-[30px]"
-                                      alt={items.teamb.short_name}
+                                      width={30} height={30} alt={items.teamb.short_name}
                                     />
                                     <span className="text-[#909090] font-semibold">
                                       {items.teamb.short_name} -
@@ -300,7 +308,7 @@ export default async function Home() {
 
                         <a href="/h2h">
                           <div className="flex mt-2 justify-end items-center space-x-2">
-                            <img src="/assets/img/home/handshake.png" alt="" />
+                            <Image src="/assets/img/home/handshake.png" width={30} height={30} alt="" />
                             <span className="text-[#909090] font-medium">
                               H2H
                             </span>
@@ -341,10 +349,10 @@ export default async function Home() {
                         </div>
                         <span className="absolute right-4 top-[19px]">
                           <button className="arro-button">
-                            <img
+                            <Image
                               src="/assets/img/arrow.png"
                               className=""
-                              alt=""
+                              width={30} height={30} alt=""
                             />
                           </button>
                         </span>
@@ -362,20 +370,20 @@ export default async function Home() {
                             <div className="">
                               <div className="items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
                                 <div className="flex items-center space-x-2">
-                                  <img
+                                  <Image
                                     src="/assets/img/flg-1.png"
                                     className="h-[30px] rounded-full"
-                                    alt="aus"
+                                    width={30} height={30} alt="aus"
                                   />
                                   <div>
                                     <span className="flex items-center gap-1">
                                       <span className="text-[#5e5e5e] font-medium">
                                         IND
                                       </span>
-                                      <img
+                                      <Image
                                         src="/assets/img/home/bat.png"
                                         className="h-[15px]"
-                                        alt=""
+                                        width={30} height={30} alt=""
                                       />
                                     </span>
                                     <p className="flex items-end gap-2">
@@ -394,10 +402,10 @@ export default async function Home() {
                               <div>
                                 <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
                                   <div className="flex items-center space-x-2">
-                                    <img
+                                    <Image
                                       src="/assets/img/ban.png"
                                       className="h-[30px]"
-                                      alt="ind"
+                                      width={30} height={30} alt="ind"
                                     />
                                     <div>
                                       <span className="text-[#5e5e5e] font-medium">
@@ -435,10 +443,10 @@ export default async function Home() {
                           <div className="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
                           <a href="#">
                             <div className="flex justify-end items-center space-x-2">
-                              <img
+                              <Image
                                 src="/assets/img/home/handshake.png"
                                 className="h-[15px]"
-                                alt=""
+                                width={30} height={30} alt=""
                               />
                               <span className="text-[#909090] text-[11px] font-medium">
                                 H2H
@@ -494,7 +502,7 @@ export default async function Home() {
                     </div>
                   </div>
                   {completedMatch.map((cmatch) => (
-                    <div className="lg:block hidden rounded-lg p-4 mb-4 bg-[#ffffff] hover:shadow-lg">
+                    <div key={cmatch.match_id} className="lg:block hidden rounded-lg p-4 mb-4 bg-[#ffffff] hover:shadow-lg">
                       <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center space-x-2">
                           <div
@@ -566,10 +574,10 @@ export default async function Home() {
                               </p>
                               <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
                                 <div className="flex items-center space-x-2">
-                                  <img
+                                  <Image
                                     src={cmatch.teama.logo_url}
                                     className="h-[30px] rounded-full"
-                                    alt={cmatch.teama.short_name}
+                                    width={30} height={30} alt={cmatch.teama.short_name}
                                   />
                                   <span className="text-[#909090] font-semibold">
                                     {cmatch.teama.short_name} -{" "}
@@ -589,10 +597,10 @@ export default async function Home() {
                               <div>
                                 <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
                                   <div className="flex items-center space-x-2">
-                                    <img
+                                    <Image
                                       src={cmatch.teamb.logo_url}
                                       className="h-[30px]"
-                                      alt={cmatch.teamb.short_name}
+                                      width={30} height={30} alt={cmatch.teamb.short_name}
                                     />
                                     <span className="text-[#909090] font-semibold">
                                       {cmatch.teamb.short_name} -{" "}
@@ -614,7 +622,7 @@ export default async function Home() {
 
                           <Link href="/match-result">
                             <div className=" font-semibold flex flex-col items-center">
-                              <img src="/assets/img/home/win.png" alt="" />
+                              <Image src="/assets/img/home/win.png" width={30} height={30} alt="" />
                               <p className="text-[#0B773C] text-1xl w-[75%] text-center">
                                 {cmatch.result}
                               </p>
@@ -624,7 +632,7 @@ export default async function Home() {
                           <div className="h-[100px] border-l-[1px] border-[#d0d3d7]"></div>
 
                           <div className="flex flex-col items-center">
-                            <img src="/assets/img/player-2.png" alt="" />
+                            <Image src="/assets/img/player-2.png" width={30} height={30} alt="" />
 
                             <p className=" font-semibold">Adam Zampa</p>
                             <p>Man of the match</p>
@@ -649,10 +657,10 @@ export default async function Home() {
                         </div>
                         <span className="absolute right-4 top-[19px]">
                           <button className="arro-button">
-                            <img
+                            <Image
                               src="/assets/img/arrow.png"
                               className=""
-                              alt=""
+                              width={30} height={30} alt=""
                             />
                           </button>
                         </span>
@@ -671,10 +679,10 @@ export default async function Home() {
                             <div className="">
                               <div className="items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
                                 <div className="flex items-center space-x-2">
-                                  <img
+                                  <Image
                                     src="/assets/img/eng.png"
                                     className="h-[30px] rounded-full"
-                                    alt="aus"
+                                    width={30} height={30} alt="aus"
                                   />
                                   <div>
                                     <span className="flex items-center gap-1">
@@ -697,10 +705,10 @@ export default async function Home() {
                               <div>
                                 <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
                                   <div className="flex items-center space-x-2">
-                                    <img
+                                    <Image
                                       src="/assets/img/aus.png"
                                       className="h-[30px] rounded-full"
-                                      alt="aus"
+                                      width={30} height={30} alt="aus"
                                     />
                                     <div>
                                       <span className="flex items-center gap-1">
@@ -726,7 +734,7 @@ export default async function Home() {
                             {/* <!-- <div className="h-[100px] border-l-[1px] border-[#d0d3d7]"></div> --> */}
 
                             <div className=" font-semibold flex flex-col items-center">
-                              <img src="/assets/img/home/win.png" alt="" />
+                              <Image src="/assets/img/home/win.png" width={30} height={30} alt="" />
                               <p className="text-[#0B773C] font-semibold mt-1 text-[13px] w-[75%] text-center">
                                 Australia won by 7 wickets
                               </p>
@@ -749,10 +757,10 @@ export default async function Home() {
                           <div className="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
                           <a href="#">
                             <div className="flex justify-end items-center space-x-2">
-                              <img
+                              <Image
                                 src="/assets/img/home/handshake.png"
                                 className="h-[15px]"
-                                alt=""
+                                width={30} height={30} alt=""
                               />
                               <span className="text-[#909090] text-[11px] font-medium">
                                 H2H
@@ -763,10 +771,10 @@ export default async function Home() {
 
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-1">
-                            <img
+                            <Image
                               src="/assets/img/player-2.png"
                               className="h-[32px]"
-                              alt=""
+                              width={30} height={30} alt=""
                             />
                             <div>
                               <p className=" font-semibold">Adam Zampa</p>
@@ -778,7 +786,7 @@ export default async function Home() {
                     </div>
                   </div>
                   {upcomingMatch.map((ucmatch) => (
-                    <div className="lg:block hidden rounded-lg p-4 mb-4 bg-[#ffffff] hover:shadow-lg">
+                    <div key={ucmatch.match_id} className="lg:block hidden rounded-lg p-4 mb-4 bg-[#ffffff] hover:shadow-lg">
                       <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center space-x-2">
                           <div
@@ -849,10 +857,10 @@ export default async function Home() {
                               </p>
                               <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
                                 <div className="flex items-center space-x-2">
-                                  <img
+                                  <Image
                                     src={ucmatch.teama.logo_url}
                                     className="h-[30px] rounded-full"
-                                    alt={ucmatch.teama.short_name}
+                                    width={30} height={30} alt={ucmatch.teama.short_name}
                                   />
                                   <span className="font-semibold">
                                     {ucmatch.teama.short_name}
@@ -863,10 +871,10 @@ export default async function Home() {
                               <div>
                                 <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
                                   <div className="flex items-center space-x-2">
-                                    <img
+                                    <Image
                                       src={ucmatch.teamb.logo_url}
                                       className="h-[30px]"
-                                      alt={ucmatch.teamb.short_name}
+                                      width={30} height={30} alt={ucmatch.teamb.short_name}
                                     />
                                     <span className="font-semibold">
                                       {ucmatch.teamb.short_name}
@@ -909,7 +917,7 @@ export default async function Home() {
 
                         <a href="#">
                           <div className="flex mt-2 justify-end items-center space-x-2">
-                            <img src="/assets/img/home/handshake.png" alt="" />
+                            <Image src="/assets/img/home/handshake.png" width={30} height={30} alt="" />
                             <span className="text-[#909090] font-medium">
                               H2H
                             </span>
@@ -934,10 +942,10 @@ export default async function Home() {
                         </div>
                         <span className="absolute right-[12px] top-[19px]">
                           <button className="arro-button">
-                            <img
+                            <Image
                               src="/assets/img/arrow.png"
                               className=""
-                              alt=""
+                              width={30} height={30} alt=""
                             />
                           </button>
                         </span>
@@ -955,10 +963,10 @@ export default async function Home() {
                             <div>
                               <div className="items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
                                 <div className="flex items-center space-x-2">
-                                  <img
+                                  <Image
                                     src="/assets/img/eng.png"
                                     className="h-[30px] rounded-full"
-                                    alt="aus"
+                                    width={30} height={30} alt="aus"
                                   />
                                   <div>
                                     <span className="flex items-center gap-1">
@@ -971,10 +979,10 @@ export default async function Home() {
                               </div>
                               <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
                                 <div className="flex items-center space-x-2">
-                                  <img
+                                  <Image
                                     src="/assets/img/aus.png"
                                     className="h-[30px] rounded-full"
-                                    alt="aus"
+                                    width={30} height={30} alt="aus"
                                   />
                                   <div>
                                     <span className="flex items-center gap-1">
@@ -1041,10 +1049,10 @@ export default async function Home() {
                         <div className="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
                         <a href="#">
                           <div className="flex justify-end items-center space-x-2">
-                            <img
+                            <Image
                               src="/assets/img/home/handshake.png"
                               className="h-[15px]"
-                              alt=""
+                              width={30} height={30} alt=""
                             />
                             <span className="text-[#909090] text-[11px] font-medium">
                               H2H
@@ -1165,10 +1173,10 @@ export default async function Home() {
                             </p>
                             <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
                               <div className="flex items-center space-x-2">
-                                <img
+                                <Image
                                   src="/assets/img/afg.png"
                                   className="h-[30px] rounded-full"
-                                  alt="aus"
+                                  width={30} height={30} alt="aus"
                                 />
                                 <span className="font-semibold">
                                   Afghanistan
@@ -1179,10 +1187,10 @@ export default async function Home() {
                             <div>
                               <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
                                 <div className="flex items-center space-x-2">
-                                  <img
+                                  <Image
                                     src="/assets/img/sa.png"
                                     className="h-[30px]"
-                                    alt="ind"
+                                    width={30} height={30} alt="ind"
                                   />
                                   <span className="font-semibold">
                                     South Africa
@@ -1218,7 +1226,7 @@ export default async function Home() {
 
                       <a href="#">
                         <div className="flex mt-2 justify-end items-center space-x-2">
-                          <img src="/assets/img/home/handshake.png" alt="" />
+                          <Image src="/assets/img/home/handshake.png" width={30} height={30} alt="" />
                           <span className="text-[#909090] font-medium">
                             H2H
                           </span>
@@ -1243,10 +1251,10 @@ export default async function Home() {
                         </div>
                         <span className="absolute right-[12px] top-[19px]">
                           <button className="arro-button">
-                            <img
+                            <Image
                               src="/assets/img/arrow.png"
                               className=""
-                              alt=""
+                              width={30} height={30} alt=""
                             />
                           </button>
                         </span>
@@ -1265,10 +1273,10 @@ export default async function Home() {
                             <div className="">
                               <div className="items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
                                 <div className="flex items-center space-x-2">
-                                  <img
+                                  <Image
                                     src="/assets/img/afg.png"
                                     className="h-[30px] rounded-full"
-                                    alt="aus"
+                                    width={30} height={30} alt="aus"
                                   />
                                   <div>
                                     <span className="flex items-center gap-1">
@@ -1283,10 +1291,10 @@ export default async function Home() {
                               <div>
                                 <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
                                   <div className="flex items-center space-x-2">
-                                    <img
+                                    <Image
                                       src="/assets/img/sa.png"
                                       className="h-[30px] rounded-full"
-                                      alt="aus"
+                                      width={30} height={30} alt="aus"
                                     />
                                     <div>
                                       <span className="flex items-center gap-1">
@@ -1326,10 +1334,10 @@ export default async function Home() {
                           <div className="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
                           <a href="#">
                             <div className="flex justify-end items-center space-x-2">
-                              <img
+                              <Image
                                 src="/assets/img/home/handshake.png"
                                 className="h-[15px]"
-                                alt=""
+                                width={30} height={30} alt=""
                               />
                               <span className="text-[#909090] text-[11px] font-medium">
                                 H2H
@@ -1388,9 +1396,7 @@ export default async function Home() {
 
                 <div
                   id="live1"
-                  className={`tab-content ${
-                    activeMainTab === "live1" ? "" : "hidden"
-                  }`}
+                  className="tab-content hidden"
                 >
                   {/* <!-- live match desktop view start --> */}
                   <div className="lg:block hidden rounded-lg p-4 mb-4 bg-[#ffffff] hover:shadow-lg">
@@ -1481,10 +1487,10 @@ export default async function Home() {
                             </p>
                             <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
                               <div className="flex items-center space-x-2">
-                                <img
+                                <Image
                                   src="/assets/img/flg-1.png"
                                   className="h-[30px] rounded-full"
-                                  alt="aus"
+                                  width={30} height={30} alt="aus"
                                 />
                                 <span className="text-[#909090] font-semibold">
                                   IND -{" "}
@@ -1497,20 +1503,20 @@ export default async function Home() {
                                   (81.2 overs)
                                 </span>
                               </p>
-                              <img
+                              <Image
                                 src="/assets/img/home/bat.png"
                                 className="h-[13px]"
-                                alt=""
+                                width={30} height={30} alt=""
                               />
                             </div>
 
                             <div>
                               <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
                                 <div className="flex items-center space-x-2">
-                                  <img
+                                  <Image
                                     src="/assets/img/ban.png"
                                     className="h-[30px]"
-                                    alt="ind"
+                                    width={30} height={30} alt="ind"
                                   />
                                   <span className="text-[#909090] font-semibold">
                                     Bangladesh -
@@ -1552,7 +1558,7 @@ export default async function Home() {
 
                       <a href="#">
                         <div className="flex mt-2 justify-end items-center space-x-2">
-                          <img src="/assets/img/home/handshake.png" alt="" />
+                          <Image src="/assets/img/home/handshake.png" width={30} height={30} alt="" />
                           <span className="text-[#909090] font-medium">
                             H2H
                           </span>
@@ -1593,10 +1599,10 @@ export default async function Home() {
                         </div>
                         <span className="absolute right-4 top-[19px]">
                           <button className="arro-button">
-                            <img
+                            <Image
                               src="/assets/img/arrow.png"
                               className=""
-                              alt=""
+                              width={30} height={30} alt=""
                             />
                           </button>
                         </span>
@@ -1614,20 +1620,20 @@ export default async function Home() {
                             <div className="">
                               <div className="items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
                                 <div className="flex items-center space-x-2">
-                                  <img
+                                  <Image
                                     src="/assets/img/flg-1.png"
                                     className="h-[30px] rounded-full"
-                                    alt="aus"
+                                    width={30} height={30} alt="aus"
                                   />
                                   <div>
                                     <span className="flex items-center gap-1">
                                       <span className="text-[#5e5e5e] font-medium">
                                         IND
                                       </span>
-                                      <img
+                                      <Image
                                         src="/assets/img/home/bat.png"
                                         className="h-[15px]"
-                                        alt=""
+                                        width={30} height={30} alt=""
                                       />
                                     </span>
                                     <p className="flex items-end gap-2">
@@ -1646,10 +1652,10 @@ export default async function Home() {
                               <div>
                                 <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
                                   <div className="flex items-center space-x-2">
-                                    <img
+                                    <Image
                                       src="/assets/img/ban.png"
                                       className="h-[30px]"
-                                      alt="ind"
+                                      width={30} height={30} alt="ind"
                                     />
                                     <div>
                                       <span className="text-[#5e5e5e] font-medium">
@@ -1687,10 +1693,10 @@ export default async function Home() {
                           <div className="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
                           <a href="#">
                             <div className="flex justify-end items-center space-x-2">
-                              <img
+                              <Image
                                 src="/assets/img/home/handshake.png"
                                 className="h-[15px]"
-                                alt=""
+                                width={30} height={30} alt=""
                               />
                               <span className="text-[#909090] text-[11px] font-medium">
                                 H2H
@@ -1749,9 +1755,8 @@ export default async function Home() {
 
                 <div
                   id="finished1"
-                  className={`tab-content ${
-                    activeMainTab === "finished1" ? "" : "hidden"
-                  }`}
+                  className="tab-content hidden"
+                  
                 >
                   <div className="lg:block hidden rounded-lg p-4 mb-4 bg-[#ffffff] hover:shadow-lg">
                     <div className="flex items-center justify-between mb-4">
@@ -1822,10 +1827,10 @@ export default async function Home() {
                             </p>
                             <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
                               <div className="flex items-center space-x-2">
-                                <img
+                                <Image
                                   src="/assets/img/eng.png"
                                   className="h-[30px] rounded-full"
-                                  alt="aus"
+                                  width={30} height={30} alt="aus"
                                 />
                                 <span className="text-[#909090] font-semibold">
                                   Australia -{" "}
@@ -1843,10 +1848,10 @@ export default async function Home() {
                             <div>
                               <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
                                 <div className="flex items-center space-x-2">
-                                  <img
+                                  <Image
                                     src="/assets/img/aus.png"
                                     className="h-[30px]"
-                                    alt="ind"
+                                    width={30} height={30} alt="ind"
                                   />
                                   <span className="text-[#909090] font-semibold">
                                     England -{" "}
@@ -1866,7 +1871,7 @@ export default async function Home() {
 
                         <Link href="/match-result">
                           <div className=" font-semibold flex flex-col items-center">
-                            <img src="/assets/img/home/win.png" alt="" />
+                            <Image src="/assets/img/home/win.png" width={30} height={30} alt="" />
                             <p className="text-[#0B773C] text-1xl w-[75%] text-center">
                               Australia won by 7 wickets
                             </p>
@@ -1876,7 +1881,7 @@ export default async function Home() {
                         <div className="h-[100px] border-l-[1px] border-[#d0d3d7]"></div>
 
                         <div className="flex flex-col items-center">
-                          <img src="/assets/img/player-2.png" alt="" />
+                          <Image src="/assets/img/player-2.png" width={30} height={30} alt="" />
 
                           <p className=" font-semibold">Adam Zampa</p>
                           <p>Man of the match</p>
@@ -1901,10 +1906,10 @@ export default async function Home() {
                         </div>
                         <span className="absolute right-4 top-[19px]">
                           <button className="arro-button">
-                            <img
+                            <Image
                               src="/assets/img/arrow.png"
                               className=""
-                              alt=""
+                              width={30} height={30} alt=""
                             />
                           </button>
                         </span>
@@ -1923,10 +1928,10 @@ export default async function Home() {
                             <div className="">
                               <div className="items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
                                 <div className="flex items-center space-x-2">
-                                  <img
+                                  <Image
                                     src="/assets/img/eng.png"
                                     className="h-[30px] rounded-full"
-                                    alt="aus"
+                                    width={30} height={30} alt="aus"
                                   />
                                   <div>
                                     <span className="flex items-center gap-1">
@@ -1949,10 +1954,10 @@ export default async function Home() {
                               <div>
                                 <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
                                   <div className="flex items-center space-x-2">
-                                    <img
+                                    <Image
                                       src="/assets/img/aus.png"
                                       className="h-[30px] rounded-full"
-                                      alt="aus"
+                                      width={30} height={30} alt="aus"
                                     />
                                     <div>
                                       <span className="flex items-center gap-1">
@@ -1978,7 +1983,7 @@ export default async function Home() {
                             {/* <!-- <div className="h-[100px] border-l-[1px] border-[#d0d3d7]"></div> --> */}
 
                             <div className=" font-semibold flex flex-col items-center">
-                              <img src="/assets/img/home/win.png" alt="" />
+                              <Image src="/assets/img/home/win.png" width={30} height={30} alt="" />
                               <p className="text-[#0B773C] font-semibold mt-1 text-[13px] w-[75%] text-center">
                                 Australia won by 7 wickets
                               </p>
@@ -2001,10 +2006,10 @@ export default async function Home() {
                           <div className="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
                           <a href="#">
                             <div className="flex justify-end items-center space-x-2">
-                              <img
+                              <Image
                                 src="/assets/img/home/handshake.png"
                                 className="h-[15px]"
-                                alt=""
+                                width={30} height={30} alt=""
                               />
                               <span className="text-[#909090] text-[11px] font-medium">
                                 H2H
@@ -2015,10 +2020,10 @@ export default async function Home() {
 
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-1">
-                            <img
+                            <Image
                               src="/assets/img/player-2.png"
                               className="h-[32px]"
-                              alt=""
+                              width={30} height={30} alt=""
                             />
                             <div>
                               <p className=" font-semibold">Adam Zampa</p>
@@ -2033,9 +2038,8 @@ export default async function Home() {
 
                 <div
                   id="scorecard1"
-                  className={`tab-content ${
-                    activeMainTab === "scorecard1" ? "" : "hidden"
-                  }`}
+                  className="tab-content hidden"
+                  
                 >
                   <div className="lg:block hidden rounded-lg p-4 mb-4 bg-[#ffffff] hover:shadow-lg">
                     <div className="flex items-center justify-between mb-4">
@@ -2105,10 +2109,10 @@ export default async function Home() {
                             </p>
                             <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
                               <div className="flex items-center space-x-2">
-                                <img
+                                <Image
                                   src="/assets/img/eng.png"
                                   className="h-[30px] rounded-full"
-                                  alt="aus"
+                                  width={30} height={30} alt="aus"
                                 />
                                 <span className="font-semibold">Australia</span>
                               </div>
@@ -2117,10 +2121,10 @@ export default async function Home() {
                             <div>
                               <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
                                 <div className="flex items-center space-x-2">
-                                  <img
+                                  <Image
                                     src="/assets/img/aus.png"
                                     className="h-[30px]"
-                                    alt="ind"
+                                    width={30} height={30} alt="ind"
                                   />
                                   <span className="font-semibold">England</span>
                                 </div>
@@ -2185,7 +2189,7 @@ export default async function Home() {
 
                       <a href="#">
                         <div className="flex mt-2 justify-end items-center space-x-2">
-                          <img src="/assets/img/home/handshake.png" alt="" />
+                          <Image src="/assets/img/home/handshake.png" width={30} height={30} alt="" />
                           <span className="text-[#909090] font-medium">
                             H2H
                           </span>
@@ -2210,10 +2214,10 @@ export default async function Home() {
                         </div>
                         <span className="absolute right-[12px] top-[19px]">
                           <button className="arro-button">
-                            <img
+                            <Image
                               src="/assets/img/arrow.png"
                               className=""
-                              alt=""
+                              width={30} height={30} alt=""
                             />
                           </button>
                         </span>
@@ -2232,10 +2236,10 @@ export default async function Home() {
                             <div>
                               <div className="items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
                                 <div className="flex items-center space-x-2">
-                                  <img
+                                  <Image
                                     src="/assets/img/eng.png"
                                     className="h-[30px] rounded-full"
-                                    alt="aus"
+                                    width={30} height={30} alt="aus"
                                   />
                                   <div>
                                     <span className="flex items-center gap-1">
@@ -2248,10 +2252,10 @@ export default async function Home() {
                               </div>
                               <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
                                 <div className="flex items-center space-x-2">
-                                  <img
+                                  <Image
                                     src="/assets/img/aus.png"
                                     className="h-[30px] rounded-full"
-                                    alt="aus"
+                                    width={30} height={30} alt="aus"
                                   />
                                   <div>
                                     <span className="flex items-center gap-1">
@@ -2318,10 +2322,10 @@ export default async function Home() {
                         <div className="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
                         <a href="#">
                           <div className="flex justify-end items-center space-x-2">
-                            <img
+                            <Image
                               src="/assets/img/home/handshake.png"
                               className="h-[15px]"
-                              alt=""
+                              width={30} height={30} alt=""
                             />
                             <span className="text-[#909090] text-[11px] font-medium">
                               H2H
@@ -2442,10 +2446,10 @@ export default async function Home() {
                             </p>
                             <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
                               <div className="flex items-center space-x-2">
-                                <img
+                                <Image
                                   src="/assets/img/afg.png"
                                   className="h-[30px] rounded-full"
-                                  alt="aus"
+                                  width={30} height={30} alt="aus"
                                 />
                                 <span className="font-semibold">
                                   Afghanistan
@@ -2456,10 +2460,10 @@ export default async function Home() {
                             <div>
                               <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
                                 <div className="flex items-center space-x-2">
-                                  <img
+                                  <Image
                                     src="/assets/img/sa.png"
                                     className="h-[30px]"
-                                    alt="ind"
+                                    width={30} height={30} alt="ind"
                                   />
                                   <span className="font-semibold">
                                     South Africa
@@ -2495,7 +2499,7 @@ export default async function Home() {
 
                       <a href="#">
                         <div className="flex mt-2 justify-end items-center space-x-2">
-                          <img src="/assets/img/home/handshake.png" alt="" />
+                          <Image src="/assets/img/home/handshake.png" width={30} height={30} alt="" />
                           <span className="text-[#909090] font-medium">
                             H2H
                           </span>
@@ -2520,10 +2524,10 @@ export default async function Home() {
                         </div>
                         <span className="absolute right-[12px] top-[19px]">
                           <button className="arro-button">
-                            <img
+                            <Image
                               src="/assets/img/arrow.png"
                               className=""
-                              alt=""
+                              width={30} height={30} alt=""
                             />
                           </button>
                         </span>
@@ -2542,10 +2546,10 @@ export default async function Home() {
                             <div className="">
                               <div className="items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
                                 <div className="flex items-center space-x-2">
-                                  <img
+                                  <Image
                                     src="/assets/img/afg.png"
                                     className="h-[30px] rounded-full"
-                                    alt="aus"
+                                    width={30} height={30} alt="aus"
                                   />
                                   <div>
                                     <span className="flex items-center gap-1">
@@ -2560,10 +2564,10 @@ export default async function Home() {
                               <div>
                                 <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
                                   <div className="flex items-center space-x-2">
-                                    <img
+                                    <Image
                                       src="/assets/img/sa.png"
                                       className="h-[30px] rounded-full"
-                                      alt="aus"
+                                      width={30} height={30} alt="aus"
                                     />
                                     <div>
                                       <span className="flex items-center gap-1">
@@ -2603,10 +2607,10 @@ export default async function Home() {
                           <div className="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
                           <a href="#">
                             <div className="flex justify-end items-center space-x-2">
-                              <img
+                              <Image
                                 src="/assets/img/home/handshake.png"
                                 className="h-[15px]"
-                                alt=""
+                                width={30} height={30} alt=""
                               />
                               <span className="text-[#909090] text-[11px] font-medium">
                                 H2H
@@ -2668,67 +2672,34 @@ export default async function Home() {
             <div className="tab-section">
               <div className="tabs my-4">
                 <div className="flex text-1xl space-x-4 p-2 bg-[#ffffff] rounded-lg overflow-auto">
-                  <button
-                    className={`font-medium py-2 px-3 whitespace-nowrap ${
-                      activeTab === "news2" ? "bg-[#1A80F8] text-white" : ""
-                    } rounded-md`}
-                    //  onclick="handleTabClick(event, 'news2', this)"
-                    //     className="font-medium py-2 px-3 whitespace-nowrap bg-[#1A80F8] text-white rounded-md"
-                  >
+                  <button className="font-medium py-2 px-3 whitespace-nowrap bg-[#1A80F8] text-white  rounded-md">
                     News
                   </button>
                   <button
-                    // onclick="handleTabClick(event, 'fantasytips2', this)"
-                    //     className="font-medium py-2 px-3 whitespace-nowrap"
+                    
 
-                    className={`font-medium py-2 px-3 whitespace-nowrap ${
-                      activeTab === "fantasytips2"
-                        ? "bg-[#1A80F8] text-white"
-                        : ""
-                    } rounded-md`}
+                    className="font-medium py-2 px-3 whitespace-nowrap"
                   >
                     Fantasy Tips
                   </button>
                   <button
-                    className={`font-medium py-2 px-3 whitespace-nowrap ${
-                      activeTab === "ipl2" ? "bg-[#1A80F8] text-white" : ""
-                    } rounded-md`}
-                    // onclick="handleTabClick(event, 'ipl2', this)"
-                    //     className="font-medium py-2 px-3 whitespace-nowrap"
+                    className="font-medium py-2 px-3 whitespace-nowrap"   
                   >
                     IPL 2025
                   </button>
                   <button
-                    // onclick="handleTabClick(event, 'dailyquiz2', this)"
-                    //     className="font-medium py-2 px-3 whitespace-nowrap"
-
-                    className={`font-medium py-2 px-3 whitespace-nowrap ${
-                      activeTab === "dailyquiz2"
-                        ? "bg-[#1A80F8] text-white"
-                        : ""
-                    } rounded-md`}
+                    className="font-medium py-2 px-3 whitespace-nowrap"
                   >
                     Daily Quiz
                   </button>
                   <button
-                    className={`font-medium py-2 px-3 whitespace-nowrap ${
-                      activeTab === "pointstable2"
-                        ? "bg-[#1A80F8] text-white"
-                        : ""
-                    } rounded-md`}
-                    // onclick="handleTabClick(event, 'pointstable2', this)"
-                    //     className="font-medium py-2 px-3 whitespace-nowrap"
+                    className="font-medium py-2 px-3 whitespace-nowrap"
                   >
                     Points Table
                   </button>
                   <button
-                    className={`font-medium py-2 px-3 whitespace-nowrap ${
-                      activeTab === "socialtrends2"
-                        ? "bg-[#1A80F8] text-white"
-                        : ""
-                    } rounded-md`}
-                    // onclick="handleTabClick(event, 'socialtrends2', this)"
-                    //     className="font-medium py-2 px-3 whitespace-nowrap"
+                    className="font-medium py-2 px-3 whitespace-nowrap"
+                   
                   >
                     Social Trends
                   </button>
@@ -2738,16 +2709,14 @@ export default async function Home() {
               <div className="tab-content-container">
                 <div
                   id="news2"
-                  className={`tab-content ${
-                    activeTab === "news2" ? "" : "hidden"
-                  }`}
+                  className="tab-content news2"
                 >
                   <div className="rounded-lg py-4 px-4 bg-[#ffffff] mb-4">
                     <div className="lg:grid grid-cols-12 gap-4">
                       <div className="col-span-6 ">
-                        <img
+                        <Image
                           src="/assets/img/team-1.png"
-                          alt="Main news"
+                          width={30} height={30} alt="Main news"
                           className="rounded-lg w-full h-48 object-cover mb-3"
                         />
                       </div>
@@ -2801,7 +2770,7 @@ export default async function Home() {
                         <p className="text-gray-500 font-normal">
                           India will go into the home Test series against New
                           Zealand with pretty much the same squad that took on
-                          Bangladesh in September - India's last red-ball action
+                          Bangladesh in September - India s last red-ball action
                           ahead of the five-Test...
                         </p>
                         <a href="#">
@@ -2830,9 +2799,9 @@ export default async function Home() {
                       <div className="col-span-6">
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-1.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -2888,9 +2857,9 @@ export default async function Home() {
                         <div className="border-t-[1px] border-[#E7F2F4]"></div>
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-2.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -2946,9 +2915,9 @@ export default async function Home() {
 
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-3.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -3004,9 +2973,9 @@ export default async function Home() {
                       <div className="col-span-6">
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-1.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -3062,9 +3031,9 @@ export default async function Home() {
                         <div className="border-t-[1px] border-[#E7F2F4]"></div>
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-2.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -3120,9 +3089,9 @@ export default async function Home() {
 
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-3.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -3199,16 +3168,14 @@ export default async function Home() {
                 </div>
                 <div
                   id="fantasytips2"
-                  className={`tab-content ${
-                    activeTab === "fantasytips2" ? "" : "hidden"
-                  }`}
+                  className="tab-content hidden"
                 >
                   <div className="rounded-lg py-4 px-4 bg-[#ffffff] mb-4">
                     <div className="lg:grid grid-cols-12 gap-4">
                       <div className="col-span-6 ">
-                        <img
+                        <Image
                           src="/assets/img/team-1.png"
-                          alt="Main news"
+                          width={30} height={30} alt="Main news"
                           className="rounded-lg w-full h-48 object-cover mb-3"
                         />
                       </div>
@@ -3262,7 +3229,7 @@ export default async function Home() {
                         <p className="text-gray-500 font-normal">
                           India will go into the home Test series against New
                           Zealand with pretty much the same squad that took on
-                          Bangladesh in September - India's last red-ball action
+                          Bangladesh in September - Indias last red-ball action
                           ahead of the five-Test...
                         </p>
                         <a href="#">
@@ -3291,9 +3258,9 @@ export default async function Home() {
                       <div className="col-span-6">
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-1.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -3349,9 +3316,9 @@ export default async function Home() {
                         <div className="border-t-[1px] border-[#E7F2F4]"></div>
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-2.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -3407,9 +3374,9 @@ export default async function Home() {
 
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-3.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -3465,9 +3432,9 @@ export default async function Home() {
                       <div className="col-span-6">
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-1.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -3523,9 +3490,9 @@ export default async function Home() {
                         <div className="border-t-[1px] border-[#E7F2F4]"></div>
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-2.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -3581,9 +3548,9 @@ export default async function Home() {
 
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-3.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -3660,16 +3627,14 @@ export default async function Home() {
                 </div>
                 <div
                   id="ipl2"
-                  className={`tab-content ${
-                    activeTab === "ipl2" ? "" : "hidden"
-                  }`}
+                  className="tab-content hidden"
                 >
                   <div className="rounded-lg py-4 px-4 bg-[#ffffff] mb-4">
                     <div className="lg:grid grid-cols-12 gap-4">
                       <div className="col-span-6 ">
-                        <img
+                        <Image
                           src="/assets/img/team-1.png"
-                          alt="Main news"
+                          width={30} height={30} alt="Main news"
                           className="rounded-lg w-full h-48 object-cover mb-3"
                         />
                       </div>
@@ -3723,7 +3688,7 @@ export default async function Home() {
                         <p className="text-gray-500 font-normal">
                           India will go into the home Test series against New
                           Zealand with pretty much the same squad that took on
-                          Bangladesh in September - India's last red-ball action
+                          Bangladesh in September - Indias last red-ball action
                           ahead of the five-Test...
                         </p>
                         <a href="#">
@@ -3752,9 +3717,9 @@ export default async function Home() {
                       <div className="col-span-6">
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-1.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -3810,9 +3775,9 @@ export default async function Home() {
                         <div className="border-t-[1px] border-[#E7F2F4]"></div>
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-2.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -3868,9 +3833,9 @@ export default async function Home() {
 
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-3.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -3926,9 +3891,9 @@ export default async function Home() {
                       <div className="col-span-6">
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-1.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -3984,9 +3949,9 @@ export default async function Home() {
                         <div className="border-t-[1px] border-[#E7F2F4]"></div>
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-2.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -4042,9 +4007,9 @@ export default async function Home() {
 
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-3.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -4121,16 +4086,14 @@ export default async function Home() {
                 </div>
                 <div
                   id="dailyquiz2"
-                  className={`tab-content ${
-                    activeTab === "dailyquiz2" ? "" : "hidden"
-                  }`}
+                  className="tab-content hidden"
                 >
                   <div className="rounded-lg py-4 px-4 bg-[#ffffff] mb-4">
                     <div className="lg:grid grid-cols-12 gap-4">
                       <div className="col-span-6 ">
-                        <img
+                        <Image
                           src="/assets/img/team-1.png"
-                          alt="Main news"
+                          width={30} height={30} alt="Main news"
                           className="rounded-lg w-full h-48 object-cover mb-3"
                         />
                       </div>
@@ -4184,7 +4147,7 @@ export default async function Home() {
                         <p className="text-gray-500 font-normal">
                           India will go into the home Test series against New
                           Zealand with pretty much the same squad that took on
-                          Bangladesh in September - India's last red-ball action
+                          Bangladesh in September - Indias last red-ball action
                           ahead of the five-Test...
                         </p>
                         <a href="#">
@@ -4213,9 +4176,9 @@ export default async function Home() {
                       <div className="col-span-6">
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-1.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -4271,9 +4234,9 @@ export default async function Home() {
                         <div className="border-t-[1px] border-[#E7F2F4]"></div>
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-2.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -4329,9 +4292,9 @@ export default async function Home() {
 
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-3.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -4387,9 +4350,9 @@ export default async function Home() {
                       <div className="col-span-6">
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-1.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -4445,9 +4408,9 @@ export default async function Home() {
                         <div className="border-t-[1px] border-[#E7F2F4]"></div>
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-2.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -4503,9 +4466,9 @@ export default async function Home() {
 
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-3.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -4582,16 +4545,14 @@ export default async function Home() {
                 </div>
                 <div
                   id="pointstable2"
-                  className={`tab-content ${
-                    activeTab === "pointstable2" ? "" : "hidden"
-                  }`}
+                  className="tab-content hidden"
                 >
                   <div className="rounded-lg py-4 px-4 bg-[#ffffff] mb-4">
                     <div className="lg:grid grid-cols-12 gap-4">
                       <div className="col-span-6 ">
-                        <img
+                        <Image
                           src="/assets/img/team-1.png"
-                          alt="Main news"
+                          width={30} height={30} alt="Main news"
                           className="rounded-lg w-full h-48 object-cover mb-3"
                         />
                       </div>
@@ -4645,7 +4606,7 @@ export default async function Home() {
                         <p className="text-gray-500 font-normal">
                           India will go into the home Test series against New
                           Zealand with pretty much the same squad that took on
-                          Bangladesh in September - India's last red-ball action
+                          Bangladesh in September - Indias last red-ball action
                           ahead of the five-Test...
                         </p>
                         <a href="#">
@@ -4674,9 +4635,9 @@ export default async function Home() {
                       <div className="col-span-6">
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-1.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -4732,9 +4693,9 @@ export default async function Home() {
                         <div className="border-t-[1px] border-[#E7F2F4]"></div>
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-2.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -4790,9 +4751,9 @@ export default async function Home() {
 
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-3.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -4848,9 +4809,9 @@ export default async function Home() {
                       <div className="col-span-6">
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-1.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -4906,9 +4867,9 @@ export default async function Home() {
                         <div className="border-t-[1px] border-[#E7F2F4]"></div>
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-2.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -4964,9 +4925,9 @@ export default async function Home() {
 
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-3.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -5043,16 +5004,14 @@ export default async function Home() {
                 </div>
                 <div
                   id="socialtrends2"
-                  className={`tab-content ${
-                    activeTab === "socialtrends2" ? "" : "hidden"
-                  }`}
+                  className="tab-content hidden"
                 >
                   <div className="rounded-lg py-4 px-4 bg-[#ffffff] mb-4">
                     <div className="lg:grid grid-cols-12 gap-4">
                       <div className="col-span-6 ">
-                        <img
+                        <Image
                           src="/assets/img/team-1.png"
-                          alt="Main news"
+                          width={30} height={30} alt="Main news"
                           className="rounded-lg w-full h-48 object-cover mb-3"
                         />
                       </div>
@@ -5106,7 +5065,7 @@ export default async function Home() {
                         <p className="text-gray-500 font-normal">
                           India will go into the home Test series against New
                           Zealand with pretty much the same squad that took on
-                          Bangladesh in September - India's last red-ball action
+                          Bangladesh in September - Indias last red-ball action
                           ahead of the five-Test...
                         </p>
                         <a href="#">
@@ -5135,9 +5094,9 @@ export default async function Home() {
                       <div className="col-span-6">
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-1.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -5193,9 +5152,9 @@ export default async function Home() {
                         <div className="border-t-[1px] border-[#E7F2F4]"></div>
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-2.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -5251,9 +5210,9 @@ export default async function Home() {
 
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-3.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -5309,9 +5268,9 @@ export default async function Home() {
                       <div className="col-span-6">
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-1.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -5367,9 +5326,9 @@ export default async function Home() {
                         <div className="border-t-[1px] border-[#E7F2F4]"></div>
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-2.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -5425,9 +5384,9 @@ export default async function Home() {
 
                         <Link href="#">
                           <div className="flex gap-3 my-5">
-                            <img
+                            <Image
                               src="/assets/img/flag/p-3.png"
-                              alt="News thumbnail"
+                              width={30} height={30} alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
                             <div>
@@ -5511,10 +5470,10 @@ export default async function Home() {
               <div className="flex gap-1 items-center justify-between">
                 <div className="flex gap-1 items-center">
                   <div className="col-span-4 relative">
-                    <img
+                    <Image
                       src="/assets/img/home/trofi.png"
                       className="h-[75px]"
-                      alt=""
+                      width={30} height={30} alt=""
                     />
                   </div>
                   <div className="col-span-8 relative">
@@ -5558,7 +5517,7 @@ export default async function Home() {
                 <Link href="/t20series">
                   <div className="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3 mb-2">
                     <div>
-                      <img src="/assets/img/1.png" alt="" />
+                      <Image src="/assets/img/1.png" width={30} height={30} alt="" />
                     </div>
                     <div className="font-medium text-[#394351]">
                       ICC World cup
@@ -5568,7 +5527,7 @@ export default async function Home() {
                 <Link href="/t20series">
                   <div className="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3 mb-2 ">
                     <div>
-                      <img src="/assets/img/2.png" alt="" />
+                      <Image src="/assets/img/2.png" width={30} height={30} alt="" />
                     </div>
                     <div className="font-medium text-[#394351]">
                       ICC Champion Trophy
@@ -5578,7 +5537,7 @@ export default async function Home() {
                 <Link href="/t20series">
                   <div className="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3 mb-2 ">
                     <div>
-                      <img src="/assets/img/3.png" alt="" />
+                      <Image src="/assets/img/3.png" width={30} height={30} alt="" />
                     </div>
                     <div className="font-medium text-[#394351]">
                       T20 World Cup
@@ -5588,7 +5547,7 @@ export default async function Home() {
                 <Link href="/t20series">
                   <div className="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3 mb-2 ">
                     <div>
-                      <img src="/assets/img/4.png" alt="" />
+                      <Image src="/assets/img/4.png" width={30} height={30} alt="" />
                     </div>
                     <div className="font-medium text-[#394351]">
                       Indian Premium League
@@ -5598,7 +5557,7 @@ export default async function Home() {
                 <Link href="/t20series">
                   <div className="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3 mb-2 ">
                     <div>
-                      <img src="/assets/img/5.png" alt="" />
+                      <Image src="/assets/img/5.png" width={30} height={30} alt="" />
                     </div>
                     <div className="font-medium text-[#394351]">
                       Pakistan Super League
@@ -5608,7 +5567,7 @@ export default async function Home() {
                 <Link href="/t20series">
                   <div className="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3 mb-2 ">
                     <div>
-                      <img src="/assets/img/6.png" alt="" />
+                      <Image src="/assets/img/6.png" width={30} height={30} alt="" />
                     </div>
                     <div className="font-medium text-[#394351]">
                       Bangladesh Premium Leaguge
@@ -5618,7 +5577,7 @@ export default async function Home() {
                 <Link href="/t20series">
                   <div className="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3 mb-2 ">
                     <div>
-                      <img src="/assets/img/7.png" alt="" />
+                      <Image src="/assets/img/7.png" width={30} height={30} alt="" />
                     </div>
                     <div className="font-medium text-[#394351]">
                       Big Bash Leaguge
@@ -5628,7 +5587,7 @@ export default async function Home() {
                 <Link href="/t20series">
                   <div className="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3">
                     <div>
-                      <img src="/assets/img/8.png" alt="" />
+                      <Image src="/assets/img/8.png" width={30} height={30} alt="" />
                     </div>
                     <div className="font-medium text-[#394351]">
                       Super Smash
@@ -5657,10 +5616,10 @@ export default async function Home() {
                       />
                     </div>
                     <div>
-                      <img
+                      <Image
                         src="/assets/img/flag/search.png"
                         className="h-[14px]"
-                        alt=""
+                        width={30} height={30} alt=""
                       />
                     </div>
                   </form>
@@ -5687,18 +5646,18 @@ export default async function Home() {
                   <div key={index} className="border-b mb-4">
                     <button className="w-full flex text-[14px] justify-between items-center pb-3">
                       <span className="flex items-center font-medium text-[#394351]">
-                        <img
+                        <Image
                           src={country.flag}
                           className="mr-3"
-                          alt={`${country.name} Flag`}
+                          width={30} height={30} alt={`${country.name} Flag`}
                         />
                         {country.name}
                       </span>
                       <span className="transform transition-transform">
-                        <img
+                        <Image
                           src="/assets/img/arrow.png"
                           className="h-[7px]"
-                          alt="Arrow"
+                          width={30} height={30} alt="Arrow"
                         />
                       </span>
                     </button>
@@ -5757,7 +5716,7 @@ export default async function Home() {
                 >
                   <Link href="/team">
                     <div className=" flex items-center space-x-2 justify-center">
-                      <img src="/assets/img/flag/17.png" alt="" />
+                      <Image src="/assets/img/flag/17.png" width={30} height={30} alt="" />
                       <p className="font-semibold">India</p>
                     </div>
                   </Link>
@@ -5773,7 +5732,7 @@ export default async function Home() {
                 >
                   <Link href="/team">
                     <div className=" flex items-center space-x-2 justify-center">
-                      <img src="/assets/img/flag/2.png" alt="" />
+                      <Image src="/assets/img/flag/2.png" width={30} height={30} alt="" />
                       <p className="font-semibold">Australia</p>
                     </div>
                   </Link>
@@ -5789,7 +5748,7 @@ export default async function Home() {
                 >
                   <Link href="/team">
                     <div className=" flex items-center space-x-2 justify-center">
-                      <img src="/assets/img/flag/16.png" alt="" />
+                      <Image src="/assets/img/flag/16.png" width={30} height={30} alt="" />
                       <p className="font-semibold">Pakistan</p>
                     </div>
                   </Link>
@@ -5805,7 +5764,7 @@ export default async function Home() {
                 >
                   <Link href="/team">
                     <div className=" flex items-center space-x-2 justify-center">
-                      <img src="/assets/img/flag/11.png" alt="" />
+                      <Image src="/assets/img/flag/11.png" width={30} height={30} alt="" />
                       <p className="font-semibold">South Africa</p>
                     </div>
                   </Link>
@@ -5821,7 +5780,7 @@ export default async function Home() {
                 >
                   <Link href="/team">
                     <div className=" flex items-center space-x-2 justify-center">
-                      <img src="/assets/img/flag/12.png" alt="" />
+                      <Image src="/assets/img/flag/12.png" width={30} height={30} alt="" />
                       <p className="font-semibold">New Zealand</p>
                     </div>
                   </Link>
@@ -5838,7 +5797,7 @@ export default async function Home() {
                 >
                   <Link href="/team">
                     <div className=" flex items-center space-x-2 justify-center">
-                      <img src="/assets/img/flag/13.png" alt="" />
+                      <Image src="/assets/img/flag/13.png" width={30} height={30} alt="" />
                       <p className="font-semibold">Sri Lanka</p>
                     </div>
                   </Link>
@@ -5854,7 +5813,7 @@ export default async function Home() {
                 >
                   <Link href="/team">
                     <div className=" flex items-center space-x-2 justify-center">
-                      <img src="/assets/img/flag/10.png" alt="" />
+                      <Image src="/assets/img/flag/10.png" width={30} height={30} alt="" />
                       <p className="font-semibold">England</p>
                     </div>
                   </Link>
@@ -5870,7 +5829,7 @@ export default async function Home() {
                 >
                   <Link href="/team">
                     <div className=" flex items-center space-x-2 justify-center">
-                      <img src="/assets/img/flag/17.png" alt="" />
+                      <Image src="/assets/img/flag/17.png" width={30} height={30} alt="" />
                       <p className="font-semibold">Afghanistan</p>
                     </div>
                   </Link>
@@ -5886,7 +5845,7 @@ export default async function Home() {
                 >
                   <Link href="/team">
                     <div className=" flex items-center space-x-2 justify-center">
-                      <img src="/assets/img/flag/13.png" alt="" />
+                      <Image src="/assets/img/flag/13.png" width={30} height={30} alt="" />
                       <p className="font-semibold">Bangladesh</p>
                     </div>
                   </Link>
@@ -5902,9 +5861,9 @@ export default async function Home() {
                 >
                   <Link href="/team">
                     <div className=" flex items-center space-x-2 justify-center">
-                      <img
+                      <Image
                         src="/assets/img/flag/14.png"
-                        alt=""
+                        width={30} height={30} alt=""
                         className="rounded-full"
                       />
                       <p className="font-semibold">West Indies</p>
@@ -5925,52 +5884,12 @@ export default async function Home() {
 
           <CardSlider></CardSlider>
 
-          {/* <div className="grid md:grid-cols-5 grid-cols-2 gap-4">
-
-                <div className="col-span-1">
-                    <div className="relative">
-                        <img src="/assets/img/home/img-2.png" className="w-full" alt="" />
-                        <p className="absolute bottom-[12px] text-white font-semibold text-center px-2 text-[14px] md:text-[13px]"
-                            style={{ texttransform: "capitalize" }}>The number 10 position for the Fastest fifty </p>
-                    </div>
-                </div>
-
-                <div className="col-span-1">
-                    <div className="relative">
-                        <img src="/assets/img/home/img-3.png" className="w-full" alt="" />
-                        <p className="absolute bottom-[12px] text-white font-semibold text-center px-2 text-[14px] md:text-[13px]"
-                            style={{ textTransform: "capitalize" }}>Yuvraj Singh (India)12 balls vs England, 2007</p>
-                    </div>
-                </div>
-                <div className="col-span-1">
-                    <div className="relative">
-                        <img src="/assets/img/home/img-4.png" className="w-full" alt="" />
-                        <p className="absolute bottom-[12px] text-white font-semibold text-center px-2 text-[14px] md:text-[13px]"
-                            style={{ textTransform: "capitalize" }}>Marcus Stoinis Australian player hit his fastest</p>
-                    </div>
-                </div>
-                <div className="col-span-1">
-                    <div className="relative">
-                        <img src="/assets/img/home/img-5.png" className="w-full" alt="" />
-                        <p className="absolute bottom-[12px] text-white font-semibold text-center px-2 text-[14px] md:text-[13px]"
-                            style={{ textTransform: "capitalize" }}>Stephan Myburgh (Netherlands) </p>
-                    </div>
-                </div>
-                <div className="col-span-1">
-                    <div className="relative">
-                        <img src="/assets/img/home/img-6.png" className="w-full" alt="" />
-                        <p className="absolute bottom-[12px] text-white font-semibold text-center px-2 text-[14px] md:text-[13px]"
-                            style={{ textTransform: "capitalize" }}>South Africa vs India Match Preview, 4th T20I</p>
-                    </div>
-                </div>
-
-            </div> */}
 
           <div className="flex items-center justify-center py-4">
             <div className="flex items-center space-x-4 w-full">
               <div className="flex-grow h-0.5 bg-gray-300"></div>
               <h2 className="md:text-[24px] text-[18px] text-black font-bold whitespace-nowrap">
-                WOMEN'S T20 WORLD CUP 2024
+                WOMENS T20 WORLD CUP 2024
               </h2>
               <div className="flex-grow h-0.5 bg-gray-300"></div>
             </div>
@@ -6083,10 +6002,10 @@ export default async function Home() {
                       </p>
                       <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
                         <div className="flex items-center space-x-2">
-                          <img
+                          <Image
                             src="/assets/img/afg.png"
                             className="h-[30px] rounded-full"
-                            alt="aus"
+                            width={30} height={30} alt="aus"
                           />
                           <span className="font-semibold">Afghanistan</span>
                         </div>
@@ -6095,10 +6014,10 @@ export default async function Home() {
                       <div>
                         <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
                           <div className="flex items-center space-x-2">
-                            <img
+                            <Image
                               src="/assets/img/sa.png"
                               className="h-[30px]"
-                              alt="ind"
+                              width={30} height={30} alt="ind"
                             />
                             <span className="font-semibold">South Africa</span>
                           </div>
@@ -6129,7 +6048,7 @@ export default async function Home() {
 
                 <a href="#">
                   <div className="flex mt-2 justify-end items-center space-x-2">
-                    <img src="/assets/img/home/handshake.png" alt="" />
+                    <Image src="/assets/img/home/handshake.png" width={30} height={30} alt="" />
                     <span className="text-[#909090] font-medium">H2H</span>
                   </div>
                 </a>
@@ -6156,7 +6075,7 @@ export default async function Home() {
                   </div>
                   <span className="absolute right-[12px] top-[19px]">
                     <button className="arro-button">
-                      <img src="/assets/img/arrow.png" className="" alt="" />
+                      <Image src="/assets/img/arrow.png" className="" width={30} height={30} alt="" />
                     </button>
                   </span>
                 </div>
@@ -6172,10 +6091,10 @@ export default async function Home() {
                     <div className="">
                       <div className="items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
                         <div className="flex items-center space-x-2">
-                          <img
+                          <Image
                             src="/assets/img/afg.png"
                             className="h-[30px] rounded-full"
-                            alt="aus"
+                            width={30} height={30} alt="aus"
                           />
                           <div>
                             <span className="flex items-center gap-1">
@@ -6190,10 +6109,10 @@ export default async function Home() {
                       <div>
                         <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
                           <div className="flex items-center space-x-2">
-                            <img
+                            <Image
                               src="/assets/img/sa.png"
                               className="h-[30px] rounded-full"
-                              alt="aus"
+                              width={30} height={30} alt="aus"
                             />
                             <div>
                               <span className="flex items-center gap-1">
@@ -6229,10 +6148,10 @@ export default async function Home() {
                     </p>
                     <div className="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
                     <div className="flex justify-end items-center space-x-2">
-                      <img
+                      <Image
                         src="/assets/img/home/handshake.png"
                         className="h-[15px]"
-                        alt=""
+                        width={30} height={30} alt=""
                       />
                       <span className="text-[#909090] text-[11px] font-medium">
                         H2H
@@ -6290,9 +6209,9 @@ export default async function Home() {
             <div className="rounded-lg py-4 px-4 bg-[#ffffff] mb-4">
               <div className=" md:grid grid-cols-12 gap-4">
                 <div className="col-span-5">
-                  <img
+                  <Image
                     src="/assets/img/home/img-7.png"
-                    alt="Main news"
+                    width={30} height={30} alt="Main news"
                     className="rounded-lg w-full object-cover mb-4 md:mb-0 h-[186px]"
                   />
                 </div>
@@ -6345,7 +6264,7 @@ export default async function Home() {
                     England tested their pace and spin combinations to
                     devastating effect ahead of a move to Dubai for their
                     crucial last group game of this T20 World Cup, against West
-                    Indies on Tuesday. Heather Knight, England's captain,{" "}
+                    Indies on Tuesday. Heather Knight, Englands captain,{" "}
                   </p>
                   <button className="text-[#1A80F8] font-semibold flex items-center text-[13px] pt-2 underline">
                     Read more{" "}
@@ -6369,9 +6288,9 @@ export default async function Home() {
 
               <div className="mt-5">
                 <div className="flex gap-3 py-4">
-                  <img
+                  <Image
                     src="/assets/img/img-6.png"
-                    alt="News thumbnail"
+                    width={30} height={30} alt="News thumbnail"
                     className="rounded-lg lg:h-[103px] h-[80px] md:h-[90px]"
                   />
                   <div>
@@ -6416,7 +6335,7 @@ export default async function Home() {
                       October 9, 2024
                     </p>
                     <h4 className="md:text-1xl text-[13px] font-semibold mb-1">
-                      Muzumdar: Australia's experience saw them through
+                      Muzumdar: Australias experience saw them through
                     </h4>
                     <p className="hidden md:block text-gray-500 font-normal">
                       India lost another knockout game to Australia in the last
@@ -6428,9 +6347,9 @@ export default async function Home() {
                 <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
                 <div className="flex gap-3 py-4">
-                  <img
+                  <Image
                     src="/assets/img/img-7.png"
-                    alt="News thumbnail"
+                    width={30} height={30} alt="News thumbnail"
                     className="rounded-lg lg:h-[103px] h-[80px] md:h-[90px]"
                   />
                   <div>
@@ -6487,9 +6406,9 @@ export default async function Home() {
                 <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
                 <div className="flex gap-3 py-4">
-                  <img
+                  <Image
                     src="/assets/img/img-8.png"
-                    alt="News thumbnail"
+                    width={30} height={30} alt="News thumbnail"
                     className="rounded-lg lg:h-[103px] h-[80px] md:h-[90px]"
                   />
                   <div>
@@ -6546,7 +6465,7 @@ export default async function Home() {
 
                 <div className="py-4 text-center flex justify-center text-[#2182F8] md:text-[15px] text-[13px] font-semibold">
                   <button className="underline flex items-center">
-                    More from Women's T20 World Cup 2024
+                    More from Womens T20 World Cup 2024
                     <span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

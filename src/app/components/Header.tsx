@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import React, { useState } from 'react'
+import Image from "next/image";
 
 const Header = () => {
 
@@ -127,7 +128,7 @@ const Header = () => {
         <div className="lg:w-[1000px] w-full mx-auto text-white py-5 flex items-center justify-between">
           <div>
             <Link href="/">
-              <img className="h-[2.375rem]" src="/assets/img/logo.png" alt="" />
+              <Image className="h-[2.375rem]" src="/assets/img/logo.png" alt="" width={150} height={50} />
             </Link>
           </div>
           {/* Toggle Button for Mobile */}
@@ -264,7 +265,7 @@ const Header = () => {
                   .map((item, index) => (
                     <Link href={item.href || "#"} key={index}>
                       <div className="flex-shrink-0 w-[125px] flex items-center flex-col">
-                        <img
+                        <Image
                           src={item.imgSrc}
                           alt={item.alt}
                           className="rounded-lg w-[80px]"

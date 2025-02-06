@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react'
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -191,13 +192,13 @@ const Footer = () => {
       <hr className="border-gray-700 my-6" />
       <div className="flex flex-col md:flex-row justify-between items-center md:mx-4 md:gap-10 lg:mx-0">
         <div className="text-center mb-4 md:mb-0">
-          <img src="/assets/img/logo.png" className="h-[40px]" alt="" />
+          <Image src="/assets/img/logo.png" className="h-[40px]" alt="" width={30} height={30}/>
           <div className="flex space-x-4 mt-4">
             <a href="#">
-              <img src="/assets/img/store-1.png" alt="Google Play" className="h-[35px]" />
+              <Image src="/assets/img/store-1.png" alt="Google Play" className="h-[35px]" width={30} height={30}/>
             </a>
             <a href="#">
-              <img src="/assets/img/store-2.png" alt="App Store" className="h-[35px]" />
+              <Image src="/assets/img/store-2.png" alt="App Store" className="h-[35px]" width={30} height={30}/>
             </a>
           </div>
         </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const images = [
   { id: 1, src: '/assets/img/home/img-2.png', title: 'The number 10 position for the Fastest fifty' },
@@ -36,24 +37,12 @@ const stories = [
   },
 ];
 
-// const stories = [
-//   [
-//     { id: 1, src: '/assets/img/home/img-6.png', title: '' },
-//     { id: 2, src: '/assets/img/home/img-5.png', title: '' },
-//     { id: 3, src: '/assets/img/home/img-4.png', title: '' },
-//     { id: 4, src: '/assets/img/home/img-3.png', title: '' },
-//   ],
-
-
-
-// ];
 
 export default function Slider() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [modalOpen, setModalOpen] = useState(false);
   const [currentStory, setCurrentStory] = useState(0);
   const [progress, setProgress] = useState(0);
-
 
 
   // ***********************************************************
@@ -100,10 +89,9 @@ export default function Slider() {
     }
   };
 
-  const openModal = () => {
-
+  const openModal = (index: number) => {
+    setCurrentStory(index); // Store the index if needed
     setModalOpen(true);
-
   };
 
   const closeModal = () => {
@@ -128,7 +116,7 @@ export default function Slider() {
             style={{ minWidth: '20%' }}
             onClick={() => openModal(index)}
           >
-            <img src={image.src} alt={image.title} className="rounded-lg w-full" />
+            <Image src={image.src} alt={image.title} className="rounded-lg w-full" width={30} height={30} />
             <p className="absolute bottom-[12px] text-white font-semibold text-center px-2 text-[14px] md:text-[13px]">{image.title}</p>
           </div>
         ))}
@@ -187,7 +175,7 @@ export default function Slider() {
 
               {/* Story Content */}
               <div className="relative w-full flex items-center justify-center top-[7px]">
-                <img
+                <Image
                   src={stories[currentStory].image}
                   alt="Story"
                   className=""

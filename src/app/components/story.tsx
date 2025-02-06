@@ -1,6 +1,13 @@
-import { useState, useEffect } from "react";
+'use client';
+
+import { useState, useEffect, useCallback } from "react";
+import Image from 'next/image';
 
 const StorySlider = () => {
+
+    const [currentStory, setCurrentStory] = useState(0);
+    const [progress, setProgress] = useState(0);
+
     const stories = [
         {
             id: 1,
@@ -22,8 +29,18 @@ const StorySlider = () => {
         },
     ];
 
-    const [currentStory, setCurrentStory] = useState(0);
-    const [progress, setProgress] = useState(0);
+    // Use useCallback to memoize nextStory to avoid unnecessary re-creation on each render
+    const nextStory = useCallback(() => {
+        setProgress(0);
+        setCurrentStory((prev) => (prev + 1) % stories.length);
+    }, [stories.length]); // Only recreate nextStory if stories.length changes
+
+    const previousStory = () => {
+        setProgress(0);
+        setCurrentStory((prev) =>
+            prev === 0 ? stories.length - 1 : prev - 1
+        );
+    };
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -34,19 +51,7 @@ const StorySlider = () => {
         }, 300);
 
         return () => clearInterval(interval);
-    }, [progress]);
-
-    const nextStory = () => {
-        setProgress(0);
-        setCurrentStory((prev) => (prev + 1) % stories.length);
-    };
-
-    const previousStory = () => {
-        setProgress(0);
-        setCurrentStory((prev) =>
-            prev === 0 ? stories.length - 1 : prev - 1
-        );
-    };
+    }, [progress, nextStory]); // nextStory is now memoized
 
     return (
         <div className="flex flex-col items-center justify-center w-full h-screen bg-gray-900">
@@ -70,7 +75,7 @@ const StorySlider = () => {
 
             {/* Story Content */}
             <div className="relative">
-                <img
+                <Image
                     src={stories[currentStory].image}
                     alt="Story"
                     className="absolute w-full h-full object-cover"
