@@ -62,7 +62,7 @@ const StorySlider = () => {
                         key={index}
                         className="h-1 bg-gray-700 rounded-lg overflow-hidden flex-grow"
                     >
-                        <div
+                        <div 
                             className={`h-full bg-blue-500 transition-all`}
                             style={{
                                 width: `${currentStory === index ? progress : currentStory > index ? 100 : 0

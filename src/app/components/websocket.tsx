@@ -21,10 +21,10 @@ class MatchWebSocket extends Component<object, MatchData> { // Changed from {} t
     this.state = {
       matchId: "",
       matchOddsback: 0,
-      matchOddslay: 0,
+      matchOddslay: 0,   
       matchRuns: "",
       matchOvers: "",
-      matchWikets: "",
+      matchWikets: "", 
       matchStatus: "",
       matchBattingTeam: "",
       aa: ""

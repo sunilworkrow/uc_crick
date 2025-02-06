@@ -109,7 +109,7 @@ export default function Slider() {
         className="flex gap-4 transition-transform duration-500"
         style={{ transform: `translateX(-${currentIndex * (100 / itemsPerPage)}%)` }}
       >
-        {images.map((image, index) => (
+        {images.map((image, index) => ( 
           <div
             key={image.id}
             className="md:w-1/5 w-1/2 flex-shrink-0 relative"

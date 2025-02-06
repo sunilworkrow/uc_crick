@@ -184,7 +184,7 @@ const Footer = () => {
               <a href="#" className="">
                 {" "}
                 Fan Polls{" "}
-              </a>{" "}
+              </a>{" "} 
             </li>
           </ul>
         </div>

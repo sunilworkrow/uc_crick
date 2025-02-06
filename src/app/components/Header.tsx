@@ -265,7 +265,7 @@ const Header = () => {
                   .map((item, index) => (
                     <Link href={item.href || "#"} key={index}>
                       <div className="flex-shrink-0 w-[125px] flex items-center flex-col">
-                        <Image
+                        <Image 
                           src={item.imgSrc}
                           alt={item.alt}
                           className="rounded-lg w-[80px]"

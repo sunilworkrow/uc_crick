@@ -13,7 +13,7 @@ const WeeklySlider = () => {
             { country: 'Australia', flag: '/assets/img/eng.png' },
             { country: 'England', flag: '/assets/img/aus.png' },
           ],
-          countdown: '8:05:17',
+          countdown: '8:05:17', 
           match: 'Afghanistan tour of South Africa 2024',
         },
         {

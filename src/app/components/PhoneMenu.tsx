@@ -12,7 +12,7 @@ const PhoneMenu = () => {
     setIsOpen(false);
   };
 
-  return (
+  return ( 
     <>
       {/* Side Navigation */}
       <div
