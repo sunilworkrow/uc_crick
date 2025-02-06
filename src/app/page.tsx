@@ -131,7 +131,7 @@ export default async function Home() {
                           </div>
                         </div>
                         <div className="flex items-center space-x-2">
-                          <span className="text-[13px] font-medium">BAN</span>
+                          <span className="text-[13px] font-medium">{items.teama.short_name}</span>
                           <span className="flex items-center bg-[#FAFFFC] border-[1px] border-[#0B773C] rounded-full text-[#0B773C] pr-2">
                             <span className="">
                               <svg
@@ -149,7 +149,8 @@ export default async function Home() {
                                 />
                               </svg>
                             </span>
-                            41
+                            <span className={"oddback"+items.match_id}>41</span>
+                            
                           </span>
                           <span className="flex items-center bg-[#FFF7F7] border-[1px] border-[#A70B0B]  rounded-full text-[#A70B0B] pr-2">
                             <span className="">
@@ -168,7 +169,7 @@ export default async function Home() {
                                 />
                               </svg>
                             </span>
-                            45
+                            <span className={"oddlay"+items.match_id}>45</span>
                           </span>
                         </div>
                       </div>

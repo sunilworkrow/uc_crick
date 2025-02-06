@@ -1,70 +1,12 @@
-// "use client";
-// import React, { useEffect, useState } from "react";
 
-// const ChatComponent: React.FC = () => {
-//   const [messages, setMessages] = useState<any>({});
-//   const [message, setMessage] = useState<string>("");
-//   const [ws, setWs] = useState<WebSocket | null>(null);
-
-//   useEffect(() => {
-//     const socket = new WebSocket(
-//       "ws://webhook.entitysport.com:8087/connect?token=35f1701edeebeabc332e2a1825a022e7"
-//     );
-
-//     socket.onmessage = (event) => {
-//       const newMessage = event.data;
-//       console.log("Received:", JSON.parse(newMessage).response);
-//       // setMessages((prevMessages) => [...prevMessages, newMessage]);
-//       const parsedMessage = JSON.parse(newMessage).response;
-//       // setMessages((prevMessages) => [...prevMessages, newMessage]);
-//       setMessages((prevMessages) => JSON.parse(newMessage));
-
-//     };
-
-//     socket.onopen = () => {
-//       console.log("WebSocket Connected");
-//     };
-
-//     socket.onclose = () => {
-//       console.log("WebSocket Disconnected");
-//     };
-
-//     socket.onerror = (error) => {
-//       console.error("WebSocket Error:", error);
-//     };
-
-//     setWs(socket);
-
-//     return () => {
-//       socket.close();
-//     };
-//   }, []);
-
-//   const matchOdds = JSON.stringify(messages?.response?.live_odds);
-//   const matchScore = JSON.stringify(messages?.response?.live?.live_score);
-//   const matchStatus = JSON.stringify(messages?.response?.live?.status_note);
-//   const matchBattingTeam = JSON.stringify(
-//     messages?.response?.live?.live_inning.batting_team_id
-//   );
-
-//   return (
-//     <div>
-//       <p>{matchOdds}</p>
-//       <p>{matchScore}</p>
-//       <p>{matchStatus}</p>
-//       <p>{matchBattingTeam}</p>
-//     </div>
-//   );
-// };
-
-// export default ChatComponent;
 
 "use client";
 import React, { Component } from "react";
 
 interface MatchData {
   matchId: string;
-  matchOdds: string;
+  matchOddsback: number;
+  matchOddslay : number;
   matchRuns: string;
   matchOvers: string;
   matchWikets: string;
@@ -80,7 +22,8 @@ class MatchWebSocket extends Component<{}, MatchData> {
     super(props);
     this.state = {
       matchId: "",
-      matchOdds: "",
+      matchOddsback: 0,
+      matchOddslay: 0,
       matchRuns: "",
       matchOvers: "",
       matchWikets: "",
@@ -103,13 +46,13 @@ class MatchWebSocket extends Component<{}, MatchData> {
       console.log('11',JSON.stringify(data?.live?.live_inning?.batting_team_id));
       console.log(JSON.stringify(data?.live?.live_score));
       this.setState({
-        matchId: JSON.parse(JSON.stringify(data?.match_id)),
-        matchOdds: JSON.stringify(data?.live_odds),
-        aa: data,
-        matchBattingTeam: JSON.stringify(data?.live?.live_inning?.batting_team_id),
-        matchRuns: JSON.stringify(data?.live?.live_score?.runs),
-        matchOvers: JSON.stringify(data?.live?.live_score?.overs),
-        matchWikets: JSON.stringify(data?.live?.live_score?.wickets),
+        matchId: data?.match_id,
+        matchOddsback: data?.live_odds?.matchodds?.teama.back  ? data.live_odds.matchodds.teama.back : 0,
+        matchOddslay: data?.live_odds?.matchodds?.teama.lay  ? data.live_odds.matchodds.teama.lay : 0,
+        matchBattingTeam: data?.live?.live_inning?.batting_team_id,
+        matchRuns: data?.live?.live_score?.runs,
+        matchOvers: data?.live?.live_score?.overs,
+        matchWikets: data?.live?.live_score?.wickets,
         matchStatus: JSON.stringify(data?.live?.status_note),
       });
 
@@ -153,9 +96,21 @@ class MatchWebSocket extends Component<{}, MatchData> {
     });
 
     const statuselements = document.querySelectorAll(`.statusNote${this.state.matchId}`); // Select elements with class `match-info`
-    console.log("st2-",statuselements);
+    
     statuselements.forEach((element) => {
       element.innerHTML = ` <p>${JSON.parse(this.state.matchStatus)}</p>`;
+    });
+
+    const oddbackelements = document.querySelectorAll(`.oddback${this.state.matchId}`); // Select elements with class `match-info`
+    
+    oddbackelements.forEach((element) => {
+      element.innerHTML = ` <p>${this.state.matchOddsback}</p>`;
+    });
+
+    const oddlayelements = document.querySelectorAll(`.oddlay${this.state.matchId}`); // Select elements with class `match-info`
+    
+    oddlayelements.forEach((element) => {
+      element.innerHTML = ` <p>${this.state.matchOddslay}</p>`;
     });
   };
 
