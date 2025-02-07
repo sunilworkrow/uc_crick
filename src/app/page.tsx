@@ -45,15 +45,20 @@ interface MatchItem {
   date_start_ist: string;
 }
 
-interface PageProps {
-  params: {
-    matchType:  "live" | "upcoming" | "result";
-  };
-}
+// interface PageProps {
+//   params: {
+//     matchType:  "live" | "upcoming" | "result";
+//   };
+// }
+type Params = Promise<{ matchType: string }>
 
-export default async function Home({params}: PageProps) {
 
-  const { matchType } = await params;
+
+export default async function Home(props: { params: Params }) {
+
+  // const { matchType } = await params;
+  const params = await props.params;
+  const matchType = params.matchType;
   if (matchType && !["live", "upcoming", "result"].includes(matchType)) {
     notFound();
   }
