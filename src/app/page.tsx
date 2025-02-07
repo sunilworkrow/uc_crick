@@ -62,7 +62,7 @@ export default async function Home(props: { params: Params }) {
   if (matchType && !["live", "upcoming", "result"].includes(matchType)) {
     notFound();
   }
-  // if (
+  // if ( 
   //   params.matchType &&
   //   !["live", "upcoming", "result"].includes(params.matchType)
   // ) {
