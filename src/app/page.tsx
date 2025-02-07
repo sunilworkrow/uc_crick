@@ -100,7 +100,7 @@ export default async function Home(props: { params: Params }) {
             src="/assets/img/home.png"
             className="w-[100%]"
             alt=""
-            width={100}
+            width={1000}
             height={50}
           />
         </div>
@@ -445,8 +445,7 @@ export default async function Home(props: { params: Params }) {
                             <Image
                               src="/assets/img/arrow.png"
                               className=""
-                              width={30}
-                              height={30}
+                              width={10} height={15}
                               alt=""
                             />
                           </button>
@@ -749,8 +748,8 @@ export default async function Home(props: { params: Params }) {
                           <div className="flex flex-col items-center">
                             <Image
                               src="/assets/img/player-2.png"
-                              width={30}
-                              height={30}
+                              width={40}
+                              height={40}
                               alt=""
                             />
 
@@ -780,8 +779,8 @@ export default async function Home(props: { params: Params }) {
                             <Image
                               src="/assets/img/arrow.png"
                               className=""
-                              width={30}
-                              height={30}
+                              width={10}
+                              height={15}
                               alt=""
                             />
                           </button>
@@ -1092,8 +1091,8 @@ export default async function Home(props: { params: Params }) {
                             <Image
                               src="/assets/img/arrow.png"
                               className=""
-                              width={30}
-                              height={30}
+                              width={10}
+                              height={15}
                               alt=""
                             />
                           </button>
@@ -1418,8 +1417,8 @@ export default async function Home(props: { params: Params }) {
                             <Image
                               src="/assets/img/arrow.png"
                               className=""
-                              width={30}
-                              height={30}
+                              width={10}
+                              height={15}
                               alt=""
                             />
                           </button>
@@ -1848,8 +1847,8 @@ export default async function Home(props: { params: Params }) {
                             <Image
                               src="/assets/img/arrow.png"
                               className=""
-                              width={30}
-                              height={30}
+                              width={10}
+                              height={15}
                               alt=""
                             />
                           </button>
@@ -2192,8 +2191,8 @@ export default async function Home(props: { params: Params }) {
                             <Image
                               src="/assets/img/arrow.png"
                               className=""
-                              width={30}
-                              height={30}
+                              width={10}
+                              height={15}
                               alt=""
                             />
                           </button>
@@ -2512,8 +2511,8 @@ export default async function Home(props: { params: Params }) {
                             <Image
                               src="/assets/img/arrow.png"
                               className=""
-                              width={30}
-                              height={30}
+                              width={10}
+                              height={15}
                               alt=""
                             />
                           </button>
@@ -2839,8 +2838,8 @@ export default async function Home(props: { params: Params }) {
                             <Image
                               src="/assets/img/arrow.png"
                               className=""
-                              width={30}
-                              height={30}
+                              width={10}
+                              height={15}
                               alt=""
                             />
                           </button>
@@ -3020,8 +3019,8 @@ export default async function Home(props: { params: Params }) {
                       <div className="col-span-6 ">
                         <Image
                           src="/assets/img/team-1.png"
-                          width={30}
-                          height={30}
+                          width={300}
+                          height={300}
                           alt="Main news"
                           className="rounded-lg w-full h-48 object-cover mb-3"
                         />
@@ -3107,8 +3106,8 @@ export default async function Home(props: { params: Params }) {
                           <div className="flex gap-3 my-5">
                             <Image
                               src="/assets/img/flag/p-1.png"
-                              width={30}
-                              height={30}
+                              width={90}
+                              height={90}
                               alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
@@ -3167,8 +3166,8 @@ export default async function Home(props: { params: Params }) {
                           <div className="flex gap-3 my-5">
                             <Image
                               src="/assets/img/flag/p-2.png"
-                              width={30}
-                              height={30}
+                              width={90}
+                              height={90}
                               alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
@@ -3227,8 +3226,8 @@ export default async function Home(props: { params: Params }) {
                           <div className="flex gap-3 my-5">
                             <Image
                               src="/assets/img/flag/p-3.png"
-                              width={30}
-                              height={30}
+                              width={90}
+                              height={90}
                               alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
@@ -3287,8 +3286,8 @@ export default async function Home(props: { params: Params }) {
                           <div className="flex gap-3 my-5">
                             <Image
                               src="/assets/img/flag/p-1.png"
-                              width={30}
-                              height={30}
+                              width={90}
+                              height={90}
                               alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
@@ -3347,8 +3346,8 @@ export default async function Home(props: { params: Params }) {
                           <div className="flex gap-3 my-5">
                             <Image
                               src="/assets/img/flag/p-2.png"
-                              width={30}
-                              height={30}
+                              width={90}
+                              height={90}
                               alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
@@ -3407,8 +3406,8 @@ export default async function Home(props: { params: Params }) {
                           <div className="flex gap-3 my-5">
                             <Image
                               src="/assets/img/flag/p-3.png"
-                              width={30}
-                              height={30}
+                              width={90}
+                              height={90}
                               alt="News thumbnail"
                               className="rounded-lg h-[90px]"
                             />
@@ -5846,8 +5845,8 @@ export default async function Home(props: { params: Params }) {
                     <Image
                       src="/assets/img/home/trofi.png"
                       className="h-[75px]"
-                      width={30}
-                      height={30}
+                      width={75}
+                      height={75}
                       alt=""
                     />
                   </div>
@@ -5894,8 +5893,8 @@ export default async function Home(props: { params: Params }) {
                     <div>
                       <Image
                         src="/assets/img/1.png"
-                        width={30}
-                        height={30}
+                        width={20}
+                        height={20}
                         alt=""
                       />
                     </div>
@@ -5909,8 +5908,8 @@ export default async function Home(props: { params: Params }) {
                     <div>
                       <Image
                         src="/assets/img/2.png"
-                        width={30}
-                        height={30}
+                        width={20}
+                        height={20}
                         alt=""
                       />
                     </div>
@@ -5924,8 +5923,8 @@ export default async function Home(props: { params: Params }) {
                     <div>
                       <Image
                         src="/assets/img/3.png"
-                        width={30}
-                        height={30}
+                        width={20}
+                        height={20}
                         alt=""
                       />
                     </div>
@@ -5939,8 +5938,8 @@ export default async function Home(props: { params: Params }) {
                     <div>
                       <Image
                         src="/assets/img/4.png"
-                        width={30}
-                        height={30}
+                        width={20}
+                        height={20}
                         alt=""
                       />
                     </div>
@@ -5954,8 +5953,8 @@ export default async function Home(props: { params: Params }) {
                     <div>
                       <Image
                         src="/assets/img/5.png"
-                        width={30}
-                        height={30}
+                        width={20}
+                        height={20}
                         alt=""
                       />
                     </div>
@@ -5969,8 +5968,8 @@ export default async function Home(props: { params: Params }) {
                     <div>
                       <Image
                         src="/assets/img/6.png"
-                        width={30}
-                        height={30}
+                        width={20}
+                        height={20}
                         alt=""
                       />
                     </div>
@@ -5984,8 +5983,8 @@ export default async function Home(props: { params: Params }) {
                     <div>
                       <Image
                         src="/assets/img/7.png"
-                        width={30}
-                        height={30}
+                        width={20}
+                        height={20}
                         alt=""
                       />
                     </div>
@@ -5999,8 +5998,8 @@ export default async function Home(props: { params: Params }) {
                     <div>
                       <Image
                         src="/assets/img/8.png"
-                        width={30}
-                        height={30}
+                        width={20}
+                        height={20}
                         alt=""
                       />
                     </div>
@@ -6034,8 +6033,8 @@ export default async function Home(props: { params: Params }) {
                       <Image
                         src="/assets/img/flag/search.png"
                         className="h-[14px]"
-                        width={30}
-                        height={30}
+                        width={15}
+                        height={15}
                         alt=""
                       />
                     </div>
@@ -6066,8 +6065,8 @@ export default async function Home(props: { params: Params }) {
                         <Image
                           src={country.flag}
                           className="mr-3"
-                          width={30}
-                          height={30}
+                          width={20}
+                          height={20}
                           alt={`${country.name} Flag`}
                         />
                         {country.name}
@@ -6076,8 +6075,8 @@ export default async function Home(props: { params: Params }) {
                         <Image
                           src="/assets/img/arrow.png"
                           className="h-[7px]"
-                          width={30}
-                          height={30}
+                          width={10}
+                          height={15}
                           alt="Arrow"
                         />
                       </span>
@@ -6139,8 +6138,8 @@ export default async function Home(props: { params: Params }) {
                     <div className=" flex items-center space-x-2 justify-center">
                       <Image
                         src="/assets/img/flag/17.png"
-                        width={30}
-                        height={30}
+                        width={20}
+                        height={20}
                         alt=""
                       />
                       <p className="font-semibold">India</p>
@@ -6160,8 +6159,8 @@ export default async function Home(props: { params: Params }) {
                     <div className=" flex items-center space-x-2 justify-center">
                       <Image
                         src="/assets/img/flag/2.png"
-                        width={30}
-                        height={30}
+                        width={20}
+                        height={20}
                         alt=""
                       />
                       <p className="font-semibold">Australia</p>
@@ -6181,8 +6180,8 @@ export default async function Home(props: { params: Params }) {
                     <div className=" flex items-center space-x-2 justify-center">
                       <Image
                         src="/assets/img/flag/16.png"
-                        width={30}
-                        height={30}
+                        width={20}
+                        height={20}
                         alt=""
                       />
                       <p className="font-semibold">Pakistan</p>
@@ -6202,8 +6201,8 @@ export default async function Home(props: { params: Params }) {
                     <div className=" flex items-center space-x-2 justify-center">
                       <Image
                         src="/assets/img/flag/11.png"
-                        width={30}
-                        height={30}
+                        width={20}
+                        height={20}
                         alt=""
                       />
                       <p className="font-semibold">South Africa</p>
@@ -6223,8 +6222,8 @@ export default async function Home(props: { params: Params }) {
                     <div className=" flex items-center space-x-2 justify-center">
                       <Image
                         src="/assets/img/flag/12.png"
-                        width={30}
-                        height={30}
+                        width={20}
+                        height={20}
                         alt=""
                       />
                       <p className="font-semibold">New Zealand</p>
@@ -6245,8 +6244,8 @@ export default async function Home(props: { params: Params }) {
                     <div className=" flex items-center space-x-2 justify-center">
                       <Image
                         src="/assets/img/flag/13.png"
-                        width={30}
-                        height={30}
+                        width={20}
+                        height={20}
                         alt=""
                       />
                       <p className="font-semibold">Sri Lanka</p>
@@ -6266,8 +6265,8 @@ export default async function Home(props: { params: Params }) {
                     <div className=" flex items-center space-x-2 justify-center">
                       <Image
                         src="/assets/img/flag/10.png"
-                        width={30}
-                        height={30}
+                        width={20}
+                        height={20}
                         alt=""
                       />
                       <p className="font-semibold">England</p>
@@ -6287,8 +6286,8 @@ export default async function Home(props: { params: Params }) {
                     <div className=" flex items-center space-x-2 justify-center">
                       <Image
                         src="/assets/img/flag/17.png"
-                        width={30}
-                        height={30}
+                        width={20}
+                        height={20}
                         alt=""
                       />
                       <p className="font-semibold">Afghanistan</p>
@@ -6308,8 +6307,8 @@ export default async function Home(props: { params: Params }) {
                     <div className=" flex items-center space-x-2 justify-center">
                       <Image
                         src="/assets/img/flag/13.png"
-                        width={30}
-                        height={30}
+                        width={20}
+                        height={20}
                         alt=""
                       />
                       <p className="font-semibold">Bangladesh</p>
@@ -6329,8 +6328,8 @@ export default async function Home(props: { params: Params }) {
                     <div className=" flex items-center space-x-2 justify-center">
                       <Image
                         src="/assets/img/flag/14.png"
-                        width={30}
-                        height={30}
+                        width={20}
+                        height={20}
                         alt=""
                         className="rounded-full"
                       />
@@ -6554,8 +6553,8 @@ export default async function Home(props: { params: Params }) {
                       <Image
                         src="/assets/img/arrow.png"
                         className=""
-                        width={30}
-                        height={30}
+                        width={10}
+                        height={15}
                         alt=""
                       />
                     </button>
@@ -6699,8 +6698,8 @@ export default async function Home(props: { params: Params }) {
                 <div className="col-span-5">
                   <Image
                     src="/assets/img/home/img-7.png"
-                    width={30}
-                    height={30}
+                    width={186}
+                    height={186}
                     alt="Main news"
                     className="rounded-lg w-full object-cover mb-4 md:mb-0 h-[186px]"
                   />
@@ -6780,8 +6779,8 @@ export default async function Home(props: { params: Params }) {
                 <div className="flex gap-3 py-4">
                   <Image
                     src="/assets/img/img-6.png"
-                    width={30}
-                    height={30}
+                    width={100}
+                    height={100}
                     alt="News thumbnail"
                     className="rounded-lg lg:h-[103px] h-[80px] md:h-[90px]"
                   />
@@ -6841,8 +6840,8 @@ export default async function Home(props: { params: Params }) {
                 <div className="flex gap-3 py-4">
                   <Image
                     src="/assets/img/img-7.png"
-                    width={30}
-                    height={30}
+                    width={100}
+                    height={100}
                     alt="News thumbnail"
                     className="rounded-lg lg:h-[103px] h-[80px] md:h-[90px]"
                   />
@@ -6902,8 +6901,8 @@ export default async function Home(props: { params: Params }) {
                 <div className="flex gap-3 py-4">
                   <Image
                     src="/assets/img/img-8.png"
-                    width={30}
-                    height={30}
+                    width={100}
+                    height={100}
                     alt="News thumbnail"
                     className="rounded-lg lg:h-[103px] h-[80px] md:h-[90px]"
                   />

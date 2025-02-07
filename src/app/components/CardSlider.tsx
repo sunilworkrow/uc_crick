@@ -116,7 +116,7 @@ export default function Slider() {
             style={{ minWidth: '20%' }}
             onClick={() => openModal(index)}
           >
-            <Image src={image.src} alt={image.title} className="rounded-lg w-full" width={30} height={30} />
+            <Image src={image.src} alt={image.title} className="rounded-lg w-full" width={200} height={30} />
             <p className="absolute bottom-[12px] text-white font-semibold text-center px-2 text-[14px] md:text-[13px]">{image.title}</p>
           </div>
         ))}

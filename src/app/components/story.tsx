@@ -79,6 +79,7 @@ const StorySlider = () => {
                     src={stories[currentStory].image}
                     alt="Story"
                     className="absolute w-full h-full object-cover"
+                    width={200} height={30}
                 />
                 <div className="absolute bottom-10 px-6 text-white text-center">
                     <h1 className="text-2xl font-bold">{stories[currentStory].title}</h1>
