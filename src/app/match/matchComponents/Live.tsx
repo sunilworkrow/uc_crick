@@ -7,33 +7,32 @@ import Image from "next/image";
 export default function Live() {
 
   return (
-    
 
     <section className="lg:w-[1000px] mx-auto md:mb-0 mb-4 px-2 lg:px-0">
     <div id="tabs" className="my-4">
       <div className="flex text-1xl space-x-8 p-2 bg-[#ffffff] rounded-lg overflow-auto">
-        <Link href="/match-moreinfo">
+        <Link href="/match/live/more-info">
           <button
             className="font-medium py-2 px-3 whitespace-nowrap"
           >
             More Info
           </button>
         </Link>
-        <Link href="/match-live-now">
+        <Link href="/match/live/live">
           <button
             className="font-medium py-2 px-3 whitespace-nowrap bg-[#1A80F8] text-white rounded-md"
           >
             Live
           </button>
         </Link>
-        <Link href="/match-scorecard">
+        <Link href="/match/live/scorecard">
           <button
             className="font-medium py-2 px-3 whitespace-nowrap"
           >
             Scorecard
           </button>
         </Link>
-        <Link href="/match-squad">
+        <Link href="/match/live/squad">
           <button
             className="font-medium py-2 px-3 whitespace-nowrap"
           >
@@ -41,14 +40,14 @@ export default function Live() {
           </button>
         </Link>
 
-        <Link href="/matchpoints">
+        <Link href="/match/live/points-table">
           <button
             className="font-medium py-2 px-3 whitespace-nowrap"
           >
             Points Table
           </button>
         </Link>
-        <Link href="/live-stats/most-runs-stats">
+        <Link href="/match/live/stats">
           <button
             className="font-medium py-2 px-3 whitespace-nowrap"
           >

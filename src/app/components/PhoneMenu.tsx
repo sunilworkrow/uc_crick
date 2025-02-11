@@ -42,7 +42,7 @@ const PhoneMenu = () => {
       <div className="md:hidden sticky bottom-0 bg-[#0e2149] text-white text-1xl py-2 flex justify-around items-center">
         <a
           href="#"
-          className="block flex flex-col items-center py-[4px] px-[9px] bg-[#ffffffdb] text-black rounded-lg font-semibold"
+          className=" flex flex-col items-center py-[4px] px-[9px] bg-[#ffffffdb] text-black rounded-lg font-semibold"
         >
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
@@ -55,7 +55,7 @@ const PhoneMenu = () => {
           </span>
           <span>Home</span>
         </a>
-        <a href="#" className="block flex flex-col items-center">
+        <a href="#" className=" flex flex-col items-center">
           <span>
             <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <g id="schedule-icon" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" fillOpacity="0.87">
@@ -70,7 +70,7 @@ const PhoneMenu = () => {
           </span>
           Fixtures
         </a>
-        <a href="#" className="block flex flex-col items-center">
+        <a href="#" className="flex flex-col items-center">
           <span>
             <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <g id="cup-icon" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
@@ -85,7 +85,7 @@ const PhoneMenu = () => {
           </span>
           Series
         </a>
-        <a href="#" className="block flex flex-col items-center">
+        <a href="#" className=" flex flex-col items-center">
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
               <path
@@ -101,7 +101,7 @@ const PhoneMenu = () => {
         <a
           href="#"
           onClick={openNav}
-          className="block flex flex-col items-center"
+          className=" flex flex-col items-center"
         >
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
