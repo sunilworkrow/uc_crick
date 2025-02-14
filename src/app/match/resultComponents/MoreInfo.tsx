@@ -4,8 +4,7 @@ import Link from 'next/link';
 import React, { useState } from 'react'
 import Image from "next/image";
 
-export default function Info() {
-
+export default function MoreInfo() {
 
 
     const [openHeading, setOpenHeading] = useState<number | null>(null);
@@ -15,123 +14,104 @@ export default function Info() {
     };
 
 
-  return (
-    <section className="lg:w-[1000px] mx-auto md:mb-0 mb-4 px-2 lg:px-0">
+    return (
+        <>
+            <section className="lg:w-[1000px] mx-auto md:mb-0 mb-4 px-2 lg:px-0">
                 <div id="tabs" className="my-4">
                     <div className="flex text-1xl space-x-8 p-2 bg-[#ffffff] rounded-lg overflow-auto">
-                        <Link href="/match/scheduled/info">
+                        <Link href="/match/result/more-info">
                             <button
                                 className="font-medium py-2 px-3 whitespace-nowrap bg-[#1A80F8] text-white rounded-md"
                             >
                                 More Info
                             </button>
                         </Link>
-                        <Link href="/match/scheduled/live">
+                        <Link href="/match/result/live">
                             <button
-                               
+
                                 className="font-medium py-2 px-3 whitespace-nowrap"
                             >
                                 Live
                             </button>
                         </Link>
-                        <Link href="/match/scheduled/scorecard">
+                        <Link href="/match/result/scorecard">
                             <button
-                               
+
                                 className="font-medium py-2 px-3 whitespace-nowrap"
                             >
                                 Scorecard
                             </button>
                         </Link>
-                        <Link href="/match/scheduled/squad">
+                        <Link href="/match/result/squad">
                             <button
-                               
+
                                 className="font-medium py-2 px-3 whitespace-nowrap"
                             >
-                                Squads
+                                Squad
                             </button>
                         </Link>
-                        <Link href="/match/scheduled/points-table">
+                        <Link href="/match/result/points-table">
                             <button
-                                
+
                                 className="font-medium py-2 px-3 whitespace-nowrap"
                             >
                                 Points Table
                             </button>
                         </Link>
-                        <Link href="/match/scheduled/stats">
+                        <Link href="/match/result/stats">
                             <button
-                               
+
                                 className="font-medium py-2 px-3 whitespace-nowrap"
                             >
                                 Stats
                             </button>
                         </Link>
-                        <Link href="/match/scheduled/fantasy-tips">
-                            <button
-                             
-                                className="font-medium py-2 px-3 whitespace-nowrap"
-                            >
-                                Fantasy Tips
-                            </button>
-                        </Link>
                     </div>
                 </div>
-                
+
                 <div id="tab-content">
-                    <div id="info">
+                    {/*------------------------  More Info Seaction Start ---------------------------*/}
+                    <div id="info" className="tab-content">
                         <div className="md:grid grid-cols-12 gap-4">
                             {/* Match Detail */}
                             <div className="lg:col-span-8 md:col-span-7">
                                 <div className="rounded-lg bg-white">
                                     <div className="p-4">
-                                        <h3 className="text-[15px] font-semibold mb-2 pl-[7px] border-l-[3px] border-[#229ED3]">
-                                            Match Detail
-                                        </h3>
-                                        <div className="border-t border-[#E4E9F0]" />
-                                        {/* Responsive Grid Section */}
-                                        <div className="grid md:gap-6 gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-3 px-2">
-                                            <div>
-                                                <h2 className="text-[15px] font-medium">Series :</h2>
-                                                <p className="font-normal text-[#586577]">
-                                                    Bangladesh tour of India
+                                        <div className="md:flex items-center justify-between">
+                                            <div className="flex gap-4 items-center md:mb-0 mb-[15px]">
+                                                <div>
+                                                    <Image
+                                                        src="/assets/img/vs-img.png"
+                                                        className="md:h-[auto] h-[56px]"
+                                                        width={80} height={80} alt=""
+                                                    />
+                                                </div>
+                                                <div>
+                                                    <p className="text-[16px] text-[#909090] font-medium mb-1">
+                                                        2nd Test
+                                                    </p>
+                                                    <p className="text-[16px] text-[#272B47] font-medium mb-2">
+                                                        Bangladesh tour of India
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div className="md:text-end">
+                                                <p className="text-[14px] mb-1 text-[#272B47] font-medium">
+                                                    <span className="text-[14px] text-[#909090]">Date :</span> 27
+                                                    Sep 2024, Fri, 9:30 AM IST
                                                 </p>
-                                            </div>
-                                            <div>
-                                                <h2 className="text-[15px] font-medium">Date :</h2>
-                                                <p className="font-normal text-[#586577]">
-                                                    27 Sep 2024, Fri, 9:30 AM IST
+                                                <p className="text-[14px] text-[#272B47] font-medium">
+                                                    <span className="text-[14px] text-[#909090]">Toss :</span> IND
+                                                    won the toss &amp; elected to bowl
                                                 </p>
-                                            </div>
-                                            <div>
-                                                <h2 className="text-[15px] font-medium">Stadium :</h2>
-                                                <p className="font-normal text-[#586577]">
-                                                    IND won the toss &amp; elected to bowl
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div className="border-t border-[#E4E9F0]" />
-                                        {/* Responsive Grid Section */}
-                                        <div className="grid md:gap-6 gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-3 px-2">
-                                            <div>
-                                                <h2 className="text-[15px] font-medium">Third Umpire :</h2>
-                                                <p className="font-normal text-[#586577]">Sue Redfern</p>
-                                            </div>
-                                            <div>
-                                                <h2 className="text-[15px] font-medium">On-field Umpire :</h2>
-                                                <p className="font-normal text-[#586577]">
-                                                    Claire Polosak, Lauren Agenbag
-                                                </p>
-                                            </div>
-                                            <div>
-                                                <h2 className="text-[15px] font-medium">Referee :</h2>
-                                                <p className="font-normal text-[#586577]">GS Lakshmi</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div className="rounded-lg bg-[#ffffff] my-4 p-4">
                                     <div>
-                                        <h3 className="text-[15px] font-semibold mb-2 pl-[7px] border-l-[3px] mb-3 border-[#229ED3]">
+                                        <h3 className="text-[15px] font-semibold  pl-[7px] border-l-[3px] mb-3 border-[#229ED3]">
                                             Recent Performance{" "}
                                             <span className="text-[#909090]"> (Last 5 match) </span>
                                         </h3>
@@ -145,7 +125,7 @@ export default function Info() {
                                                                 <Image
                                                                     src="/assets/img/flag/17.png"
                                                                     className="h-[25px]"
-                                                                    width={25} height={25} alt="india"
+                                                                    width={25} height={20} alt="india"
                                                                 />
                                                             </div>
                                                             <h3 className="text-1xl font-medium">India</h3>
@@ -192,6 +172,7 @@ export default function Info() {
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div className="border-t-[1px] border-[#E4E9F0]" />
                                                 {openHeading === 1 && (
                                                     <div className="md:px-3 open-Performance-data">
@@ -469,9 +450,7 @@ export default function Info() {
                                                                             <p>274/10 &amp; 170/10</p>
                                                                         </div>
                                                                     </Link>
-                                                                    {/* <div class="md:px-4 py-2 font-medium text-center text-[#6A7586]">
-                                          VS
-                                      </div> */}
+
                                                                     <div>
                                                                         <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
                                                                             <div className="flex items-center space-x-1">
@@ -516,9 +495,7 @@ export default function Info() {
                                                                         </div>
                                                                         <p>540/10 &amp; 220/10</p>
                                                                     </div>
-                                                                    {/* <div class="md:px-4 py-2 font-medium text-center text-[#6A7586]">
-                                      VS
-                                  </div> */}
+
                                                                     <div>
                                                                         <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
                                                                             <div className="flex items-center space-x-1">
@@ -563,9 +540,7 @@ export default function Info() {
                                                                         </div>
                                                                         <p>274/10 &amp; 170/10</p>
                                                                     </div>
-                                                                    {/* <div class="md:px-4 py-2 font-medium text-center text-[#6A7586]">
-                                  VS
-                              </div> */}
+
                                                                     <div>
                                                                         <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
                                                                             <div className="flex items-center space-x-1">
@@ -610,9 +585,7 @@ export default function Info() {
                                                                         </div>
                                                                         <p>274/10 &amp; 170/10</p>
                                                                     </div>
-                                                                    {/* <div class="md:px-4 py-2 font-medium text-center text-[#6A7586]">
-                              VS
-                          </div> */}
+
                                                                     <div>
                                                                         <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
                                                                             <div className="flex items-center space-x-1">
@@ -657,9 +630,7 @@ export default function Info() {
                                                                         </div>
                                                                         <p>274/10 &amp; 170/10</p>
                                                                     </div>
-                                                                    {/* <div class="md:px-4 py-2 font-medium text-center text-[#6A7586]">
-                          VS
-                      </div> */}
+
                                                                     <div>
                                                                         <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
                                                                             <div className="flex items-center space-x-1">
@@ -704,9 +675,7 @@ export default function Info() {
                                                                         </div>
                                                                         <p>274/10 &amp; 170/10</p>
                                                                     </div>
-                                                                    {/* <div class="md:px-4 py-2 font-medium text-center text-[#6A7586]">
-                      VS
-                  </div> */}
+
                                                                     <div>
                                                                         <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
                                                                             <div className="flex items-center space-x-1">
@@ -811,33 +780,37 @@ export default function Info() {
                                                                 <tbody>
                                                                     <tr className="whitespace-nowrap bg-white border-b dark:bg-gray-800 dark:border-gray-700 text-[13px]">
                                                                         <td className="px-4 pl-0 py-1 ">
-                                                                            <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
-                                                                                <div className="flex items-center space-x-1">
-                                                                                    <Image
-                                                                                        src="/assets/img/flag/18.png"
-                                                                                        className="h-[24px] rounded-full"
-                                                                                        width={25} height={25} alt="aus"
-                                                                                    />
-                                                                                    <span className="text-[#909090]">AUS</span>
+                                                                            <Link href="#">
+                                                                                <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
+                                                                                    <div className="flex items-center space-x-1">
+                                                                                        <Image
+                                                                                            src="/assets/img/flag/18.png"
+                                                                                            className="h-[24px] rounded-full"
+                                                                                            width={25} height={25} alt="aus"
+                                                                                        />
+                                                                                        <span className="text-[#909090]">AUS</span>
+                                                                                    </div>
+                                                                                    <p>274/10 &amp; 170/10</p>
                                                                                 </div>
-                                                                                <p>274/10 &amp; 170/10</p>
-                                                                            </div>
+                                                                            </Link>
                                                                         </td>
                                                                         <td className="md:px-4 py-2 font-medium text-[#6A7586]">
                                                                             VS
                                                                         </td>
                                                                         <td className="md:px-4 py-2">
-                                                                            <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
-                                                                                <p>274/10 &amp; 170/10</p>
-                                                                                <div className="flex items-center space-x-1">
-                                                                                    <span className="text-[#909090]">IND</span>
-                                                                                    <Image
-                                                                                        src="/assets/img/flag/17.png"
-                                                                                        className="h-[24px]"
-                                                                                        width={25} height={25} alt="ind"
-                                                                                    />
+                                                                            <Link href="#">
+                                                                                <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
+                                                                                    <p>274/10 &amp; 170/10</p>
+                                                                                    <div className="flex items-center space-x-1">
+                                                                                        <span className="text-[#909090]">IND</span>
+                                                                                        <Image
+                                                                                            src="/assets/img/flag/17.png"
+                                                                                            className="h-[24px]"
+                                                                                            width={25} height={25} alt="ind"
+                                                                                        />
+                                                                                    </div>
                                                                                 </div>
-                                                                            </div>
+                                                                            </Link>
                                                                         </td>
                                                                         <td className="md:px-4 py-2">
                                                                             <div className="text-right leading-6">
@@ -857,33 +830,37 @@ export default function Info() {
                                                                     </tr>
                                                                     <tr className="whitespace-nowrap bg-white border-b dark:bg-gray-800 dark:border-gray-700 text-[13px]">
                                                                         <td className="px-4 pl-0 py-1">
-                                                                            <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full	">
-                                                                                <div className="flex items-center space-x-1">
-                                                                                    <Image
-                                                                                        src="/assets/img/flag/18.png"
-                                                                                        className="h-[24px] rounded-full"
-                                                                                        width={25} height={25} alt="aus"
-                                                                                    />
-                                                                                    <span className="text-[#909090]">AUS</span>
+                                                                            <Link href="#">
+                                                                                <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full	">
+                                                                                    <div className="flex items-center space-x-1">
+                                                                                        <Image
+                                                                                            src="/assets/img/flag/18.png"
+                                                                                            className="h-[24px] rounded-full"
+                                                                                            width={25} height={25} alt="aus"
+                                                                                        />
+                                                                                        <span className="text-[#909090]">AUS</span>
+                                                                                    </div>
+                                                                                    <p className="">540/10 &amp; 220/10</p>
                                                                                 </div>
-                                                                                <p className="">540/10 &amp; 220/10</p>
-                                                                            </div>
+                                                                            </Link>
                                                                         </td>
                                                                         <td className="md:px-4 py-2 font-medium	 text-[#6A7586]">
                                                                             VS
                                                                         </td>
                                                                         <td className="md:px-4 py-2">
-                                                                            <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full	">
-                                                                                <p>140/10 &amp; 420/10</p>
-                                                                                <div className="flex items-center space-x-1">
-                                                                                    <span className="text-[#909090]">IND</span>
-                                                                                    <Image
-                                                                                        src="/assets/img/flag/17.png"
-                                                                                        className="h-[24px]"
-                                                                                        width={25} height={25} alt="aus"
-                                                                                    />
+                                                                            <Link href="#">
+                                                                                <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full	">
+                                                                                    <p>140/10 &amp; 420/10</p>
+                                                                                    <div className="flex items-center space-x-1">
+                                                                                        <span className="text-[#909090]">IND</span>
+                                                                                        <Image
+                                                                                            src="/assets/img/flag/17.png"
+                                                                                            className="h-[24px]"
+                                                                                            width={25} height={25} alt="aus"
+                                                                                        />
+                                                                                    </div>
                                                                                 </div>
-                                                                            </div>
+                                                                            </Link>
                                                                         </td>
                                                                         <td className="md:px-4 py-2">
                                                                             <div className="text-right leading-6">
@@ -903,33 +880,37 @@ export default function Info() {
                                                                     </tr>
                                                                     <tr className="whitespace-nowrap bg-white border-b dark:bg-gray-800 dark:border-gray-700 text-[13px]">
                                                                         <td className="px-4 pl-0 py-1">
-                                                                            <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full	">
-                                                                                <div className="flex items-center space-x-1">
-                                                                                    <Image
-                                                                                        src="/assets/img/flag/19.png"
-                                                                                        className="h-[24px] rounded-full"
-                                                                                        width={25} height={25} alt="pak"
-                                                                                    />
-                                                                                    <span className="text-[#909090]">PAK</span>
+                                                                            <Link href="#">
+                                                                                <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full	">
+                                                                                    <div className="flex items-center space-x-1">
+                                                                                        <Image
+                                                                                            src="/assets/img/flag/19.png"
+                                                                                            className="h-[24px] rounded-full"
+                                                                                            width={25} height={25} alt="pak"
+                                                                                        />
+                                                                                        <span className="text-[#909090]">PAK</span>
+                                                                                    </div>
+                                                                                    <p className="">274/10 &amp; 170/10</p>
                                                                                 </div>
-                                                                                <p className="">274/10 &amp; 170/10</p>
-                                                                            </div>
+                                                                            </Link>
                                                                         </td>
                                                                         <td className="md:px-4 py-2 font-medium	 text-[#6A7586]">
                                                                             VS
                                                                         </td>
                                                                         <td className="md:px-4 py-2">
-                                                                            <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full	">
-                                                                                <p>250/10 &amp; 160/10</p>
-                                                                                <div className="flex items-center space-x-1">
-                                                                                    <span className="text-[#909090]">IND</span>
-                                                                                    <Image
-                                                                                        src="/assets/img/flag/17.png"
-                                                                                        className="h-[24px]"
-                                                                                        width={25} height={25} alt="aus"
-                                                                                    />
+                                                                            <Link href="#">
+                                                                                <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full	">
+                                                                                    <p>250/10 &amp; 160/10</p>
+                                                                                    <div className="flex items-center space-x-1">
+                                                                                        <span className="text-[#909090]">IND</span>
+                                                                                        <Image
+                                                                                            src="/assets/img/flag/17.png"
+                                                                                            className="h-[24px]"
+                                                                                            width={25} height={25} alt="aus"
+                                                                                        />
+                                                                                    </div>
                                                                                 </div>
-                                                                            </div>
+                                                                            </Link>
                                                                         </td>
                                                                         <td className="md:px-4 py-2">
                                                                             <div className="text-right leading-6">
@@ -949,33 +930,37 @@ export default function Info() {
                                                                     </tr>
                                                                     <tr className="whitespace-nowrap bg-white border-b dark:bg-gray-800 dark:border-gray-700 text-[13px]">
                                                                         <td className="px-4 pl-0 py-1">
-                                                                            <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full	">
-                                                                                <div className="flex items-center space-x-1">
-                                                                                    <Image
-                                                                                        src="/assets/img/flag/19.png"
-                                                                                        className="h-[24px] rounded-full"
-                                                                                        width={25} height={25} alt="aus"
-                                                                                    />
-                                                                                    <span className="text-[#909090]">PAK</span>
+                                                                            <Link href="#">
+                                                                                <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full	">
+                                                                                    <div className="flex items-center space-x-1">
+                                                                                        <Image
+                                                                                            src="/assets/img/flag/19.png"
+                                                                                            className="h-[24px] rounded-full"
+                                                                                            width={25} height={25} alt="aus"
+                                                                                        />
+                                                                                        <span className="text-[#909090]">PAK</span>
+                                                                                    </div>
+                                                                                    <p className="">274/10 &amp; 170/10</p>
                                                                                 </div>
-                                                                                <p className="">274/10 &amp; 170/10</p>
-                                                                            </div>
+                                                                            </Link>
                                                                         </td>
                                                                         <td className="md:px-4 py-2 font-medium	 text-[#6A7586]">
                                                                             VS
                                                                         </td>
                                                                         <td className="md:px-4 py-2">
-                                                                            <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full	">
-                                                                                <p>280/10 &amp; 190/10</p>
-                                                                                <div className="flex items-center space-x-1">
-                                                                                    <span className="text-[#909090]">IND</span>
-                                                                                    <Image
-                                                                                        src="/assets/img/flag/17.png"
-                                                                                        className="h-[24px]"
-                                                                                        width={25} height={25} alt="aus"
-                                                                                    />
+                                                                            <Link href="#">
+                                                                                <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full	">
+                                                                                    <p>280/10 &amp; 190/10</p>
+                                                                                    <div className="flex items-center space-x-1">
+                                                                                        <span className="text-[#909090]">IND</span>
+                                                                                        <Image
+                                                                                            src="/assets/img/flag/17.png"
+                                                                                            className="h-[24px]"
+                                                                                            width={25} height={25} alt="aus"
+                                                                                        />
+                                                                                    </div>
                                                                                 </div>
-                                                                            </div>
+                                                                            </Link>
                                                                         </td>
                                                                         <td className="md:px-4 py-2">
                                                                             <div className="text-right leading-6">
@@ -995,33 +980,37 @@ export default function Info() {
                                                                     </tr>
                                                                     <tr className="whitespace-nowrap bg-white border-b dark:bg-gray-800 dark:border-gray-700 text-[13px]">
                                                                         <td className="px-4 pl-0 py-1">
-                                                                            <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full	">
-                                                                                <div className="flex items-center space-x-1">
-                                                                                    <Image
-                                                                                        src="/assets/img/flag/18.png"
-                                                                                        className="h-[24px] rounded-full"
-                                                                                        width={25} height={25} alt="aus"
-                                                                                    />
-                                                                                    <span className="text-[#909090]">PAK</span>
+                                                                            <Link href="#">
+                                                                                <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full	">
+                                                                                    <div className="flex items-center space-x-1">
+                                                                                        <Image
+                                                                                            src="/assets/img/flag/18.png"
+                                                                                            className="h-[24px] rounded-full"
+                                                                                            width={25} height={25} alt="aus"
+                                                                                        />
+                                                                                        <span className="text-[#909090]">PAK</span>
+                                                                                    </div>
+                                                                                    <p className="">174/10 &amp; 160/10</p>
                                                                                 </div>
-                                                                                <p className="">174/10 &amp; 160/10</p>
-                                                                            </div>
+                                                                            </Link>
                                                                         </td>
                                                                         <td className="md:px-4 py-2 font-medium	 text-[#6A7586]">
                                                                             VS
                                                                         </td>
                                                                         <td className="md:px-4 py-2">
-                                                                            <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full	">
-                                                                                <p>380/10 &amp; 250/10</p>
-                                                                                <div className="flex items-center space-x-1">
-                                                                                    <span className="text-[#909090]">IND</span>
-                                                                                    <Image
-                                                                                        src="/assets/img/flag/17.png"
-                                                                                        className="h-[24px]"
-                                                                                        width={25} height={25} alt="aus"
-                                                                                    />
+                                                                            <Link href="#">
+                                                                                <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full	">
+                                                                                    <p>380/10 &amp; 250/10</p>
+                                                                                    <div className="flex items-center space-x-1">
+                                                                                        <span className="text-[#909090]">IND</span>
+                                                                                        <Image
+                                                                                            src="/assets/img/flag/17.png"
+                                                                                            className="h-[24px]"
+                                                                                            width={25} height={25} alt="aus"
+                                                                                        />
+                                                                                    </div>
                                                                                 </div>
-                                                                            </div>
+                                                                            </Link>
                                                                         </td>
                                                                         <td className="md:px-4 py-2">
                                                                             <div className="text-right leading-6">
@@ -1046,20 +1035,20 @@ export default function Info() {
                                                         <div className="lg:hidden block">
                                                             <div className="flex justify-between items-center py-4 px-2 bg-[#f7faff] rounded-lg my-3 border-b-[1px] border-[#E4E9F0]">
                                                                 <div className="">
-                                                                    <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-3">
-                                                                        <div className="flex items-center space-x-1">
-                                                                            <Image
-                                                                                src="/assets/img/flag/18.png"
-                                                                                className="h-[18px] rounded-full"
-                                                                                width={25} height={25} alt="aus"
-                                                                            />
-                                                                            <span className="text-[#909090]">AUS</span>
+                                                                    <Link href="#">
+                                                                        <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-3">
+                                                                            <div className="flex items-center space-x-1">
+                                                                                <Image
+                                                                                    src="/assets/img/flag/18.png"
+                                                                                    className="h-[18px] rounded-full"
+                                                                                    width={25} height={25} alt="aus"
+                                                                                />
+                                                                                <span className="text-[#909090]">AUS</span>
+                                                                            </div>
+                                                                            <p>274/10 &amp; 170/10</p>
                                                                         </div>
-                                                                        <p>274/10 &amp; 170/10</p>
-                                                                    </div>
-                                                                    {/* <div class="md:px-4 py-2 font-medium text-center text-[#6A7586]">
-                                          VS
-                                      </div> */}
+                                                                    </Link>
+
                                                                     <div>
                                                                         <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
                                                                             <div className="flex items-center space-x-1">
@@ -1104,9 +1093,7 @@ export default function Info() {
                                                                         </div>
                                                                         <p>540/10 &amp; 220/10</p>
                                                                     </div>
-                                                                    {/* <div class="md:px-4 py-2 font-medium text-center text-[#6A7586]">
-                                      VS
-                                  </div> */}
+
                                                                     <div>
                                                                         <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
                                                                             <div className="flex items-center space-x-1">
@@ -1151,9 +1138,7 @@ export default function Info() {
                                                                         </div>
                                                                         <p>274/10 &amp; 170/10</p>
                                                                     </div>
-                                                                    {/* <div class="md:px-4 py-2 font-medium text-center text-[#6A7586]">
-                                  VS
-                              </div> */}
+
                                                                     <div>
                                                                         <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
                                                                             <div className="flex items-center space-x-1">
@@ -1198,9 +1183,7 @@ export default function Info() {
                                                                         </div>
                                                                         <p>274/10 &amp; 170/10</p>
                                                                     </div>
-                                                                    {/* <div class="md:px-4 py-2 font-medium text-center text-[#6A7586]">
-                              VS
-                          </div> */}
+
                                                                     <div>
                                                                         <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
                                                                             <div className="flex items-center space-x-1">
@@ -1245,9 +1228,7 @@ export default function Info() {
                                                                         </div>
                                                                         <p>274/10 &amp; 170/10</p>
                                                                     </div>
-                                                                    {/* <div class="md:px-4 py-2 font-medium text-center text-[#6A7586]">
-                          VS
-                      </div> */}
+
                                                                     <div>
                                                                         <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
                                                                             <div className="flex items-center space-x-1">
@@ -1292,9 +1273,7 @@ export default function Info() {
                                                                         </div>
                                                                         <p>274/10 &amp; 170/10</p>
                                                                     </div>
-                                                                    {/* <div class="md:px-4 py-2 font-medium text-center text-[#6A7586]">
-                      VS
-                  </div> */}
+
                                                                     <div>
                                                                         <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
                                                                             <div className="flex items-center space-x-1">
@@ -1335,9 +1314,10 @@ export default function Info() {
                                         </div>
                                     </div>
                                 </div>
+
                                 <div className="rounded-lg bg-[#ffffff] my-4 p-4">
                                     <div>
-                                        <h3 className="text-1xl font-semibold pl-[7px] border-l-[3px] mb-3 border-[#229ED3]">
+                                        <h3 className="text-1xl font-semibold  pl-[7px] border-l-[3px] mb-3 border-[#229ED3]">
                                             Head To Head (Last 10 matches)
                                         </h3>
                                         <div className="border-t-[1px] border-[#E4E9F0]" />
@@ -1387,13 +1367,13 @@ export default function Info() {
                                         </div>
                                         <div className="border-t-[1px] border-[#E4E9F0]" />
                                         <div className="py-4 flex justify-between items-center">
-                                        <Link href="#">
-                                            <div className="font-medium w-full">
-                                                <p className="mx-2 font-semibold uppercase">BAN</p>
-                                                <p className="mx-2 font-medium uppercase text-[#586577]">
-                                                    150 &amp; 324
-                                                </p>
-                                            </div>
+                                            <Link href="#">
+                                                <div className="font-medium w-full">
+                                                    <p className="mx-2 font-semibold uppercase">BAN</p>
+                                                    <p className="mx-2 font-medium uppercase text-[#586577]">
+                                                        150 &amp; 324
+                                                    </p>
+                                                </div>
                                             </Link>
                                             <div className=" font-semibold text-center w-full">
                                                 <p className="text-[#3D4DCF]">IND Won</p>
@@ -1402,23 +1382,23 @@ export default function Info() {
                                                 </p>
                                             </div>
                                             <Link href="">
-                                            <div className="font-medium text-right w-full">
-                                                <p className="mx-2 font-semibold uppercase">IND</p>
-                                                <p className="mx-2 font-medium uppercase text-[#586577]">
-                                                    404 &amp; 258/2
-                                                </p>
-                                            </div>
+                                                <div className="font-medium text-right w-full">
+                                                    <p className="mx-2 font-semibold uppercase">IND</p>
+                                                    <p className="mx-2 font-medium uppercase text-[#586577]">
+                                                        404 &amp; 258/2
+                                                    </p>
+                                                </div>
                                             </Link>
                                         </div>
                                         <div className="border-t-[1px] border-[#E4E9F0]" />
                                         <div className="py-4 flex justify-between items-center">
-                                        <Link href="">
-                                            <div className="font-medium w-full">
-                                                <p className="mx-2 font-semibold uppercase">IND</p>
-                                                <p className="mx-2 font-medium uppercase text-[#586577]">
-                                                    347/9 (89.2)
-                                                </p>
-                                            </div>
+                                            <Link href="">
+                                                <div className="font-medium w-full">
+                                                    <p className="mx-2 font-semibold uppercase">IND</p>
+                                                    <p className="mx-2 font-medium uppercase text-[#586577]">
+                                                        347/9 (89.2)
+                                                    </p>
+                                                </div>
                                             </Link>
                                             <div className=" font-semibold text-center w-full">
                                                 <p className="text-[#3D4DCF]">IND Won</p>
@@ -1427,23 +1407,23 @@ export default function Info() {
                                                 </p>
                                             </div>
                                             <Link href="">
-                                            <div className="font-medium text-right w-full">
-                                                <p className="mx-2 font-semibold uppercase">BAN</p>
-                                                <p className="mx-2 font-medium uppercase text-[#586577]">
-                                                    106 &amp; 195
-                                                </p>
-                                            </div>
+                                                <div className="font-medium text-right w-full">
+                                                    <p className="mx-2 font-semibold uppercase">BAN</p>
+                                                    <p className="mx-2 font-medium uppercase text-[#586577]">
+                                                        106 &amp; 195
+                                                    </p>
+                                                </div>
                                             </Link>
                                         </div>
                                         <div className="border-t-[1px] border-[#E4E9F0]" />
                                         <div className="py-4 flex justify-between items-center">
-                                        <Link href="">
-                                            <div className="font-medium w-full">
-                                                <p className="mx-2 font-semibold uppercase">IND</p>
-                                                <p className="mx-2 font-medium uppercase text-[#586577]">
-                                                    493/6 (114.0)
-                                                </p>
-                                            </div>
+                                            <Link href="">
+                                                <div className="font-medium w-full">
+                                                    <p className="mx-2 font-semibold uppercase">IND</p>
+                                                    <p className="mx-2 font-medium uppercase text-[#586577]">
+                                                        493/6 (114.0)
+                                                    </p>
+                                                </div>
                                             </Link>
                                             <div className=" font-semibold text-center w-full">
                                                 <p className="text-[#3D4DCF]">IND Won</p>
@@ -1452,12 +1432,12 @@ export default function Info() {
                                                 </p>
                                             </div>
                                             <Link href="">
-                                            <div className="font-medium text-right w-full">
-                                                <p className="mx-2 font-semibold uppercase">BAN</p>
-                                                <p className="mx-2 font-medium uppercase text-[#586577]">
-                                                    150 &amp; 113
-                                                </p>
-                                            </div>
+                                                <div className="font-medium text-right w-full">
+                                                    <p className="mx-2 font-semibold uppercase">BAN</p>
+                                                    <p className="mx-2 font-medium uppercase text-[#586577]">
+                                                        150 &amp; 113
+                                                    </p>
+                                                </div>
                                             </Link>
                                         </div>
                                     </div>
@@ -1470,52 +1450,45 @@ export default function Info() {
                                                 Team Comparison (Last 10 matches)
                                             </h3>
                                             <div className="flex items-center md:justify-center justify-end md:mt-0 mt-4">
-                                                <button
-                                                    className="cust-box-click-button bg-[#ffffff] font-medium text-[#6A7586] px-5 py-1 rounded-full"
-                                                   
-                                                >
-                                                    <span></span>
-                                                </button>
 
-                                                <button
-                                                    className="cust-box-click-button font-medium px-5 py-1 rounded-full bg-[#081736] text-white" >
+                                                <button className="cust-box-click-button font-medium px-5 py-1 rounded-full bg-[#081736] text-white">
                                                     <span>Overall</span>
                                                 </button>
 
-                                                <button
-                                                    className="cust-box-click-button font-medium px-5 py-1 rounded-full">
+                                                <button className="cust-box-click-button font-medium px-5 py-1 rounded-full text-[#6A7586]" >
                                                     <span>On Venue</span>
                                                 </button>
 
                                             </div>
                                         </div>
+
                                         <div className="border-t-[1px] border-[#E4E9F0]" />
 
-                                        <div className="cust-box-click-content cust-box-click-firview mt-4">
+                                        <div>
                                             <div className="cust-box-click-content cust-box-click-overall1 mt-4">
                                                 <div>
                                                     <div className="py-4 flex justify-between items-center">
-                                                    <Link href="">
-                                                        <div className="font-bold flex items-center">
-                                                            <Image className="h-[30px]" src="/assets/img/flg-1.png" width={30} height={30} alt="" />
-                                                            <p className="mx-2 text-1xl font-semibold">
-                                                                IND
-                                                                <span className="text-[13px] text-[#9094b6] font-medium block">
-                                                                    vs all teams
-                                                                </span>
-                                                            </p>
-                                                        </div>
+                                                        <Link href="">
+                                                            <div className="font-bold flex items-center">
+                                                                <Image className="h-[30px]" src="/assets/img/flg-1.png" width={30} height={30} alt="" />
+                                                                <p className="mx-2 text-1xl font-semibold">
+                                                                    IND
+                                                                    <span className="text-[13px] text-[#9094b6] font-medium block">
+                                                                        vs all teams
+                                                                    </span>
+                                                                </p>
+                                                            </div>
                                                         </Link>
                                                         <Link href="">
-                                                        <div className="font-bold flex items-center">
-                                                            <p className="mx-2 text-1xl font-semibold text-right">
-                                                                BAN
-                                                                <span className="text-[13px] text-[#9094b6] font-medium block">
-                                                                    vs all teams
-                                                                </span>
-                                                            </p>
-                                                            <Image className="h-[30px]" src="/assets/img/ban.png" width={30} height={30} alt="ban" />
-                                                        </div>
+                                                            <div className="font-bold flex items-center">
+                                                                <p className="mx-2 text-1xl font-semibold text-right">
+                                                                    BAN
+                                                                    <span className="text-[13px] text-[#9094b6] font-medium block">
+                                                                        vs all teams
+                                                                    </span>
+                                                                </p>
+                                                                <Image className="h-[30px]" src="/assets/img/ban.png" width={30} height={30} alt="ban" />
+                                                            </div>
                                                         </Link>
                                                     </div>
                                                     <div className="border-t-[1px] border-[#E4E9F0]" />
@@ -1591,101 +1564,7 @@ export default function Info() {
                                             </div>
                                         </div>
 
-                                        <div className="cust-box-click-content cust-box-click-oddsview mt-4 hidden">
-                                            <div className="cust-box-click-content cust-box-click-overall1 mt-4">
-                                                <div>
-                                                    <div className="py-4 flex justify-between items-center">
-                                                        <div className="font-bold flex items-center">
-                                                            <Image className="h-[30px]" src="/assets/img/flg-1.png" width={25} height={25} alt="" />
-                                                            <p className="mx-2 text-1xl font-semibold">
-                                                                IND
-                                                                <span className="text-[13px] text-[#9094b6] font-medium block">
-                                                                    vs all teams
-                                                                </span>
-                                                            </p>
-                                                        </div>
-                                                        <div className="font-bold flex items-center">
-                                                            <p className="mx-2 text-1xl font-semibold text-right">
-                                                                BAN
-                                                                <span className="text-[13px] text-[#9094b6] font-medium block">
-                                                                    vs all teams
-                                                                </span>
-                                                            </p>
-                                                            <Image className="h-[30px]" src="/assets/img/ban.png" width={25} height={25} alt="ban" />
-                                                        </div>
-                                                    </div>
-                                                    <div className="border-t-[1px] border-[#E4E9F0]" />
-                                                    <div className="py-2 flex justify-between items-center">
-                                                        <div className="font-medium text-[#586577] w-full">
-                                                            <p className="mx-2 font-semibold uppercase">1</p>
-                                                        </div>
-                                                        <div className=" font-semibold text-center w-full">
-                                                            <p className="text-[#73758B] font-normal">Matches Played</p>
-                                                        </div>
-                                                        <div className="font-medium text-right w-full">
-                                                            <p className="text-[#586577] font-medium">1</p>
-                                                        </div>
-                                                    </div>
-                                                    <div className="border-t-[1px] border-[#E4E9F0]" />
-                                                    <div className="py-2 flex justify-between items-center">
-                                                        <div className="font-medium text-[#586577] w-full">
-                                                            <p className="mx-2 font-semibold text-[#439F76] uppercase">
-                                                                100%
-                                                            </p>
-                                                        </div>
-                                                        <div className=" font-semibold text-center w-full">
-                                                            <p className="text-[#73758B] font-normal">Win</p>
-                                                        </div>
-                                                        <div className="font-medium text-right w-full">
-                                                            <p className="text-[#586577] font-medium">0%</p>
-                                                        </div>
-                                                    </div>
-                                                    <div className="border-t-[1px] border-[#E4E9F0]" />
-                                                    <div className="py-2 flex justify-between items-center">
-                                                        <div className="font-medium text-[#586577] w-full">
-                                                            <p className="mx-2 font-semibold uppercase text-[#439F76]">
-                                                                119
-                                                            </p>
-                                                        </div>
-                                                        <div className=" font-semibold text-center w-full">
-                                                            <p className="text-[#73758B] font-normal">Avg Score</p>
-                                                        </div>
-                                                        <div className="font-medium text-right w-full">
-                                                            <p className="text-[#586577] font-medium">123</p>
-                                                        </div>
-                                                    </div>
-                                                    <div className="border-t-[1px] border-[#E4E9F0]" />
-                                                    <div className="py-2 flex justify-between items-center">
-                                                        <div className="font-medium text-[#586577] w-full">
-                                                            <p className="mx-2 font-semibold uppercase text-[#439F76]">
-                                                                212
-                                                            </p>
-                                                        </div>
-                                                        <div className=" font-semibold text-center w-full">
-                                                            <p className="text-[#73758B] font-normal">Highest Score</p>
-                                                        </div>
-                                                        <div className="font-medium text-right w-full">
-                                                            <p className="text-[#586577] font-medium">231</p>
-                                                        </div>
-                                                    </div>
-                                                    <div className="border-t-[1px] border-[#E4E9F0]" />
-                                                    <div className="py-2 flex justify-between items-center">
-                                                        <div className="font-medium text-[#586577] w-full">
-                                                            <p className="mx-2 font-semibold uppercase text-[#E14848]">
-                                                                152
-                                                            </p>
-                                                        </div>
-                                                        <div className=" font-semibold text-center w-full">
-                                                            <p className="text-[#73758B] font-normal">Lowest Score</p>
-                                                        </div>
-                                                        <div className="font-medium text-right w-full">
-                                                            <p className="text-[#586577] font-medium">112</p>
-                                                        </div>
-                                                    </div>
-                                                    <div className="border-t-[1px] border-[#E4E9F0]" />
-                                                </div>
-                                            </div>
-                                        </div>
+
                                     </div>
                                 </div>
                                 <div className="rounded-lg bg-[#ffffff] my-4 p-4">
@@ -1840,9 +1719,7 @@ export default function Info() {
                                             <div className="col-span-1 relative">
                                                 <div className="flex items-center space-x-8 mb-4">
                                                     <p className="text-[13px] text-[#3E436D]">Win Bat first </p>
-                                                    <p className="text-[#13b76dbd] font-semibold text-1xl">
-                                                        43%
-                                                    </p>
+                                                    <p className="text-[#13b76dbd] font-semibold text-1xl">43%</p>
                                                 </div>
                                                 <div className="flex items-center space-x-8">
                                                     <p className="text-[13px] text-[#3E436D]">Win Bat first </p>
@@ -1900,7 +1777,7 @@ export default function Info() {
                                     <div className="p-4">
                                         <div className="flex space-x-2">
                                             <div className="border-l-[3px] border-[#229ED3] h-[19px]" />
-                                            <h3 className="text-1xl font-semibold mb-2 mb-3">
+                                            <h3 className="text-1xl font-semibold mb-3">
                                                 Pace vs Spin on Venue{" "}
                                                 <span className="text-[#909090]">
                                                     {" "}
@@ -1909,9 +1786,9 @@ export default function Info() {
                                             </h3>
                                         </div>
                                         <div className="w-full">
-                                            <div className="bg-[#B7132B] h-[8px] mr-2 mb-2">
+                                            <div className="bg-[#B7132B] h-[4px] mr-2 mb-2">
                                                 <div
-                                                    className="bg-[#13b76dbd] h-[8px]"
+                                                    className="bg-[#13b76dbd] h-[4px]"
                                                     style={{ width: "40%" }}
                                                 />
                                             </div>
@@ -1936,386 +1813,63 @@ export default function Info() {
                                 </div>
                                 <div className="rounded-lg bg-[#ffffff] my-4 p-4">
                                     <h3 className="text-1xl font-semibold mb-2 pl-[7px] border-l-[3px] border-[#229ED3]">
-                                        Recent Matches on Venue
+                                        Umpires
                                     </h3>
-                                    {/* Recent Matches on Venue desktop view  */}
                                     <div className="border-t-[1px] border-[#E4E9F0]" />
-                                    <div className="hidden lg:block">
-                                        <div className="py-4 flex justify-between items-center">
-                                            <div className="font-medium	w-full">
-                                                <a href="#">
-                                                    <div className="flex items-center space-x-2">
-                                                        <div className="flex items-center space-x-1">
-                                                            <Image
-                                                                src="/assets/img/flag/18.png"
-                                                                className="h-[24px] rounded-full"
-                                                                width={25} height={25} alt="aus"
-                                                            />
-                                                            <span className="text-[#909090]">AUS</span>
-                                                        </div>
-                                                        <p className="">274/10 &amp; 170/10</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div className=" font-semibold text-center w-full">
-                                                <p className="text-[#3D4DCF]">IND Won</p>
-                                                <p className="text-[#909090] text-[12px] font-normal">
-                                                    1st test,Duleep Thropy 2024
-                                                </p>
-                                            </div>
-                                            <div className="font-medium text-right w-full">
-                                                <a href="#">
-                                                    <div className="flex items-center space-x-2 font-medium	justify-end">
-                                                        <p>280/10 &amp; 190/10</p>
-                                                        <div className="flex items-center space-x-1">
-                                                            <span className="text-[#909090]">IND</span>
-                                                            <Image
-                                                                src="/assets/img/flag/17.png"
-                                                                className="h-[24px]"
-                                                                width={25} height={25} alt="aus"
-                                                            />
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
+                                    <div className="py-2 flex justify-between items-center">
+                                        <div className="">
+                                            <p className="mx-2 font-medium">On-field Umpire :</p>
                                         </div>
-                                        <div className="border-t-[1px] border-[#E4E9F0]" />
-                                        <div className="py-4 flex justify-between items-center">
-                                            <div className=" font-medium	w-full">
-                                                <a href="#">
-                                                    <div className="flex items-center space-x-2">
-                                                        <div className="flex items-center space-x-1">
-                                                            <Image
-                                                                src="/assets/img/flag/18.png"
-                                                                className="h-[24px] rounded-full"
-                                                                width={25} height={25} alt="aus"
-                                                            />
-                                                            <span className="text-[#909090]">AUS</span>
-                                                        </div>
-                                                        <p className="">274/10 &amp; 170/10</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div className=" font-semibold text-center w-full">
-                                                <p className=" text-[#3D4DCF]">IND Won</p>
-                                                <p className="text-[#909090] text-[12px] font-normal">
-                                                    1st test,Duleep Thropy 2024
-                                                </p>
-                                            </div>
-                                            <div className="font-medium text-right w-full">
-                                                <a href="#">
-                                                    <div className="flex items-center space-x-2 font-medium	justify-end">
-                                                        <p>280/10 &amp; 190/10</p>
-                                                        <div className="flex items-center space-x-1">
-                                                            <span className="text-[#909090]">IND</span>
-                                                            <Image
-                                                                src="/assets/img/flag/17.png"
-                                                                className="h-[24px]"
-                                                                width={25} height={25} alt="aus"
-                                                            />
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div className="border-t-[1px] border-[#E4E9F0]" />
-                                        <div className="py-4 flex justify-between items-center">
-                                            <div className=" font-medium	w-full">
-                                                <a href="#">
-                                                    <div className="flex items-center space-x-2">
-                                                        <div className="flex items-center space-x-1">
-                                                            <Image
-                                                                src="/assets/img/up.png"
-                                                                className="h-[24px] rounded-full"
-                                                                width={25} height={25} alt="up"
-                                                            />
-                                                            <span className="text-[#909090]">UP</span>
-                                                        </div>
-                                                        <p className="">548/10 &amp; 170/10</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div className=" font-semibold text-center w-full">
-                                                <p className="text-[#FF9C12] uppercase">up won</p>
-                                                <p className="text-[#909090] text-[12px] font-normal">
-                                                    11st test,Ranji Trophy 2024
-                                                </p>
-                                            </div>
-                                            <div className="font-medium text-right w-full">
-                                                <a href="#">
-                                                    <div className="flex items-center space-x-2 font-medium	justify-end">
-                                                        <p>318/10 &amp; 190/10</p>
-                                                        <div className="flex items-center space-x-1">
-                                                            <span className="text-[#909090]">ASM</span>
-                                                            <Image src="/assets/img/asm.png" className="h-[24px]" width={25} height={25} alt="asm" />
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div className="border-t-[1px] border-[#E4E9F0]" />
-                                        <div className="py-4 flex justify-between items-center">
-                                            <div className=" font-medium	w-full">
-                                                <a href="#">
-                                                    <div className="flex items-center space-x-2">
-                                                        <div className="flex items-center space-x-1">
-                                                            <Image
-                                                                src="/assets/img/up.png"
-                                                                className="h-[24px] rounded-full"
-                                                                width={25} height={25} alt="up"
-                                                            />
-                                                            <span className="text-[#909090]">UP</span>
-                                                        </div>
-                                                        <p className="">253/10 &amp; 548/10</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div className=" font-semibold text-center w-full">
-                                                <p className=" text-[#FF9C12] uppercase">up won</p>
-                                                <p className="text-[#909090] text-[12px] font-normal">
-                                                    12st test,Ranji Trophy 2024
-                                                </p>
-                                            </div>
-                                            <div className="font-medium text-right w-full">
-                                                <a href="#">
-                                                    <div className="flex items-center space-x-2 font-medium	justify-end">
-                                                        <p>417/10 &amp; 264/10</p>
-                                                        <div className="flex items-center space-x-1">
-                                                            <span className="text-[#909090]">ASM</span>
-                                                            <Image src="/assets/img/asm.png" className="h-[24px]" width={25} height={25} alt="asm" />
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div className="border-t-[1px] border-[#E4E9F0]" />
-                                        <div className="py-4 flex justify-between items-center">
-                                            <div className=" font-medium w-full">
-                                                <a href="#">
-                                                    <div className="flex items-center space-x-2">
-                                                        <div className="flex items-center space-x-1">
-                                                            <Image
-                                                                src="/assets/img/up.png"
-                                                                className="h-[24px] rounded-full"
-                                                                width={25} height={25} alt="up"
-                                                            />
-                                                            <span className="text-[#909090]">UP</span>
-                                                        </div>
-                                                        <p className="">274/10 &amp; 170/10</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div className=" font-semibold text-center w-full">
-                                                <p className=" text-[#FF9C12] uppercase">up won</p>
-                                                <p className="text-[#909090] text-[12px] font-normal">
-                                                    13st test,Ranji Trophy 2024
-                                                </p>
-                                            </div>
-                                            <div className="font-medium text-right w-full">
-                                                <a href="#">
-                                                    <div className="flex items-center space-x-2 font-medium	justify-end">
-                                                        <p>172/10 &amp; 135/10</p>
-                                                        <div className="flex items-center space-x-1">
-                                                            <span className="text-[#909090]">UKT</span>
-                                                            <Image src="/assets/img/utk.png" className="h-[24px]" width={25} height={25} alt="ukt" />
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
+                                        <div className="">
+                                            <p className="mx-2 text-[#586577] font-medium ">
+                                                Claire Polosak, Lauren Agenbag
+                                            </p>
                                         </div>
                                     </div>
-                                    {/* Recent Matches on Venue responsive view view  */}
-                                    <div className="lg:hidden">
-                                        <div className="py-4 px-3 bg-[#f7faff] rounded-lg my-3 border-b-[1px] border-[#E4E9F0]">
-                                            <p className="text-[#909090] text-[12px] mb-4 font-normal">
-                                                1st test,Duleep Thropy 2024
-                                            </p>
-                                            <div className="flex justify-between items-center">
-                                                <div className="">
-                                                    <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-3">
-                                                        <div className="flex items-center space-x-1">
-                                                            <Image
-                                                                src="/assets/img/flag/18.png"
-                                                                className="h-[18px] rounded-full"
-                                                                width={25} height={25} alt="aus"
-                                                            />
-                                                            <span className="text-[#909090]">AUS</span>
-                                                        </div>
-                                                        <p>274/10 &amp; 170/10</p>
-                                                    </div>
-                                                    <div>
-                                                        <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
-                                                            <div className="flex items-center space-x-1">
-                                                                <Image
-                                                                    src="/assets/img/flag/17.png"
-                                                                    className="h-[18px]"
-                                                                    width={25} height={25} alt="ind"
-                                                                />
-                                                                <span className="text-[#909090]">IND</span>
-                                                            </div>
-                                                            <p>280/10 &amp; 190/10</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="h-[35px] border-l-[1px] border-[#d0d3d7]" />
-                                                <div className=" font-semibold text-right">
-                                                    <p className="text-[#3D4DCF]">IND Won</p>
-                                                </div>
-                                            </div>
+                                    <div className="border-t-[1px] border-[#E4E9F0]" />
+                                    <div className="py-2 flex justify-between items-center">
+                                        <div className="">
+                                            <p className="mx-2 font-medium">Third Umpire :</p>
                                         </div>
-                                        <div className="py-4 px-3 bg-[#f7faff] rounded-lg my-3 border-b-[1px] border-[#E4E9F0]">
-                                            <p className="text-[#909090] text-[12px] mb-4 font-normal">
-                                                1st test,Duleep Thropy 2024
-                                            </p>
-                                            <div className="flex justify-between items-center">
-                                                <div className="">
-                                                    <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-3">
-                                                        <div className="flex items-center space-x-1">
-                                                            <Image
-                                                                src="/assets/img/flag/18.png"
-                                                                className="h-[18px] rounded-full"
-                                                                width={25} height={25} alt="aus"
-                                                            />
-                                                            <span className="text-[#909090]">AUS</span>
-                                                        </div>
-                                                        <p>274/10 &amp; 170/10</p>
-                                                    </div>
-                                                    <div>
-                                                        <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
-                                                            <div className="flex items-center space-x-1">
-                                                                <Image
-                                                                    src="/assets/img/flag/17.png"
-                                                                    className="h-[18px]"
-                                                                    width={25} height={25} alt="ind"
-                                                                />
-                                                                <span className="text-[#909090]">IND</span>
-                                                            </div>
-                                                            <p>280/10 &amp; 190/10</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="h-[35px] border-l-[1px] border-[#d0d3d7]" />
-                                                <div className=" font-semibold text-right">
-                                                    <p className="text-[#3D4DCF]">IND Won</p>
-                                                </div>
-                                            </div>
+                                        <div className="">
+                                            <p className="mx-2 text-[#586577] font-medium ">Sue Redfern</p>
                                         </div>
-                                        <div className="py-4 px-3 bg-[#f7faff] rounded-lg my-3 border-b-[1px] border-[#E4E9F0]">
-                                            <p className="text-[#909090] text-[12px] mb-4 font-normal">
-                                                11st test,Ranji Trophy 2024
-                                            </p>
-                                            <div className="flex justify-between items-center">
-                                                <div className="">
-                                                    <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-3">
-                                                        <div className="flex items-center space-x-1">
-                                                            <Image
-                                                                src="/assets/img/up.png"
-                                                                className="h-[21px] rounded-full"
-                                                                width={25} height={25} alt="up"
-                                                            />
-                                                            <span className="text-[#909090]">UP</span>
-                                                        </div>
-                                                        <p>548/10 &amp; 170/10</p>
-                                                    </div>
-                                                    <div>
-                                                        <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
-                                                            <div className="flex items-center space-x-1">
-                                                                <Image
-                                                                    src="/assets/img/asm.png"
-                                                                    className="h-[18px]"
-                                                                    width={25} height={25} alt="asm"
-                                                                />
-                                                                <span className="text-[#909090]">ASM</span>
-                                                            </div>
-                                                            <p>318/10 &amp; 190/10</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="h-[35px] border-l-[1px] border-[#d0d3d7]" />
-                                                <div className=" font-semibold text-right">
-                                                    <p className="text-[#FF9C12] uppercase">up won</p>
-                                                </div>
-                                            </div>
+                                    </div>
+                                    <div className="border-t-[1px] border-[#E4E9F0]" />
+                                    <div className="py-2 pb-0 flex justify-between items-center">
+                                        <div className="">
+                                            <p className="mx-2 font-medium">Referee :</p>
                                         </div>
-                                        <div className="py-4 px-3 bg-[#f7faff] rounded-lg my-3 border-b-[1px] border-[#E4E9F0]">
-                                            <p className="text-[#909090] text-[12px] mb-4 font-normal">
-                                                12st test,Ranji Trophy 2024
-                                            </p>
-                                            <div className="flex justify-between items-center">
-                                                <div className="">
-                                                    <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-3">
-                                                        <div className="flex items-center space-x-1">
-                                                            <Image
-                                                                src="/assets/img/up.png"
-                                                                className="h-[21px] rounded-full"
-                                                                width={25} height={25} alt="up"
-                                                            />
-                                                            <span className="text-[#909090]">UP</span>
-                                                        </div>
-                                                        <p>253/10 &amp; 548/10</p>
-                                                    </div>
-                                                    <div>
-                                                        <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
-                                                            <div className="flex items-center space-x-1">
-                                                                <Image
-                                                                    src="/assets/img/asm.png"
-                                                                    className="h-[18px]"
-                                                                    width={25} height={25} alt="asm"
-                                                                />
-                                                                <span className="text-[#909090]">ASM</span>
-                                                            </div>
-                                                            <p>417/10 &amp; 264/10</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="h-[35px] border-l-[1px] border-[#d0d3d7]" />
-                                                <div className=" font-semibold text-right">
-                                                    <p className="text-[#FF9C12] uppercase">up won</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="py-4 px-3 bg-[#f7faff] rounded-lg my-3 border-b-[1px] border-[#E4E9F0]">
-                                            <p className="text-[#909090] text-[12px] mb-4 font-normal">
-                                                13st test,Ranji Trophy 2024
-                                            </p>
-                                            <div className="flex justify-between items-center">
-                                                <div className="">
-                                                    <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-3">
-                                                        <div className="flex items-center space-x-1">
-                                                            <Image
-                                                                src="/assets/img/up.png"
-                                                                className="h-[21px] rounded-full"
-                                                                width={25} height={25} alt="up"
-                                                            />
-                                                            <span className="text-[#909090]">UP</span>
-                                                        </div>
-                                                        <p>274/10 &amp; 170/10</p>
-                                                    </div>
-                                                    <div>
-                                                        <div className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
-                                                            <div className="flex items-center space-x-1">
-                                                                <Image
-                                                                    src="/assets/img/asm.png"
-                                                                    className="h-[18px]"
-                                                                    width={25} height={25} alt="asm"
-                                                                />
-                                                                <span className="text-[#909090]">ASM</span>
-                                                            </div>
-                                                            <p>172/10 &amp; 135/10</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="h-[35px] border-l-[1px] border-[#d0d3d7]" />
-                                                <div className=" font-semibold text-right">
-                                                    <p className="text-[#FF9C12] uppercase">up won</p>
-                                                </div>
-                                            </div>
+                                        <div className="">
+                                            <p className="mx-2 text-[#586577] font-medium ">GS Lakshmi</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            {/* right section */}
+
+
                             <div className="lg:col-span-4 md:col-span-5">
+
+                            <div className="rounded-lg bg-[#ffffff] mb-4">
+                                    <div className="p-4">
+                                        <a href="#">
+                                            <div className="flex items-center justify-between">
+                                                <div className="flex items-center space-x-3 md:py-3">
+                                                    <div>
+                                                        <Image src="/assets/img/player/12.png" width={55} height={55} alt="R sharma (c)" />
+                                                    </div>
+                                                    <div className="font-medium">
+                                                        <h2 className="text-[15px]"> Man of the match </h2>
+                                                        <p className="text-[#909090] font-normal">R Ashwin</p>
+                                                    </div>
+                                                </div>
+                                                <Image src="/assets/img/home/win-2.png" width={40} height={40} alt="" />
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+
                                 <div className="rounded-lg bg-[#ffffff]">
                                     <div className="p-4 cust-box-click-container">
                                         <h3 className="text-1xl font-semibold pl-[7px] mb-3 border-l-[3px] border-[#229ED3]">
@@ -2323,27 +1877,23 @@ export default function Info() {
                                         </h3>
                                         <div className="border-t-[1px] border-[#E4E9F0]" />
                                         <div className="flex items-center justify-around py-4">
-
-                                        <button
+                                            <button
                                                 className="cust-box-click-button  font-medium px-5 py-1 rounded-full bg-[#081736] text-white"
                                             >
                                                 <span>India</span>
                                             </button>
-
                                             <Link href="/playing-bangladesh">
-                                            <button
-                                                className="cust-box-click-button bg-[#ffffff] font-medium text-[#6A7586] px-5 py-1 rounded-full"
-                                               
-                                            >
-                                                <span>Bangladesh</span>
-                                            </button>
+                                                <button
+                                                    className="cust-box-click-button bg-[#ffffff] font-medium text-[#6A7586] px-5 py-1 rounded-full"
+                                                >
+                                                    <span>Bangladesh</span>
+                                                </button>
                                             </Link>
-
                                         </div>
                                         <div className="border-t-[1px] border-[#E4E9F0]" />
-                                        <div className="">
+                                        <div className="cust-box-click-content cust-box-click-india mt-4">
                                             <div>
-                                                <a href="#">
+                                                <Link href="/profile">
                                                     <div className="flex items-center space-x-3 py-3 border-b-[1px] border-border-gray-700">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="R sharma (c)" />
@@ -2353,8 +1903,8 @@ export default function Info() {
                                                             <p className="text-[#909090] font-normal">Batter</p>
                                                         </div>
                                                     </div>
-                                                </a>
-                                                <a href="#">
+                                                </Link>
+                                                <Link href="/profile">
                                                     <div className="flex items-center space-x-3 py-3 border-b-[1px] border-border-gray-700">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="S Gill" />
@@ -2364,8 +1914,8 @@ export default function Info() {
                                                             <p className="text-[#909090] font-normal">Batter</p>
                                                         </div>
                                                     </div>
-                                                </a>
-                                                <a href="#">
+                                                </Link>
+                                                <Link href="/profile">
                                                     <div className="flex items-center space-x-3 py-3 border-b-[1px] border-border-gray-700">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="L Rahul" />
@@ -2375,21 +1925,19 @@ export default function Info() {
                                                             <p className="text-[#909090] font-normal">Batter</p>
                                                         </div>
                                                     </div>
-                                                </a>
-                                                <a href="#">
+                                                </Link>
+                                                <Link href="/profile">
                                                     <div className="flex items-center space-x-3 py-3 border-b-[1px] border-border-gray-700">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="R Jadeja" />
                                                         </div>
                                                         <div className="font-medium">
                                                             <h2 className="text-[15px]"> R Jadeja </h2>
-                                                            <p className="text-[#909090] font-normal">
-                                                                All Rounder{" "}
-                                                            </p>
+                                                            <p className="text-[#909090] font-normal">All Rounder </p>
                                                         </div>
                                                     </div>
-                                                </a>
-                                                <a href="#">
+                                                </Link>
+                                                <Link href="/profile">
                                                     <div className="flex items-center space-x-3 py-3 border-b-[1px] border-border-gray-700">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="J Bumrah" />
@@ -2399,8 +1947,8 @@ export default function Info() {
                                                             <p className="text-[#909090] font-normal">Bowler</p>
                                                         </div>
                                                     </div>
-                                                </a>
-                                                <a href="#">
+                                                </Link>
+                                                <Link href="/profile">
                                                     <div className="flex items-center space-x-3 py-3 border-b-[1px] border-border-gray-700">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="A Deep" />
@@ -2410,8 +1958,8 @@ export default function Info() {
                                                             <p className="text-[#909090] font-normal">Bowler </p>
                                                         </div>
                                                     </div>
-                                                </a>
-                                                <a href="#">
+                                                </Link>
+                                                <Link href="/profile">
                                                     <div className="flex items-center space-x-3 py-3 border-b-[1px] border-border-gray-700">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="Y Jaiswal" />
@@ -2421,8 +1969,8 @@ export default function Info() {
                                                             <p className="text-[#909090] font-normal">Batter</p>
                                                         </div>
                                                     </div>
-                                                </a>
-                                                <a href="#">
+                                                </Link>
+                                                <Link href="/profile">
                                                     <div className="flex items-center space-x-3 py-3 border-b-[1px] border-border-gray-700">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="V Kholi" />
@@ -2432,8 +1980,8 @@ export default function Info() {
                                                             <p className="text-[#909090] font-normal">Batter</p>
                                                         </div>
                                                     </div>
-                                                </a>
-                                                <a href="#">
+                                                </Link>
+                                                <Link href="/profile">
                                                     <div className="flex items-center space-x-3 py-3 border-b-[1px] border-border-gray-700">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="M Siraj" />
@@ -2443,8 +1991,8 @@ export default function Info() {
                                                             <p className="text-[#909090] font-normal">Bowler</p>
                                                         </div>
                                                     </div>
-                                                </a>
-                                                <a href="#">
+                                                </Link>
+                                                <Link href="/profile">
                                                     <div className="flex items-center space-x-3 py-3 border-b-[1px] border-border-gray-700">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="R Pant (WK)" />
@@ -2454,23 +2002,21 @@ export default function Info() {
                                                             <p className="text-[#909090] font-normal">Batter</p>
                                                         </div>
                                                     </div>
-                                                </a>
-                                                <a href="#">
+                                                </Link>
+                                                <Link href="/profile">
                                                     <div className="flex items-center space-x-3 py-3 pb-0">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="R Ashwin" />
                                                         </div>
                                                         <div className="font-medium">
                                                             <h2 className="text-[15px]"> R Ashwin </h2>
-                                                            <p className="text-[#909090] font-normal">
-                                                                All Rounder{" "}
-                                                            </p>
+                                                            <p className="text-[#909090] font-normal">All Rounder </p>
                                                         </div>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </div>
                                         </div>
-                                        <div className="">
+                                        <div className="cust-box-click-content cust-box-click-bangladesh mt-4 hidden">
                                             <p>View Content</p>
                                         </div>
                                     </div>
@@ -2479,7 +2025,7 @@ export default function Info() {
                                     <div className="p-4">
                                         <div className="flex space-x-2">
                                             <div className="border-l-[3px] border-[#229ED3] h-[19px]" />
-                                            <h3 className="text-1xl font-semibold mb-2 mb-3">
+                                            <h3 className="text-1xl font-semibold mb-3">
                                                 Pace vs Spin on Venue{" "}
                                                 <span className="text-[#909090]">
                                                     {" "}
@@ -2517,6 +2063,10 @@ export default function Info() {
                         </div>
                     </div>
                 </div>
+
             </section>
-  )
+
+        </>
+
+    )
 }

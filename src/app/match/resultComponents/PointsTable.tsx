@@ -1,71 +1,65 @@
+
 import React from 'react'
 import Image from "next/image";
 import Link from 'next/link';
 import WeeklySlider from "@/app/components/WeeklySlider";
 
-
 export default function PointsTable() {
+
+
+
   return (
+    
+
     <section className="lg:w-[1000px] mx-auto md:mb-0 mb-4 px-2 lg:px-0">
     <div id="tabs" className="my-4">
-                    <div className="flex text-1xl space-x-8 p-2 bg-[#ffffff] rounded-lg overflow-auto">
-                        <Link href="/match/scheduled/info">
-                            <button
-                                className="font-medium py-2 px-3 whitespace-nowrap "
-                            >
-                                More Info
-                            </button>
-                        </Link>
-                        <Link href="/match/scheduled/live">
-                            <button
-                               
-                                className="font-medium py-2 px-3 whitespace-nowrap"
-                            >
-                                Live
-                            </button>
-                        </Link>
-                        <Link href="/match/scheduled/scorecard">
-                            <button
-                               
-                                className="font-medium py-2 px-3 whitespace-nowrap "
-                            >
-                                Scorecard
-                            </button>
-                        </Link>
-                        <Link href="/match/scheduled/squad">
-                            <button
-                               
-                                className="font-medium py-2 px-3 whitespace-nowrap"
-                            >
-                                Squads
-                            </button>
-                        </Link>
-                        <Link href="/match/scheduled/points-table">
-                            <button
-                                
-                                className="font-medium py-2 px-3 whitespace-nowrap bg-[#1A80F8] text-white rounded-md"
-                            >
-                                Points Table
-                            </button>
-                        </Link>
-                        <Link href="/match/scheduled/stats">
-                            <button
-                               
-                                className="font-medium py-2 px-3 whitespace-nowrap"
-                            >
-                                Stats
-                            </button>
-                        </Link>
-                        <Link href="/match/scheduled/fantasy-tips">
-                            <button
-                             
-                                className="font-medium py-2 px-3 whitespace-nowrap"
-                            >
-                                Fantasy Tips
-                            </button>
-                        </Link>
-                    </div>
-                </div>
+        <div className="flex text-1xl space-x-8 p-2 bg-[#ffffff] rounded-lg overflow-auto">
+            <Link href="/match/result/more-info">
+                <button
+                    className="font-medium py-2 px-3 whitespace-nowrap"
+                >
+                    More Info
+                </button>
+            </Link>
+            <Link href="/match/result/live">
+                <button
+                    className="font-medium py-2 px-3 whitespace-nowrap "
+                >
+                    Live
+                </button>
+            </Link>
+            <Link href="/match/result/scorecard">
+                <button
+                    className="font-medium py-2 px-3 whitespace-nowrap "
+                >
+                    Scorecard
+                </button>
+            </Link>
+            <Link href="/match/result/squad">
+                <button
+                    className="font-medium py-2 px-3 whitespace-nowrap"
+                >
+                    Squad
+                </button>
+            </Link>
+
+            <Link href="/match/result/points-table">
+                <button
+                    className="font-medium py-2 px-3 whitespace-nowrap bg-[#1A80F8] text-white rounded-md"
+                >
+                    Points Table
+                </button>
+            </Link>
+
+            <Link href="/match/result/stats">
+                <button
+                    className="font-medium py-2 px-3 whitespace-nowrap"
+                >
+                    Stats
+                </button>
+            </Link>
+        </div>
+    </div>
 
 
     <div id="points" className="">
@@ -1006,5 +1000,6 @@ export default function PointsTable() {
 
 
 </section>
+
   )
 }

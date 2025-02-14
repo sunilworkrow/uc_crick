@@ -156,10 +156,10 @@ const Header = () => {
             <Link href="/" className="hover:text-yellow-400">
               Home
             </Link>
-            <Link href="" className="hover:text-yellow-400">
+            <Link href="#" className="hover:text-yellow-400">
               Fixtures
             </Link>
-            <Link href="" className="hover:text-yellow-400"></Link>
+            <Link href="#" className="hover:text-yellow-400"></Link>
             <div className="group">
               <Link href="" className="hover:text-yellow-400"></Link>
               <a
@@ -188,7 +188,7 @@ const Header = () => {
             <Link href="" className="hover:text-yellow-400">
               Teams
             </Link>
-            <Link href="/icc-ranking" className="hover:text-yellow-400">
+            <Link href="/iccRanking/man/team" className="hover:text-yellow-400">
               ICC Ranking
             </Link>
             <Link href="" className="hover:text-yellow-400">
@@ -269,6 +269,7 @@ const Header = () => {
                           src={item.imgSrc}
                           alt={item.alt}
                           className="rounded-lg w-[80px]"
+                          width={80} height={80}
                         />
                         <p className="mt-2 text-center">{item.label}</p>
                       </div>
