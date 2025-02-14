@@ -27,29 +27,33 @@ export default async function page(props: { params: Params }) {
   const teamTab = params?.teamTap;
   const teamType = params?.teamType;
 
-//  console.log('params', )
+  //  console.log('params', )
 
   return (
     <Layout>
 
-      {/* <Banner></Banner> */}
+      {teamType === 'kkr' && (
+        <>
+          <Banner></Banner>
 
-      {teamType === 'kkr' && teamTab === "overview" && <Overview />}
-      {teamType === 'kkr' && teamTab === "schedule-Results" && <ScheduleResults />}
-      {teamType === 'kkr' && teamTab === "squads" && <Squads />}
-      {teamType === 'kkr' && teamTab === "points-table" && <PointsTable />}
-      {teamType === 'kkr' && teamTab === "news" && <News />}
-      {teamType === 'kkr' && teamTab === "stats" && <Stats />}
+          {teamType === 'kkr' && teamTab === "overview" && <Overview />}
+          {teamType === 'kkr' && teamTab === "schedule-Results" && <ScheduleResults />}
+          {teamType === 'kkr' && teamTab === "squads" && <Squads />}
+          {teamType === 'kkr' && teamTab === "points-table" && <PointsTable />}
+          {teamType === 'kkr' && teamTab === "news" && <News />}
+          {teamType === 'kkr' && teamTab === "stats" && <Stats />}
 
+        </>
 
-      
+      )}
+
       {teamType === 'india' && teamTab === "test" && <Team />}
       {teamType === 'india' && teamTab === "odi" && <Odi />}
       {teamType === 'india' && teamTab === "t20" && <T20 />}
       {teamType === 'india' && teamTab === "icc-world-t20" && <IccWorldT20 />}
       {teamType === 'india' && teamTab === "icc-world-cup" && <IccWorldCup />}
 
-      
+
 
     </Layout>
   )

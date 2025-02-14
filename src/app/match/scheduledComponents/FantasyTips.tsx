@@ -10,7 +10,7 @@ export default function FantasyTips() {
     const [show, setShow] = useState(false);
     const [show1, setShow1] = useState(false);
 
-    const handleRecentChange = (team) => {
+    const handleRecentChange = (team: React.SetStateAction<string>) => {
         setActiveRecent(team);
     };
 

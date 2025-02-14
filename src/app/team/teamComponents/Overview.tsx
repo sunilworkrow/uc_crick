@@ -1468,7 +1468,7 @@ const toggleOpen = (key: string) => {
                       trounce</h3>
                     <p className="text-gray-500 font-normal">
                       India will go into the home Test series against New Zealand with pretty much the
-                      same squad that took on Bangladesh in September - India's last red-ball action
+                      same squad that took on Bangladesh in September - Indias last red-ball action
                       ahead
                       of the five-Test...
                     </p>
@@ -1484,7 +1484,7 @@ const toggleOpen = (key: string) => {
                     <div className="flex gap-3 my-3">
                       <Image src="/assets/img/team-2.png" width={77} height={77} alt="News thumbnail" className="rounded-lg h-[77px]" />
                       <div>
-                        <h4 className="text-[13px] font-semibold mb-2">Women's T20 World Cup, 2nd
+                        <h4 className="text-[13px] font-semibold mb-2">Womens T20 World Cup, 2nd
                           Semifinal | WI-W Vs NZ-W Playing 11 Prediction</h4>
                         <p className="text-[12px] text-gray-500 flex items-center"><span
                           className="ml-2 pr-[1px]">
@@ -1938,7 +1938,7 @@ const toggleOpen = (key: string) => {
 
                     </div>
                     <div className=" pb-2 mb-4 border-b-[1px] border-border-gray-700 ">
-                      <p className="text-[13px] font-semibold">Probably Took Wrong Risk': Alyssa Healy
+                      <p className="text-[13px] font-semibold">Probably Took Wrong Risk: Alyssa Healy
                         Regrets
                         Sitting Out
                         As SA Stuns AUS In T20 WC</p>
@@ -1946,7 +1946,7 @@ const toggleOpen = (key: string) => {
 
                     </div>
                     <div className=" pb-2 mb-4 border-b-[1px] border-border-gray-700 ">
-                      <p className="text-[13px] font-semibold">Women's T20 World Cup, NZ vs WI: Unchanged
+                      <p className="text-[13px] font-semibold">Womens T20 World Cup, NZ vs WI: Unchanged
                         New
                         Zealand Opt To
                         Bat; Check Out The Playing XIs</p>
@@ -1962,7 +1962,7 @@ const toggleOpen = (key: string) => {
 
                     </div>
                     <div className=" pb-2 mb-2">
-                      <p className="text-[13px] font-semibold">'Probably Took Wrong Risk': Alyssa Healy
+                      <p className="text-[13px] font-semibold">Probably Took Wrong Risk: Alyssa Healy
                         Regrets Sitting Out
                         As SA Stuns AUS In T20 WC</p>
                       <p className="text-[#586577] pt-2">18 Oct 2024</p>

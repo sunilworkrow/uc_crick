@@ -8,7 +8,7 @@ export default function Overview() {
 
   const [careerTab, setCareerTab] = useState('cust-box-click-batting');
 
-  const handleCareerTabClick = (tab) => {
+  const handleCareerTabClick = (tab: React.SetStateAction<string>) => {
     setCareerTab(tab);
   };
 
@@ -45,36 +45,36 @@ export default function Overview() {
     <section className="lg:w-[1000px] md:mx-auto my-5 mx-2">
       <div className="">
 
-      <div id="tabs" className="my-4">
-                    <div className="flex text-1xl space-x-8 p-2 bg-[#ffffff] rounded-lg overflow-auto">
-                    <Link href="/player/playername/overview">
-                        <button className="font-medium py-2 px-3 whitespace-nowrap bg-[#1A80F8] text-white rounded-md"
-                        >
-                            Overview
-                        </button>
-                        </Link>
-                        <Link href="/player/playername/stats">
-                        <button className="font-medium py-2 px-3 whitespace-nowrap "
-                        >
-                            Stats
-                        </button>
-                        </Link>
+        <div id="tabs" className="my-4">
+          <div className="flex text-1xl space-x-8 p-2 bg-[#ffffff] rounded-lg overflow-auto">
+            <Link href="/player/playername/overview">
+              <button className="font-medium py-2 px-3 whitespace-nowrap bg-[#1A80F8] text-white rounded-md"
+              >
+                Overview
+              </button>
+            </Link>
+            <Link href="/player/playername/stats">
+              <button className="font-medium py-2 px-3 whitespace-nowrap "
+              >
+                Stats
+              </button>
+            </Link>
 
-                        <Link href="/player/playername/news">
-                        <button
-                            className="font-medium py-2 px-3 whitespace-nowrap"
-                        >
-                            News
-                        </button>
-                        </Link>
-                        <Link href="/player/playername/photos">
-                        <button className="font-medium py-2 px-3 whitespace-nowrap"
-                        >
-                            Photos
-                        </button>
-                        </Link>
-                    </div>
-                </div>
+            <Link href="/player/playername/news">
+              <button
+                className="font-medium py-2 px-3 whitespace-nowrap"
+              >
+                News
+              </button>
+            </Link>
+            <Link href="/player/playername/photos">
+              <button className="font-medium py-2 px-3 whitespace-nowrap"
+              >
+                Photos
+              </button>
+            </Link>
+          </div>
+        </div>
 
         <div id="tab-content">
           <div id="overview">
@@ -285,16 +285,12 @@ export default function Overview() {
                     </div>
                     <div>
                       <button
-                        // className="cust-box-click-button font-medium px-5 py-1 rounded-full bg-[#081736] text-white"
-                        // onclick="showCustomBox(this, 'cust-box-click-batting')"
                         onClick={() => handleCareerTabClick('cust-box-click-batting')}
                         className={`cust-box-click-button font-medium px-5 py-1 ${careerTab === 'cust-box-click-batting' ? 'bg-[#081736] text-white' : ''} rounded-full`}
                       >
                         <span>Batting</span>
                       </button>
                       <button
-                        // className="cust-box-click-button bg-[#ffffff] font-medium text-[#6A7586] px-5 py-1 rounded-full"
-                        // onclick="showCustomBox(this, 'cust-box-click-bowling')"
                         onClick={() => handleCareerTabClick('cust-box-click-bowling')}
                         className={`cust-box-click-button font-medium px-5 py-1 ${careerTab === 'cust-box-click-bowling' ? 'bg-[#081736] text-white' : ''} rounded-full`}
                       >
@@ -335,7 +331,7 @@ export default function Overview() {
                           className="cust-slider flex gap-4 transition-transform duration-500 ease-in-out"
                           style={{ transform: `translateX(-${currentIndex * (100 / visibleSlides)}%)` }}
                         >
-                          {slides.map((slide, index) => (
+                          {slides.map((slide) => (
                             <div key={slide.id} className="cust-slide w-1/4 flex-shrink-0 rounded-lg border-[1px] border-[#ebebeb]">
                               <div className="bg-white p-4 text-center">
                                 <p className="text-1xl text-[#1A80F8] font-semibold mb-2">{slide.text}</p>
@@ -454,7 +450,7 @@ export default function Overview() {
                                   scope="row"
                                   className="px-4 py-4 font-medium text-gray-900 bg-[#C3DBFF33] whitespace-nowrap dark:text-white"
                                 >
-                                  ODI"
+                                  ODI
                                 </th>
                                 <td className="px-4 py-4">5</td>
                                 <td className="px-4 py-4">5</td>
@@ -929,7 +925,7 @@ export default function Overview() {
                       <p className="text-gray-500 font-normal">
                         India will go into the home Test series against New Zealand
                         with pretty much the same squad that took on Bangladesh in
-                        September - India's last red-ball action ahead of the
+                        September - Indias last red-ball action ahead of the
                         five-Test...
                       </p>
                       <div className="border-l-[1px] border-[#E7F2F4]" />
@@ -945,7 +941,7 @@ export default function Overview() {
                         />
                         <div>
                           <h4 className="text-[13px] font-semibold mb-2">
-                            Women's T20 World Cup, 2nd Semifinal | WI-W Vs NZ-W
+                            Womens T20 World Cup, 2nd Semifinal | WI-W Vs NZ-W
                             Playing 11 Prediction
                           </h4>
                           <p className="text-[12px] text-gray-500 flex items-center">
@@ -1161,14 +1157,14 @@ export default function Overview() {
                         </div>
                         <div className=" pb-2 mb-4 border-b-[1px] border-border-gray-700 ">
                           <p className="text-[13px] font-semibold">
-                            Probably Took Wrong Risk': Alyssa Healy Regrets Sitting
+                            Probably Took Wrong Risk: Alyssa Healy Regrets Sitting
                             Out As SA Stuns AUS In T20 WC
                           </p>
                           <p className="text-[#586577] pt-2">17 hrs ago</p>
                         </div>
                         <div className=" pb-2 mb-4 border-b-[1px] border-border-gray-700 ">
                           <p className="text-[13px] font-semibold">
-                            Women's T20 World Cup, NZ vs WI: Unchanged New Zealand
+                            Womens T20 World Cup, NZ vs WI: Unchanged New Zealand
                             Opt To Bat; Check Out The Playing XIs
                           </p>
                           <p className="text-[#586577] pt-2">19 hrs ago</p>
@@ -1182,7 +1178,7 @@ export default function Overview() {
                         </div>
                         <div className=" pb-2 mb-2">
                           <p className="text-[13px] font-semibold">
-                            'Probably Took Wrong Risk': Alyssa Healy Regrets Sitting
+                            Probably Took Wrong Risk: Alyssa Healy Regrets Sitting
                             Out As SA Stuns AUS In T20 WC
                           </p>
                           <p className="text-[#586577] pt-2">18 Oct 2024</p>

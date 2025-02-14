@@ -8,27 +8,7 @@ import Image from "next/image";
 export default function Overview() {
 
 
-    const [activeTab, setActiveTab] = useState('info');
-    const [activeSubTab, setActiveSubTab] = useState('all');
-    const [activeTeam, setActiveTeam] = useState("south-team");
-    const [activeStats, setActiveStats] = useState("most-runs");
-
-    const handleTabClick = (event, tabName) => {
-        setActiveTab(tabName);
-    };
-
-    // Function to change the active tab
-    const handleSubTabChange = (tab) => {
-        setActiveSubTab(tab);
-    };
-
-    const handleTeamChange = (team) => {
-        setActiveTeam(team);
-    };
-    const handleStatsChange = (team) => {
-        setActiveStats(team);
-    };
-
+    
 
     const [open, setOpen] = useState({
         mostRuns: false,
@@ -40,7 +20,7 @@ export default function Overview() {
         mostMatchesAsCaptain: false,
     });
 
-    const toggleOpen = (key) => {
+    const toggleOpen = (key: string) => {
         setOpen((prev) => ({
             ...prev,
             [key]: !prev[key],

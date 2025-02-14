@@ -8,7 +8,7 @@ export default function Stats() {
 
     const [statsTab, setStatsTab] = useState('cust-box-click-t20');
 
-    const handleStatsTabClick = (tab) => {
+    const handleStatsTabClick = (tab: React.SetStateAction<string>) => {
         setStatsTab(tab);
     };
 
@@ -617,7 +617,7 @@ export default function Stats() {
                                                         <tr>
                                                             <td className="md:px-2 py-3 text-[#217AF7]">
                                                                 <a href="#" style={{ cursor: "pointer" }}>
-                                                                    ICC Men's T20 World Cup
+                                                                    ICC Mens T20 World Cup
                                                                 </a>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
@@ -808,7 +808,7 @@ export default function Stats() {
                                                         <tr>
                                                             <td className="md:px-2 py-3 text-[#217AF7]">
                                                                 <a href="#" style={{ cursor: "pointer" }}>
-                                                                    ICC Men's T20 World Cup
+                                                                    ICC Mens T20 World Cup
                                                                 </a>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
@@ -988,7 +988,7 @@ export default function Stats() {
                                                         <tr>
                                                             <td className="md:px-2 py-3 text-[#217AF7]">
                                                                 <a href="#" style={{ cursor: "pointer" }}>
-                                                                    ICC Men's T20 World Cup
+                                                                    ICC Mens T20 World Cup
                                                                 </a>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>

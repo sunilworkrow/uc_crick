@@ -51,41 +51,56 @@ export default async function page(props: { params: Params }) {
   return (
     <Layout>
 
-      {/* <LiveBanner></LiveBanner> */}
+      {matchType === 'live' && (
+        <>
 
+          <LiveBanner></LiveBanner>
 
-      {/* <MoreInfo></MoreInfo> */}
+          {matchType === 'live' && matchTab === "more-info" && <MoreInfo />}
+          {matchType === 'live' && matchTab === "live" && <Live />}
+          {matchType === 'live' && matchTab === "scorecard" && <Scorecard />}
+          {matchType === 'live' && matchTab === "squad" && <Squad />}
+          {matchType === 'live' && matchTab === "points-table" && <PointsTable />}
+          {matchType === 'live' && matchTab === "stats" && <Stats />}
+        </>
 
-
-      {matchType === 'live' && matchTab === "more-info" && <MoreInfo />}
-      {matchType === 'live' && matchTab === "live" && <Live />}
-      {matchType === 'live' && matchTab === "scorecard" && <Scorecard />}
-      {matchType === 'live' && matchTab === "squad" && <Squad />}
-      {matchType === 'live' && matchTab === "points-table" && <PointsTable />}
-      {matchType === 'live' && matchTab === "stats" && <Stats />}
-
+      )}
 
       {/* scheduled pages */}
-      {/* <ScheduledBanner></ScheduledBanner> */}
 
-      {matchType ==='scheduled' && matchTab === "info" && <Info />}
-      {matchType ==='scheduled' && matchTab === "live" && <ScheduledLive />}
-      {matchType ==='scheduled' && matchTab === "scorecard" && <ScheduledScorecard />}
-      {matchType ==='scheduled' && matchTab === "squad" && <ScheduledSquad />}
-      {matchType ==='scheduled' && matchTab === "points-table" && <ScheduledPointsTable />}
-      {matchType ==='scheduled' && matchTab === "stats" && <ScheduledStats />}
-      {matchType ==='scheduled' && matchTab === "fantasy-tips" && <ScheduledFantasyTips />}
+      {matchType === 'scheduled' && (
+        <>
+          <ScheduledBanner></ScheduledBanner>
 
-      {/* result pages */}
+          {matchType === 'scheduled' && matchTab === "info" && <Info />}
+          {matchType === 'scheduled' && matchTab === "live" && <ScheduledLive />}
+          {matchType === 'scheduled' && matchTab === "scorecard" && <ScheduledScorecard />}
+          {matchType === 'scheduled' && matchTab === "squad" && <ScheduledSquad />}
+          {matchType === 'scheduled' && matchTab === "points-table" && <ScheduledPointsTable />}
+          {matchType === 'scheduled' && matchTab === "stats" && <ScheduledStats />}
+          {matchType === 'scheduled' && matchTab === "fantasy-tips" && <ScheduledFantasyTips />}
 
-<ResultBanner></ResultBanner>
 
-      {matchType ==='result' && matchTab === "more-info" && <ResultMoreinfo />}
-      {matchType ==='result' && matchTab === "live" && <ResultLive />}
-      {matchType ==='result' && matchTab === "scorecard" && <ResultScorecard />}
-      {matchType ==='result' && matchTab === "squad" && <ResultSquad />}
-      {matchType ==='result' && matchTab === "points-table" && <ResultPointsTable />}
-      {matchType ==='result' && matchTab === "stats" && <ResultStats />}
+        </>
+
+      )}
+
+      {matchType === 'result' && (
+        <>
+
+          <ResultBanner></ResultBanner>
+
+          {matchType === 'result' && matchTab === "more-info" && <ResultMoreinfo />}
+          {matchType === 'result' && matchTab === "live" && <ResultLive />}
+          {matchType === 'result' && matchTab === "scorecard" && <ResultScorecard />}
+          {matchType === 'result' && matchTab === "squad" && <ResultSquad />}
+          {matchType === 'result' && matchTab === "points-table" && <ResultPointsTable />}
+          {matchType === 'result' && matchTab === "stats" && <ResultStats />}
+
+
+        </>
+
+      )}
 
     </Layout>
   )

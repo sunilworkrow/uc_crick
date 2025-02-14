@@ -336,7 +336,7 @@ export default function Odi() {
                                             <div className="p-2 ">
                                                 <p className="font-semibold">
                                                     Vs&nbsp;ENG&nbsp;on&nbsp;Jun 25,
-                                                    1932&nbsp;at&nbsp;Lord's..
+                                                    1932&nbsp;at&nbsp;Lords..
                                                 </p>
                                                 <p className="text-[11px]">
                                                     England beat India by 158 runs
@@ -1335,7 +1335,7 @@ export default function Odi() {
                                 />
                                 <div>
                                     <h4 className="text-[13px] font-semibold mb-2">
-                                        Women's T20 World Cup, 2nd Semifinal | WI-W Vs NZ-W Playing 11
+                                        Womens T20 World Cup, 2nd Semifinal | WI-W Vs NZ-W Playing 11
                                         Prediction
                                     </h4>
                                     <p className="text-[12px] text-gray-500 flex items-center">

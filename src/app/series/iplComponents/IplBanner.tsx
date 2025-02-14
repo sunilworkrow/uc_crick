@@ -8,6 +8,9 @@ import Image from "next/image";
 export default function IplBanner() {
 
  const sliderRef = useRef(null);
+
+//  const sliderRef = useRef<HTMLDivElement>(null);
+
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const images = [
@@ -19,12 +22,12 @@ export default function IplBanner() {
     { src: "/assets/img/series/ipl.png", url: "/iplseries" },
   ];
 
-  const handleScroll = (direction) => {
+  const handleScroll = (direction: string) => {
     if (!sliderRef.current) return;
-
-    const slider = sliderRef.current;
-    const slideWidth = slider.children[0]?.offsetWidth + 80 || 200; // Default width fallback
-
+  
+    const slider = sliderRef.current as HTMLDivElement;
+    const slideWidth = slider.children[0]?.clientWidth + 80 || 200; // Default width fallback
+  
     if (direction === "right" && scrollPosition < images.length - 3) {
       setScrollPosition((prev) => prev + 1);
       slider.scrollBy({ left: slideWidth, behavior: "smooth" });
@@ -33,6 +36,7 @@ export default function IplBanner() {
       slider.scrollBy({ left: -slideWidth, behavior: "smooth" });
     }
   };
+  
   
 
 

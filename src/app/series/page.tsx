@@ -36,25 +36,38 @@ export default async function page(props: { params: Params }) {
   return (
     <Layout>
 
-      {/* <T20Banner></T20Banner> */}
+      {seriesType === 'T20' && (
+        <>
 
-      {seriesType === 'T20' && seriesTab === "overview" && <T20Overview />}
-      {seriesType === 'T20' && seriesTab === "schedule-Results" && <T20ScheduleResults />}
-      {seriesType === 'T20' && seriesTab === "squads" && <T20Squads />}
-      {seriesType === 'T20' && seriesTab === "points-table" && <T20PointsTable />}
-      {seriesType === 'T20' && seriesTab === "news" && <T20News />}
-      {seriesType === 'T20' && seriesTab === "stats" && <T20Stats />}
+          <T20Banner></T20Banner>
 
-      <IplBanner></IplBanner>
+          {seriesType === 'T20' && seriesTab === "overview" && <T20Overview />}
+          {seriesType === 'T20' && seriesTab === "schedule-Results" && <T20ScheduleResults />}
+          {seriesType === 'T20' && seriesTab === "squads" && <T20Squads />}
+          {seriesType === 'T20' && seriesTab === "points-table" && <T20PointsTable />}
+          {seriesType === 'T20' && seriesTab === "news" && <T20News />}
+          {seriesType === 'T20' && seriesTab === "stats" && <T20Stats />}
 
-      {/* <h1>hello</h1> */}
+        </>
 
-      {seriesType === 'IPL' && seriesTab === "overview" && <IplOverview />}
-      {seriesType === 'IPL' && seriesTab === "schedule-results" && <IplScheduleResults />}
-      {seriesType === 'IPL' && seriesTab === "squads" && <IplSquads />}
-      {seriesType === 'IPL' && seriesTab === "points-table" && <IplPointsTable />}
-      {seriesType === 'IPL' && seriesTab === "news" && <IplNews />}
-      {seriesType === 'IPL' && seriesTab === "stats" && <IplStats />}
+      )}
+
+
+      {seriesType === 'IPL' && (
+        <>
+
+          <IplBanner></IplBanner>
+
+          {seriesType === 'IPL' && seriesTab === "overview" && <IplOverview />}
+          {seriesType === 'IPL' && seriesTab === "schedule-results" && <IplScheduleResults />}
+          {seriesType === 'IPL' && seriesTab === "squads" && <IplSquads />}
+          {seriesType === 'IPL' && seriesTab === "points-table" && <IplPointsTable />}
+          {seriesType === 'IPL' && seriesTab === "news" && <IplNews />}
+          {seriesType === 'IPL' && seriesTab === "stats" && <IplStats />}
+
+        </>
+
+      )}
 
     </Layout>
   )

@@ -18,7 +18,7 @@ export default function Banner() {
                     Cricket in India (BCCI), the governing body of cricket in the country.
                     The first recorded match in India was in 1721 when a group of sailors
                     gathered to play in Western India. However, it was only on 25th June
-                    1932 at the famous Lord's cricket ground in England that a national
+                    1932 at the famous Lord cricket ground in England that a national
                     team played an official Test match. Only the sixth team to...
                 </p>
             </div>

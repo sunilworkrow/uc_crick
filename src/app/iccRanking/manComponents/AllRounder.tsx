@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from 'react'
-
+import Image from 'next/image';
 import Link from 'next/link'
 
 
@@ -121,9 +121,9 @@ export default function Team() {
                           }}
                         >
                           <div className="flex items-center">
-                            <img
+                            <Image
                               src="/assets/img/player/r-1.png"
-                              alt="Player"
+                              width={48} height={48} alt="Player" 
                               className="w-12 h-12 rounded-lg mr-3"
                             />
                             <div>
@@ -244,9 +244,9 @@ export default function Team() {
                           }}
                         >
                           <div className="flex items-center">
-                            <img
+                            <Image
                               src="/assets/img/player/r-1.png"
-                              alt="Player"
+                              width={48} height={48} alt="Player"
                               className="w-12 h-12 rounded-lg mr-3"
                             />
                             <div>
@@ -368,9 +368,9 @@ export default function Team() {
                           }}
                         >
                           <div className="flex items-center">
-                            <img
+                            <Image
                               src="/assets/img/player/r-1.png"
-                              alt="Player"
+                              width={48} height={48} alt="Player"
                               className="w-12 h-12 rounded-lg mr-3"
                             />
                             <div>
