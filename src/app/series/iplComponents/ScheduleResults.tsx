@@ -9,7 +9,7 @@ export default function ScheduleResults() {
 
     const [activeSubTab, setActiveSubTab] = useState("all");
 
-    const handleSubTabChange = (tab) => {
+    const handleSubTabChange = (tab: React.SetStateAction<string>) => {
         setActiveSubTab(tab);
     };
 

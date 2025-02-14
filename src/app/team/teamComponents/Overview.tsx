@@ -19,11 +19,11 @@ export default function Overview() {
     mostMatchesAsCaptain: false,
 });
 
-const toggleOpen = (key: string) => {
-    setOpen((prev) => ({
-        ...prev,
-        [key]: !prev[key],
-    }));
+const toggleOpen = (key: keyof typeof open) => {
+  setOpen((prev) => ({
+      ...prev,
+      [key]: !prev[key],  // Now TypeScript knows 'key' is a valid key
+  }));
 };
 
 

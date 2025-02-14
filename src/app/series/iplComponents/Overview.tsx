@@ -20,13 +20,12 @@ export default function Overview() {
         mostMatchesAsCaptain: false,
     });
 
-    const toggleOpen = (key: string) => {
+    const toggleOpen = (key: keyof typeof open) => {
         setOpen((prev) => ({
             ...prev,
-            [key]: !prev[key],
+            [key]: !prev[key],  // Now TypeScript knows 'key' is a valid key
         }));
     };
-
 
 
 
@@ -83,7 +82,7 @@ export default function Overview() {
 
             <div id="tab-content">
                 <div id="info"
-                    className={`tab-content ${activeTab === 'info' ? '' : 'hidden'}`}>
+                    className="tab-content ">
                     <div className="md:grid grid-cols-12 gap-4">
                         <div className="lg:col-span-8 md:col-span-7">
                             <div className="rounded-lg bg-white">
