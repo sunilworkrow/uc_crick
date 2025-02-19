@@ -15,13 +15,13 @@ const Header = () => {
 
   const items = [
     {
-      href: "/t20series",
+      href: "/series/T20/overview",
       imgSrc: "/assets/img/series/series-1.png",
       alt: "BGT 2024-25",
       label: "BGT 2024-25",
     },
     {
-      href: "/iplseries",
+      href: "/series/IPL/overview",
       imgSrc: "/assets/img/series/ipl.png",
       alt: "WBBL 2024",
       label: "WBBL 2024",

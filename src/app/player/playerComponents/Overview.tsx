@@ -548,6 +548,7 @@ export default function Overview() {
                       <div className="mt-4">
                         <div className="grid md:grid-cols-5 grid-cols-2 gap-4">
                           <div className="col-span-1">
+                            <Link href="/team/india/test">
                             <div className="bg-white p-2 rounded-lg border-[1px] border-[#ebebeb] text-center mb-2">
                               <div className="flex items-center justify-center">
                                 <Image
@@ -560,8 +561,10 @@ export default function Overview() {
                                 India
                               </p>
                             </div>
+                            </Link>
                           </div>
                           <div className="col-span-1">
+                          <Link href="/team/india/test">
                             <div className="bg-white p-2 rounded-lg border-[1px] border-[#ebebeb] text-center mb-2">
                               <div className="flex items-center justify-center">
                                 <Image
@@ -574,8 +577,10 @@ export default function Overview() {
                                 Mumbai Indians
                               </p>
                             </div>
+                            </Link>
                           </div>
                           <div className="col-span-1">
+                          <Link href="/team/india/test">
                             <div className="bg-white p-2 rounded-lg border-[1px] border-[#ebebeb] text-center mb-2">
                               <div className="flex items-center justify-center">
                                 <Image
@@ -586,8 +591,10 @@ export default function Overview() {
                               </div>
                               <p className=" font-semibold text-[12px] pt-1">KKR</p>
                             </div>
+                            </Link>
                           </div>
                           <div className="col-span-1">
+                          <Link href="/team/india/test">
                             <div className="bg-white p-2 rounded-lg border-[1px] border-[#ebebeb] text-center mb-2">
                               <div className="flex items-center justify-center">
                                 <Image
@@ -600,8 +607,10 @@ export default function Overview() {
                                 India-A
                               </p>
                             </div>
+                            </Link>
                           </div>
                           <div className="col-span-1">
+                          <Link href="/team/india/test">
                             <div className="bg-white p-2 rounded-lg border-[1px] border-[#ebebeb] text-center mb-2">
                               <div className="flex items-center justify-center">
                                 <Image
@@ -614,6 +623,7 @@ export default function Overview() {
                                 West Zone
                               </p>
                             </div>
+                            </Link>
                           </div>
                         </div>
                       </div>
@@ -787,6 +797,7 @@ export default function Overview() {
                   </div>
                   <div className="grid md:grid-cols-4 grid-cols-2 gap-4">
                     <div className="col-span-1 bg-white p-4 rounded-lg border-[1px] border-[#ebebeb] ">
+                      <Link href="/player/playername/overview">
                       <div className="text-center">
                         <div className="flex justify-center mb-2">
                           <div className="relative">
@@ -807,8 +818,10 @@ export default function Overview() {
                           Batter
                         </p>
                       </div>
+                      </Link>
                     </div>
                     <div className="col-span-1 bg-white p-4 rounded-lg border-[1px] border-[#ebebeb] ">
+                    <Link href="/player/playername/overview">
                       <div className="text-center">
                         <div className="flex justify-center mb-2">
                           <div className="relative">
@@ -829,8 +842,10 @@ export default function Overview() {
                           Batter
                         </p>
                       </div>
+                      </Link>
                     </div>
                     <div className="col-span-1 bg-white p-4 rounded-lg border-[1px] border-[#ebebeb] ">
+                    <Link href="/player/playername/overview">
                       <div className="text-center">
                         <div className="flex justify-center mb-2">
                           <div className="relative">
@@ -851,8 +866,10 @@ export default function Overview() {
                           Batter
                         </p>
                       </div>
+                      </Link>
                     </div>
                     <div className="col-span-1 bg-white p-4 rounded-lg border-[1px] border-[#ebebeb] ">
+                    <Link href="/player/playername/overview">
                       <div className="text-center">
                         <div className="flex justify-center mb-2">
                           <div className="relative">
@@ -873,6 +890,7 @@ export default function Overview() {
                           Batter
                         </p>
                       </div>
+                      </Link>
                     </div>
                   </div>
                 </div>

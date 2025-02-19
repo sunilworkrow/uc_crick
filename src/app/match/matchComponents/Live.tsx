@@ -66,7 +66,7 @@ export default function Live() {
                 <div className="rounded-lg bg-white">
                   <div className="p-4">
                     <div className="flex items-center justify-between">
-                      <Link href="/profile">
+                      <Link href="/player/playername/overview">
                         <div className="flex items-center gap-3">
                           <div>
                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="R sharma (c)" />
@@ -98,7 +98,7 @@ export default function Live() {
                         </p>
                         <p>Partnership</p>
                       </div>
-                      <Link href="/profile">
+                      <Link href="/player/playername/overview">
                         <div className="flex items-center justify-end flex-row-reverse gap-3">
                           <div>
                             <Image src="/assets/img/player/2.png" width={40} height={40} alt="R sharma (c)" />
@@ -122,7 +122,7 @@ export default function Live() {
               </div>
               <div className="col-span-4 my-4 lg:my-0">
                 <div className="rounded-lg bg-white p-4">
-                  <Link href="/profile">
+                  <Link href="/player/playername/overview">
                     <div className="flex items-center gap-3">
                       <div className="relative">
                         <Image
@@ -778,24 +778,24 @@ export default function Live() {
                         New Batter On Crease
                       </h2>
                       <div className="flex items-center justify-between">
-                        <div className="flex items-center">
-                          {/* Player Image */}
-                          <Image
-                            src="/assets/img/player/14.png"
-                            width={65} height={65} alt="Player"
-                            className="md:mr-4 mr-2 h-[40px] md:h-[auto]"
-                          />
-                          {/* Player Info */}
-                          <div>
-                            <h2 className="md:text-xl text-[16px] font-semibold">
-                              V Kohli
-                            </h2>
-                            <p className="text-[14px] font-normal">
-                              30 Year (Batter)
-                            </p>
+                        <Link href="/player/playername/overview">
+                          <div className="flex items-center">
+                            <Image
+                              src="/assets/img/player/14.png"
+                              width={65} height={65} alt="Player"
+                              className="md:mr-4 mr-2 h-[40px] md:h-[auto]"
+                            />
+                            <div>
+                              <h2 className="md:text-xl text-[16px] font-semibold">
+                                V Kohli
+                              </h2>
+                              <p className="text-[14px] font-normal">
+                                30 Year (Batter)
+                              </p>
+                            </div>
                           </div>
-                        </div>
-                        {/* Best Score */}
+                        </Link>
+
                         <div className="flex gap-3 items-center">
                           <p className="text-1xl font-normal">Best</p>
                           <h1 className="md:text-2xl text-[16px] font-semibold">
@@ -852,24 +852,26 @@ export default function Live() {
                       }}
                     >
                       <div className="md:flex items-center justify-between">
-                        <div className="flex items-center">
-                          <Image
-                            src="/assets/img/player/15.png"
-                            width={65} height={65} alt="Player"
-                            className="md:mr-4 mr-2 h-[40px] md:h-[auto]"
-                          />
-                          <div>
-                            <h2 className="md:text-xl text-[16px] font-semibold flex gap-3">
-                              <span>KL rahul</span>{" "}
-                              <span className="text-[#BFEF50] text-[14px]">
-                                29(12)
-                              </span>
-                            </h2>
-                            <p className="text-[14px] font-normal">
-                              c R Hossain b Miraz{" "}
-                            </p>
+                        <Link href="/player/playername/overview">
+                          <div className="flex items-center">
+                            <Image
+                              src="/assets/img/player/15.png"
+                              width={65} height={65} alt="Player"
+                              className="md:mr-4 mr-2 h-[40px] md:h-[auto]"
+                            />
+                            <div>
+                              <h2 className="md:text-xl text-[16px] font-semibold flex gap-3">
+                                <span>KL rahul</span>{" "}
+                                <span className="text-[#BFEF50] text-[14px]">
+                                  29(12)
+                                </span>
+                              </h2>
+                              <p className="text-[14px] font-normal">
+                                c R Hossain b Miraz{" "}
+                              </p>
+                            </div>
                           </div>
-                        </div>
+                        </Link>
                         <div className="flex gap-4 justify-end">
                           <div>
                             <p className="md:text-1xl text-[14px] font-normal">
@@ -1108,14 +1110,15 @@ export default function Live() {
                       New bowler spell
                     </h2>
                     <div className="flex items-center justify-between">
+                      <Link href="/player/playername/overview">
                       <div className="flex items-center">
-                        {/* Player Image */}
+                        
                         <Image
                           src="/assets/img/player/14.png"
                           width={65} height={65} alt="Player"
                           className="md:mr-4 mr-2 h-[40px] md:h-[auto]"
                         />
-                        {/* Player Info */}
+                       
                         <div>
                           <h2 className="md:text-xl text-[16px] font-semibold">
                             M Rahman
@@ -1125,7 +1128,8 @@ export default function Live() {
                           </p>
                         </div>
                       </div>
-                      {/* Best Score */}
+                      </Link>
+                      
                       <div className="flex gap-3 items-center">
                         <p className="text-1xl font-normal">Best</p>
                         <h1 className="md:text-2xl text-[16px] font-semibold">

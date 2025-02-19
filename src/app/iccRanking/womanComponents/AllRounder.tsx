@@ -120,6 +120,7 @@ export default function Team() {
                             background: "linear-gradient(90deg, #3C1492 0%, #6D1E93 100%)"
                           }}
                         >
+                          <Link href="/player/playername/overview">
                           <div className="flex items-center">
                             <Image
                               src="/assets/img/player/r-1.png"
@@ -131,6 +132,7 @@ export default function Team() {
                               <h3 className="text-[14px] font-normal">Maharaj</h3>
                             </div>
                           </div>
+                          </Link>
                           <div className="text-right">
                             <p className="text-[14px] font-normal">Rating</p>
                             <p className="md:text-[17px] text-[15px] font-semibold">674</p>
@@ -151,21 +153,24 @@ export default function Team() {
                               <tr>
                                 <td className="text-center">2</td>
                                 <td className="px-1">-</td>
-                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">R Khan</td>
+                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">
+                                <Link href="/player/playername/overview"> R Khan </Link> </td>
                                 <td className="py-2 px-3">AFG</td>
                                 <td className="py-2 px-3">668</td>
                               </tr>
                               <tr>
                                 <td className="text-center">3</td>
                                 <td className="px-1">-</td>
-                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">K Yadav</td>
+                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">
+                                <Link href="/player/playername/overview"> K Yadav </Link> </td>
                                 <td className="py-2 px-3">IND</td>
                                 <td className="py-2 px-3">665</td>
                               </tr>
                               <tr>
                                 <td className="text-center">4</td>
                                 <td className="px-1">-</td>
-                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">A Zampa</td>
+                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">
+                                <Link href="/player/playername/overview">  A Zampa </Link> </td>
                                 <td className="py-2 px-3">AUS</td>
                                 <td className="py-2 px-3">663</td>
                               </tr>
@@ -173,7 +178,7 @@ export default function Team() {
                                 <td className="text-center">5</td>
                                 <td className="px-1">-</td>
                                 <td className="py-2 px-3 font-medium text-[#3d3d3d]">
-                                  J Hazlewood
+                                <Link href="/player/playername/overview">   J Hazlewood </Link>
                                 </td>
                                 <td className="py-2 px-3">AUS</td>
                                 <td className="py-2 px-3">656</td>
@@ -182,7 +187,7 @@ export default function Team() {
                                 <td className="text-center">6</td>
                                 <td className="px-1">-</td>
                                 <td className="py-2 px-3 font-medium text-[#3d3d3d]">
-                                  B Scholtz
+                                <Link href="/player/playername/overview">   B Scholtz </Link>
                                 </td>
                                 <td className="py-2 px-3">PAK</td>
                                 <td className="py-2 px-3">654</td>
@@ -190,28 +195,32 @@ export default function Team() {
                               <tr>
                                 <td className="text-center">7</td>
                                 <td className="px-1">-</td>
-                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">S Afridi</td>
+                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">
+                                <Link href="/player/playername/overview">  S Afridi </Link> </td>
                                 <td className="py-2 px-3">NAM</td>
                                 <td className="py-2 px-3">650</td>
                               </tr>
                               <tr>
                                 <td className="text-center">8</td>
                                 <td className="px-1">-</td>
-                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">J Bumrah</td>
+                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">
+                                <Link href="/player/playername/overview">  J Bumrah </Link> </td>
                                 <td className="py-2 px-3">IND</td>
                                 <td className="py-2 px-3">643</td>
                               </tr>
                               <tr>
                                 <td className="text-center">9</td>
                                 <td className="px-1">-</td>
-                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">M Siraj</td>
+                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">
+                                <Link href="/player/playername/overview">  M Siraj </Link>  </td>
                                 <td className="py-2 px-3">IND</td>
                                 <td className="py-2 px-3">643</td>
                               </tr>
                               <tr>
                                 <td className="text-center">10</td>
                                 <td className="px-1">-</td>
-                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">T Boult</td>
+                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">
+                                <Link href="/player/playername/overview">  T Boult </Link> </td>
                                 <td className="py-2 px-3">NZ</td>
                                 <td className="py-2 px-3">642</td>
                               </tr>
@@ -243,6 +252,7 @@ export default function Team() {
                             background: "linear-gradient(90deg, #2D71D6 0%, #114DA6 100%)"
                           }}
                         >
+                          <Link href="/player/playername/overview">
                           <div className="flex items-center">
                             <Image
                               src="/assets/img/player/r-1.png"
@@ -254,6 +264,7 @@ export default function Team() {
                               <h3 className="text-[14px] font-normal">Maharaj</h3>
                             </div>
                           </div>
+                          </Link>
                           <div className="text-right">
                             <p className="text-[14px] font-normal">Rating</p>
                             <p className="md:text-[17px] text-[15px] font-semibold">674</p>
@@ -274,21 +285,24 @@ export default function Team() {
                               <tr>
                                 <td className="text-center">2</td>
                                 <td className="px-1">-</td>
-                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">R Khan</td>
+                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">
+                                <Link href="/player/playername/overview"> R Khan </Link> </td>
                                 <td className="py-2 px-3">AFG</td>
                                 <td className="py-2 px-3">668</td>
                               </tr>
                               <tr>
                                 <td className="text-center">3</td>
                                 <td className="px-1">-</td>
-                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">K Yadav</td>
+                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">
+                                <Link href="/player/playername/overview"> K Yadav </Link> </td>
                                 <td className="py-2 px-3">IND</td>
                                 <td className="py-2 px-3">665</td>
                               </tr>
                               <tr>
                                 <td className="text-center">4</td>
                                 <td className="px-1">-</td>
-                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">A Zampa</td>
+                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">
+                                <Link href="/player/playername/overview">  A Zampa </Link> </td>
                                 <td className="py-2 px-3">AUS</td>
                                 <td className="py-2 px-3">663</td>
                               </tr>
@@ -296,7 +310,7 @@ export default function Team() {
                                 <td className="text-center">5</td>
                                 <td className="px-1">-</td>
                                 <td className="py-2 px-3 font-medium text-[#3d3d3d]">
-                                  J Hazlewood
+                                <Link href="/player/playername/overview">   J Hazlewood </Link>
                                 </td>
                                 <td className="py-2 px-3">AUS</td>
                                 <td className="py-2 px-3">656</td>
@@ -305,7 +319,7 @@ export default function Team() {
                                 <td className="text-center">6</td>
                                 <td className="px-1">-</td>
                                 <td className="py-2 px-3 font-medium text-[#3d3d3d]">
-                                  B Scholtz
+                                <Link href="/player/playername/overview">   B Scholtz </Link>
                                 </td>
                                 <td className="py-2 px-3">PAK</td>
                                 <td className="py-2 px-3">654</td>
@@ -313,28 +327,32 @@ export default function Team() {
                               <tr>
                                 <td className="text-center">7</td>
                                 <td className="px-1">-</td>
-                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">S Afridi</td>
+                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">
+                                <Link href="/player/playername/overview">  S Afridi </Link> </td>
                                 <td className="py-2 px-3">NAM</td>
                                 <td className="py-2 px-3">650</td>
                               </tr>
                               <tr>
                                 <td className="text-center">8</td>
                                 <td className="px-1">-</td>
-                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">J Bumrah</td>
+                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">
+                                <Link href="/player/playername/overview">  J Bumrah </Link> </td>
                                 <td className="py-2 px-3">IND</td>
                                 <td className="py-2 px-3">643</td>
                               </tr>
                               <tr>
                                 <td className="text-center">9</td>
                                 <td className="px-1">-</td>
-                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">M Siraj</td>
+                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">
+                                <Link href="/player/playername/overview">  M Siraj </Link>  </td>
                                 <td className="py-2 px-3">IND</td>
                                 <td className="py-2 px-3">643</td>
                               </tr>
                               <tr>
                                 <td className="text-center">10</td>
                                 <td className="px-1">-</td>
-                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">T Boult</td>
+                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">
+                                <Link href="/player/playername/overview">  T Boult </Link> </td>
                                 <td className="py-2 px-3">NZ</td>
                                 <td className="py-2 px-3">642</td>
                               </tr>
@@ -367,6 +385,7 @@ export default function Team() {
                             background: "linear-gradient(90deg, #D20A5E 0%, #9C0C0C 100%)"
                           }}
                         >
+                          <Link href="/player/playername/overview">
                           <div className="flex items-center">
                             <Image
                               src="/assets/img/player/r-1.png"
@@ -378,6 +397,7 @@ export default function Team() {
                               <h3 className="text-[14px] font-normal">Maharaj</h3>
                             </div>
                           </div>
+                          </Link>
                           <div className="text-right">
                             <p className="text-[14px] font-normal">Rating</p>
                             <p className="md:text-[17px] text-[15px] font-semibold">674</p>
@@ -398,21 +418,24 @@ export default function Team() {
                               <tr>
                                 <td className="text-center">2</td>
                                 <td className="px-1">-</td>
-                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">R Khan</td>
+                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">
+                                <Link href="/player/playername/overview"> R Khan </Link> </td>
                                 <td className="py-2 px-3">AFG</td>
                                 <td className="py-2 px-3">668</td>
                               </tr>
                               <tr>
                                 <td className="text-center">3</td>
                                 <td className="px-1">-</td>
-                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">K Yadav</td>
+                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">
+                                <Link href="/player/playername/overview"> K Yadav </Link> </td>
                                 <td className="py-2 px-3">IND</td>
                                 <td className="py-2 px-3">665</td>
                               </tr>
                               <tr>
                                 <td className="text-center">4</td>
                                 <td className="px-1">-</td>
-                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">A Zampa</td>
+                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">
+                                <Link href="/player/playername/overview">  A Zampa </Link> </td>
                                 <td className="py-2 px-3">AUS</td>
                                 <td className="py-2 px-3">663</td>
                               </tr>
@@ -420,7 +443,7 @@ export default function Team() {
                                 <td className="text-center">5</td>
                                 <td className="px-1">-</td>
                                 <td className="py-2 px-3 font-medium text-[#3d3d3d]">
-                                  J Hazlewood
+                                <Link href="/player/playername/overview">   J Hazlewood </Link>
                                 </td>
                                 <td className="py-2 px-3">AUS</td>
                                 <td className="py-2 px-3">656</td>
@@ -429,7 +452,7 @@ export default function Team() {
                                 <td className="text-center">6</td>
                                 <td className="px-1">-</td>
                                 <td className="py-2 px-3 font-medium text-[#3d3d3d]">
-                                  B Scholtz
+                                <Link href="/player/playername/overview">   B Scholtz </Link>
                                 </td>
                                 <td className="py-2 px-3">PAK</td>
                                 <td className="py-2 px-3">654</td>
@@ -437,28 +460,32 @@ export default function Team() {
                               <tr>
                                 <td className="text-center">7</td>
                                 <td className="px-1">-</td>
-                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">S Afridi</td>
+                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">
+                                <Link href="/player/playername/overview">  S Afridi </Link> </td>
                                 <td className="py-2 px-3">NAM</td>
                                 <td className="py-2 px-3">650</td>
                               </tr>
                               <tr>
                                 <td className="text-center">8</td>
                                 <td className="px-1">-</td>
-                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">J Bumrah</td>
+                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">
+                                <Link href="/player/playername/overview">  J Bumrah </Link> </td>
                                 <td className="py-2 px-3">IND</td>
                                 <td className="py-2 px-3">643</td>
                               </tr>
                               <tr>
                                 <td className="text-center">9</td>
                                 <td className="px-1">-</td>
-                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">M Siraj</td>
+                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">
+                                <Link href="/player/playername/overview">  M Siraj </Link>  </td>
                                 <td className="py-2 px-3">IND</td>
                                 <td className="py-2 px-3">643</td>
                               </tr>
                               <tr>
                                 <td className="text-center">10</td>
                                 <td className="px-1">-</td>
-                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">T Boult</td>
+                                <td className="py-2 px-3 font-medium text-[#3d3d3d]">
+                                <Link href="/player/playername/overview">  T Boult </Link> </td>
                                 <td className="py-2 px-3">NZ</td>
                                 <td className="py-2 px-3">642</td>
                               </tr>
@@ -473,11 +500,7 @@ export default function Team() {
                         </div>
                       </div>
                     </div>
-
-
                   </div>
-
-
                 </div>
 
               </div>

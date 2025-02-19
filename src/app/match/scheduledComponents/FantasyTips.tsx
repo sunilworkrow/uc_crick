@@ -106,10 +106,10 @@ export default function FantasyTips() {
                             </div>
                             <div className="border-t-[1px] border-[#E4E9F0]" />
                             <div className="flex justify-between items-center">
-                                <Link href="#">
+                                <Link href="/player/playername/overview">
                                     <div className="flex items-center space-x-3 py-3">
                                         <div>
-                                            <Image src="/assets/img/player/1.png" width={30} height={30} alt="R sharma (c)" />
+                                            <Image src="/assets/img/player/1.png" width={40} height={40} alt="R sharma (c)" />
                                         </div>
                                         <div className="font-medium">
                                             <h2 className="text-[15px]"> R sharma (c) </h2>
@@ -118,7 +118,7 @@ export default function FantasyTips() {
                                     </div>
                                 </Link>
                                 <div>-</div>
-                                <Link href="#">
+                                <Link href="/player/playername/overview">
                                     <div className="flex items-center space-x-3 py-3">
                                         <div className="font-medium">
                                             <h2 className="text-[15px]"> R sharma (c) </h2>
@@ -132,7 +132,7 @@ export default function FantasyTips() {
                             </div>
                             <div className="border-t-[1px] border-[#eef5ff]" />
                             <div className="flex justify-between items-center">
-                                <Link href="#">
+                                <Link href="/player/playername/overview">
                                     <div className="flex items-center space-x-3 py-3">
                                         <div>
                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="R sharma (c)" />
@@ -144,7 +144,7 @@ export default function FantasyTips() {
                                     </div>
                                 </Link>
                                 <div>-</div>
-                                <Link href="#">
+                                <Link href="/player/playername/overview">
                                     <div className="flex items-center space-x-3 py-3">
                                         <div className="font-medium">
                                             <h2 className="text-[15px]"> R sharma (c) </h2>
@@ -158,7 +158,7 @@ export default function FantasyTips() {
                             </div>
                             <div className="border-t-[1px] border-[#eef5ff]" />
                             <div className="flex justify-between items-center">
-                                <Link href="#">
+                                <Link href="/player/playername/overview">
                                     <div className="flex items-center space-x-3 py-3">
                                         <div>
                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="R sharma (c)" />
@@ -170,7 +170,7 @@ export default function FantasyTips() {
                                     </div>
                                 </Link>
                                 <div>-</div>
-                                <Link href="#">
+                                <Link href="/player/playername/overview">
                                     <div className="flex items-center space-x-3 py-3">
                                         <div className="font-medium">
                                             <h2 className="text-[15px]"> R sharma (c) </h2>
@@ -184,7 +184,7 @@ export default function FantasyTips() {
                             </div>
                             <div className="border-t-[1px] border-[#eef5ff]" />
                             <div className="flex justify-between items-center">
-                                <Link href="#">
+                                <Link href="/player/playername/overview">
                                     <div className="flex items-center space-x-3 py-3">
                                         <div>
                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="R sharma (c)" />
@@ -196,7 +196,7 @@ export default function FantasyTips() {
                                     </div>
                                 </Link>
                                 <div>-</div>
-                                <Link href="#">
+                                <Link href="/player/playername/overview">
                                     <div className="flex items-center space-x-3 py-3">
                                         <div className="font-medium">
                                             <h2 className="text-[15px]"> R sharma (c) </h2>
@@ -210,7 +210,7 @@ export default function FantasyTips() {
                             </div>
                             <div className="border-t-[1px] border-[#eef5ff]" />
                             <div className="flex justify-between items-center">
-                                <Link href="#">
+                                <Link href="/player/playername/overview">
                                     <div className="flex items-center space-x-3 py-3">
                                         <div>
                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="R sharma (c)" />
@@ -222,7 +222,7 @@ export default function FantasyTips() {
                                     </div>
                                 </Link>
                                 <div>-</div>
-                                <Link href="#">
+                                <Link href="/player/playername/overview">
                                     <div className="flex items-center space-x-3 py-3">
                                         <div className="font-medium">
                                             <h2 className="text-[15px]"> R sharma (c) </h2>
@@ -236,7 +236,7 @@ export default function FantasyTips() {
                             </div>
                             <div className="border-t-[1px] border-[#eef5ff]" />
                             <div className="flex justify-between items-center">
-                                <Link href="#">
+                                <Link href="/player/playername/overview">
                                     <div className="flex items-center space-x-3 py-3">
                                         <div>
                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="R sharma (c)" />
@@ -248,7 +248,7 @@ export default function FantasyTips() {
                                     </div>
                                 </Link>
                                 <div>-</div>
-                                <Link href="#">
+                                <Link href="/player/playername/overview">
                                     <div className="flex items-center space-x-3 py-3">
                                         <div className="font-medium">
                                             <h2 className="text-[15px]"> R sharma (c) </h2>
@@ -779,7 +779,7 @@ export default function FantasyTips() {
                         </div>
                         <div className="rounded-lg bg-[#ffffff] my-4 p-4">
                             <div>
-                                <h3 className="text-[15px] font-semibold mb-2 pl-[7px] border-l-[3px] mb-3 border-[#229ED3]">
+                                <h3 className="text-[15px] font-semibold pl-[7px] border-l-[3px] mb-3 border-[#229ED3]">
                                     Team Form{" "}
                                     <span className="text-[#909090]">
                                         {" "}
@@ -2074,7 +2074,7 @@ export default function FantasyTips() {
                                 backgroundPosition: "center"
                             }}
                         >
-                            <Link href="#">
+                            <Link href="/player/playername/overview">
                                 <div className="text-center">
                                     <div className="relative">
                                         <Image
@@ -2092,7 +2092,7 @@ export default function FantasyTips() {
                                     <p className="text-sm font-bold text-white">9.0</p>
                                 </div>
                             </Link>
-                            <Link href="#">
+                            <Link href="/player/playername/overview">
                                 <div className="text-center">
                                     <div className="relative">
                                         <Image
@@ -2124,7 +2124,7 @@ export default function FantasyTips() {
                                 backgroundPosition: "center"
                             }}
                         >
-                            <Link href="#">
+                            <Link href="/player/playername/overview">
                                 <div className="text-center">
                                     <div className="relative">
                                         <Image
@@ -2142,7 +2142,7 @@ export default function FantasyTips() {
                                     <p className="text-sm font-bold text-white">9.0</p>
                                 </div>
                             </Link>
-                            <Link href="#">
+                            <Link href="/player/playername/overview">
                                 <div className="text-center">
                                     <div className="relative">
                                         <Image

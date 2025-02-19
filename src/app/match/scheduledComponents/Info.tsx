@@ -131,7 +131,7 @@ export default function Info() {
                                 </div>
                                 <div className="rounded-lg bg-[#ffffff] my-4 p-4">
                                     <div>
-                                        <h3 className="text-[15px] font-semibold mb-2 pl-[7px] border-l-[3px] mb-3 border-[#229ED3]">
+                                        <h3 className="text-[15px] font-semibold pl-[7px] border-l-[3px] mb-3 border-[#229ED3]">
                                             Recent Performance{" "}
                                             <span className="text-[#909090]"> (Last 5 match) </span>
                                         </h3>
@@ -1342,7 +1342,7 @@ export default function Info() {
                                         </h3>
                                         <div className="border-t-[1px] border-[#E4E9F0]" />
                                         <div className="py-4 text-1xl flex justify-between items-center">
-                                            <Link href="">
+                                            <Link href="/team/india/test">
                                                 <div className="font-bold uppercase flex items-center">
                                                     <Image className="h-[30px]" src="/assets/img/flg-1.png" width={30} height={30} alt="" />
                                                     <p className="mx-2 font-semibold uppercase">IND</p>
@@ -1353,7 +1353,7 @@ export default function Info() {
                                                     10 <span className="text-[#009900]">- 10</span>
                                                 </p>
                                             </div>
-                                            <Link href="">
+                                            <Link href="/team/india/test">
                                                 <div className="font-bold uppercase flex items-center">
                                                     <p className="mx-2 font-semibold uppercase">BAN</p>
                                                     <Image className="h-[30px]" src="/assets/img/ban.png" width={30} height={30} alt="ban" />
@@ -1900,7 +1900,7 @@ export default function Info() {
                                     <div className="p-4">
                                         <div className="flex space-x-2">
                                             <div className="border-l-[3px] border-[#229ED3] h-[19px]" />
-                                            <h3 className="text-1xl font-semibold mb-2 mb-3">
+                                            <h3 className="text-1xl font-semibold mb-3">
                                                 Pace vs Spin on Venue{" "}
                                                 <span className="text-[#909090]">
                                                     {" "}
@@ -2330,7 +2330,7 @@ export default function Info() {
                                                 <span>India</span>
                                             </button>
 
-                                            <Link href="/playing-bangladesh">
+                                            <Link href="#">
                                             <button
                                                 className="cust-box-click-button bg-[#ffffff] font-medium text-[#6A7586] px-5 py-1 rounded-full"
                                                
@@ -2341,9 +2341,9 @@ export default function Info() {
 
                                         </div>
                                         <div className="border-t-[1px] border-[#E4E9F0]" />
-                                        <div className="">
+                                        <div className="cust-box-click-content cust-box-click-india mt-4">
                                             <div>
-                                                <a href="#">
+                                                <Link href="/player/playername/overview">
                                                     <div className="flex items-center space-x-3 py-3 border-b-[1px] border-border-gray-700">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="R sharma (c)" />
@@ -2353,8 +2353,8 @@ export default function Info() {
                                                             <p className="text-[#909090] font-normal">Batter</p>
                                                         </div>
                                                     </div>
-                                                </a>
-                                                <a href="#">
+                                                </Link>
+                                                <Link href="/player/playername/overview">
                                                     <div className="flex items-center space-x-3 py-3 border-b-[1px] border-border-gray-700">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="S Gill" />
@@ -2364,8 +2364,8 @@ export default function Info() {
                                                             <p className="text-[#909090] font-normal">Batter</p>
                                                         </div>
                                                     </div>
-                                                </a>
-                                                <a href="#">
+                                                </Link>
+                                                <Link href="/player/playername/overview">
                                                     <div className="flex items-center space-x-3 py-3 border-b-[1px] border-border-gray-700">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="L Rahul" />
@@ -2375,21 +2375,19 @@ export default function Info() {
                                                             <p className="text-[#909090] font-normal">Batter</p>
                                                         </div>
                                                     </div>
-                                                </a>
-                                                <a href="#">
+                                                </Link>
+                                                <Link href="/player/playername/overview">
                                                     <div className="flex items-center space-x-3 py-3 border-b-[1px] border-border-gray-700">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="R Jadeja" />
                                                         </div>
                                                         <div className="font-medium">
                                                             <h2 className="text-[15px]"> R Jadeja </h2>
-                                                            <p className="text-[#909090] font-normal">
-                                                                All Rounder{" "}
-                                                            </p>
+                                                            <p className="text-[#909090] font-normal">All Rounder </p>
                                                         </div>
                                                     </div>
-                                                </a>
-                                                <a href="#">
+                                                </Link>
+                                                <Link href="/player/playername/overview">
                                                     <div className="flex items-center space-x-3 py-3 border-b-[1px] border-border-gray-700">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="J Bumrah" />
@@ -2399,8 +2397,8 @@ export default function Info() {
                                                             <p className="text-[#909090] font-normal">Bowler</p>
                                                         </div>
                                                     </div>
-                                                </a>
-                                                <a href="#">
+                                                </Link>
+                                                <Link href="/player/playername/overview">
                                                     <div className="flex items-center space-x-3 py-3 border-b-[1px] border-border-gray-700">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="A Deep" />
@@ -2410,8 +2408,8 @@ export default function Info() {
                                                             <p className="text-[#909090] font-normal">Bowler </p>
                                                         </div>
                                                     </div>
-                                                </a>
-                                                <a href="#">
+                                                </Link>
+                                                <Link href="/player/playername/overview">
                                                     <div className="flex items-center space-x-3 py-3 border-b-[1px] border-border-gray-700">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="Y Jaiswal" />
@@ -2421,8 +2419,8 @@ export default function Info() {
                                                             <p className="text-[#909090] font-normal">Batter</p>
                                                         </div>
                                                     </div>
-                                                </a>
-                                                <a href="#">
+                                                </Link>
+                                                <Link href="/player/playername/overview">
                                                     <div className="flex items-center space-x-3 py-3 border-b-[1px] border-border-gray-700">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="V Kholi" />
@@ -2432,8 +2430,8 @@ export default function Info() {
                                                             <p className="text-[#909090] font-normal">Batter</p>
                                                         </div>
                                                     </div>
-                                                </a>
-                                                <a href="#">
+                                                </Link>
+                                                <Link href="/player/playername/overview">
                                                     <div className="flex items-center space-x-3 py-3 border-b-[1px] border-border-gray-700">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="M Siraj" />
@@ -2443,8 +2441,8 @@ export default function Info() {
                                                             <p className="text-[#909090] font-normal">Bowler</p>
                                                         </div>
                                                     </div>
-                                                </a>
-                                                <a href="#">
+                                                </Link>
+                                                <Link href="/player/playername/overview">
                                                     <div className="flex items-center space-x-3 py-3 border-b-[1px] border-border-gray-700">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="R Pant (WK)" />
@@ -2454,20 +2452,18 @@ export default function Info() {
                                                             <p className="text-[#909090] font-normal">Batter</p>
                                                         </div>
                                                     </div>
-                                                </a>
-                                                <a href="#">
+                                                </Link>
+                                                <Link href="/player/playername/overview">
                                                     <div className="flex items-center space-x-3 py-3 pb-0">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="R Ashwin" />
                                                         </div>
                                                         <div className="font-medium">
                                                             <h2 className="text-[15px]"> R Ashwin </h2>
-                                                            <p className="text-[#909090] font-normal">
-                                                                All Rounder{" "}
-                                                            </p>
+                                                            <p className="text-[#909090] font-normal">All Rounder </p>
                                                         </div>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </div>
                                         </div>
                                         <div className="">
@@ -2479,7 +2475,7 @@ export default function Info() {
                                     <div className="p-4">
                                         <div className="flex space-x-2">
                                             <div className="border-l-[3px] border-[#229ED3] h-[19px]" />
-                                            <h3 className="text-1xl font-semibold mb-2 mb-3">
+                                            <h3 className="text-1xl font-semibold mb-3">
                                                 Pace vs Spin on Venue{" "}
                                                 <span className="text-[#909090]">
                                                     {" "}

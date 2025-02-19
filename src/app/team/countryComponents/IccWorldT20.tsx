@@ -11,7 +11,7 @@ export default function IccWorldT20() {
 
     const [batterTab, setBatterTab] = useState('cust-box-click-batters');
     const [batter1Tab, setBatter1Tab] = useState('cust-box-click-batters1');
-    const [homeRecordTab, setHomeRecordTab] = useState('test');
+    const [homeRecordTab, setHomeRecordTab] = useState('cust-box-click-homeground');
     const [show, setShow] = useState(false);
 
     const handleBatterTabClick = (tab: React.SetStateAction<string>) => {
@@ -80,7 +80,7 @@ export default function IccWorldT20() {
                         <div id="test" className="">
                             <div className="grid md:grid-cols-2 grid-cols-1 gap-4 mb-4">
                                 <div className="bg-white rounded-lg p-4">
-                                    <a href="#">
+                                    <Link href="/player/playername/overview">
                                         <div className="flex items-center space-x-3">
                                             <div>
                                                 <Image
@@ -99,10 +99,10 @@ export default function IccWorldT20() {
                                                 </h2>
                                             </div>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </div>
                                 <div className="bg-white rounded-lg p-4">
-                                    <a href="#">
+                                    <Link href="/player/playername/overview">
                                         <div className="flex items-center space-x-3">
                                             <div>
                                                 <Image
@@ -121,7 +121,7 @@ export default function IccWorldT20() {
                                                 </h2>
                                             </div>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="rounded-lg bg-[#ffffff] p-4 mb-4">
@@ -137,7 +137,7 @@ export default function IccWorldT20() {
                                     <div className="grid md:grid-cols-12 grid-cols-6 gap-4">
 
                                         <div className="col-span-3 cust-tp-pera-card text-center py-4 px-2 rounded-md border-[1px] border-[##E2E2E2]">
-                                            <Link href="#">
+                                            <Link href="/player/playername/overview">
                                                 <div className="relative">
                                                     <Image
                                                         src="/assets/img/player/t-3.png"
@@ -152,7 +152,7 @@ export default function IccWorldT20() {
                                             </Link>
                                         </div>
                                         <div className="col-span-3 cust-tp-pera-card text-center py-4 px-2 rounded-md border-[1px] border-[##E2E2E2]">
-                                            <Link href="#">
+                                            <Link href="/player/playername/overview">
                                                 <div className="relative">
                                                     <Image
                                                         src="/assets/img/player/t-4.png"
@@ -167,7 +167,7 @@ export default function IccWorldT20() {
                                             </Link>
                                         </div>
                                         <div className="col-span-3 cust-tp-pera-card text-center py-4 px-2 rounded-md border-[1px] border-[##E2E2E2]">
-                                            <Link href="#">
+                                            <Link href="/player/playername/overview">
                                                 <div className="relative">
                                                     <Image
                                                         src="/assets/img/player/t-5.png"
@@ -182,7 +182,7 @@ export default function IccWorldT20() {
                                             </Link>
                                         </div>
                                         <div className="col-span-3 cust-tp-pera-card text-center py-4 px-2 rounded-md border-[1px] border-[##E2E2E2]">
-                                            <Link href="#">
+                                            <Link href="/player/playername/overview">
                                                 <div className="relative">
                                                     <Image
                                                         src="/assets/img/player/t-6.png"
@@ -199,7 +199,7 @@ export default function IccWorldT20() {
                                         {show &&
                                             <>
                                                 <div className="col-span-3 cust-tp-pera-card text-center py-4 px-2 rounded-md border-[1px] border-[##E2E2E2]">
-                                                    <Link href="#">
+                                                    <Link href="/player/playername/overview">
                                                         <div className="relative">
                                                             <Image
                                                                 src="/assets/img/player/t-3.png"
@@ -214,7 +214,7 @@ export default function IccWorldT20() {
                                                     </Link>
                                                 </div>
                                                 <div className="col-span-3 cust-tp-pera-card text-center py-4 px-2 rounded-md border-[1px] border-[##E2E2E2]">
-                                                    <Link href="#">
+                                                    <Link href="/player/playername/overview">
                                                         <div className="relative">
                                                             <Image
                                                                 src="/assets/img/player/t-4.png"
@@ -229,7 +229,7 @@ export default function IccWorldT20() {
                                                     </Link>
                                                 </div>
                                                 <div className="col-span-3 cust-tp-pera-card text-center py-4 px-2 rounded-md border-[1px] border-[##E2E2E2]">
-                                                    <Link href="#">
+                                                    <Link href="/player/playername/overview">
                                                         <div className="relative">
                                                             <Image
                                                                 src="/assets/img/player/t-5.png"
@@ -244,7 +244,7 @@ export default function IccWorldT20() {
                                                     </Link>
                                                 </div>
                                                 <div className="col-span-3 cust-tp-pera-card text-center py-4 px-2 rounded-md border-[1px] border-[##E2E2E2]">
-                                                    <Link href="#">
+                                                    <Link href="/player/playername/overview">
                                                         <div className="relative">
                                                             <Image
                                                                 src="/assets/img/player/t-6.png"
@@ -293,11 +293,11 @@ export default function IccWorldT20() {
                                                 Overall Team India
                                             </h3>
                                         </div>
-                                        <a href="#">
+                                        <Link href="#">
                                             <div className="md:font-semibold flex items-center justify-center md:text-[13px] text-[12px]">
                                                 Last updated on&nbsp;06 Dec 2024
                                             </div>
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="border-t border-[#E4E9F0] mb-3" />
                                     <div className="grid grid-cols-12 gap-4 justify-between">
@@ -393,7 +393,7 @@ export default function IccWorldT20() {
                                                             width={40} height={40} alt="Sachin Tendulkar"
                                                             className="rounded-full w-10 h-10"
                                                         />
-                                                        <Link href="#">
+                                                        <Link href="/player/playername/overview">
                                                             <h3 className="text-1xl font-semibold text-gray-800">
                                                                 Sachin Tendulkar
                                                             </h3>
@@ -422,7 +422,7 @@ export default function IccWorldT20() {
                                                             width={40} height={40} alt="Sachin Tendulkar"
                                                             className="rounded-full w-10 h-10"
                                                         />
-                                                        <Link href="#">
+                                                        <Link href="/player/playername/overview">
                                                             <h3 className="text-1xl font-semibold text-gray-800">
                                                                 Rahul Dravid
                                                             </h3>
@@ -451,7 +451,7 @@ export default function IccWorldT20() {
                                                             width={40} height={40} alt="Sachin Tendulkar"
                                                             className="rounded-full w-10 h-10"
                                                         />
-                                                        <Link href="#">
+                                                        <Link href="/player/playername/overview">
                                                             <h3 className="text-1xl font-semibold text-gray-800">
                                                                 Sunil Gavaskar
                                                             </h3>
@@ -479,7 +479,7 @@ export default function IccWorldT20() {
                                 </div>
                             </div>
                             <div>
-                                <div className="rounded-lg bg-[#ffffff] p-4 mb-4">
+                            <div className="rounded-lg bg-[#ffffff] p-4 mb-4">
                                     <div className="flex justify-between items-center pb-2">
                                         <div>
                                             <h3 className="text-1xl font-semibold pl-[4px] border-l-[3px] border-[#2182F8]">
@@ -522,7 +522,7 @@ export default function IccWorldT20() {
                                                             width={40} height={40} alt="Sachin Tendulkar"
                                                             className="rounded-full w-10 h-10"
                                                         />
-                                                        <Link href="#">
+                                                        <Link href="/player/playername/overview">
                                                             <h3 className="text-1xl font-semibold text-gray-800">
                                                                 Anil Kumble
                                                             </h3>
@@ -534,8 +534,10 @@ export default function IccWorldT20() {
                                                                 <p className="text-[#18A6ED] font-bold">10/74</p>
                                                                 <p>Wicket</p>
                                                             </div>
+
                                                             <div className="md:px-4 px-2 text-center">
                                                                 <p>Against</p>
+                                                                <Link href="/team/india/test">
                                                                 <div className="flex items-center space-x-1">
                                                                     <Image
                                                                         src="/assets/img/flag/16.png"
@@ -546,6 +548,7 @@ export default function IccWorldT20() {
                                                                         Pak
                                                                     </span>
                                                                 </div>
+                                                                </Link>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -560,7 +563,7 @@ export default function IccWorldT20() {
                                                             width={40} height={40} alt="Sachin Tendulkar"
                                                             className="rounded-full w-10 h-10"
                                                         />
-                                                        <Link href="#">
+                                                        <Link href="/player/playername/overview">
                                                             <h3 className="text-1xl font-semibold text-gray-800">
                                                                 Jasubhai Patel
                                                             </h3>
@@ -574,6 +577,7 @@ export default function IccWorldT20() {
                                                             </div>
                                                             <div className="md:px-4 px-2 text-center">
                                                                 <p>Against</p>
+                                                                <Link href="/team/india/test">
                                                                 <div className="flex items-center space-x-1">
                                                                     <Image
                                                                         src="/assets/img/flag/12.png"
@@ -584,6 +588,7 @@ export default function IccWorldT20() {
                                                                         Aus
                                                                     </span>
                                                                 </div>
+                                                                </Link>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -598,7 +603,7 @@ export default function IccWorldT20() {
                                                             width={40} height={40} alt="Sachin Tendulkar"
                                                             className="rounded-full w-10 h-10"
                                                         />
-                                                        <Link href="#">
+                                                        <Link href="/player/playername/overview">
                                                             <h3 className="text-1xl font-semibold text-gray-800">
                                                                 Kapil Dev
                                                             </h3>
@@ -612,6 +617,7 @@ export default function IccWorldT20() {
                                                             </div>
                                                             <div className="md:px-4 px-2 text-center">
                                                                 <p>Against</p>
+                                                                <Link href="/team/india/test">
                                                                 <div className="flex items-center space-x-1">
                                                                     <Image
                                                                         src="/assets/img/flag/b-2.png"
@@ -622,6 +628,7 @@ export default function IccWorldT20() {
                                                                         WI
                                                                     </span>
                                                                 </div>
+                                                                </Link>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -836,7 +843,7 @@ export default function IccWorldT20() {
                                                 Team India Best Scores/Figures in an Inning
                                             </h3>
                                         </div>
-                                        <a href="#">
+                                        <Link href="#">
                                             <div className="text-[#1A80F8] font-semibold flex items-center justify-center text-[13px] underline">
                                                 View More{" "}
                                                 <svg
@@ -854,7 +861,7 @@ export default function IccWorldT20() {
                                                     />
                                                 </svg>
                                             </div>
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="border-t border-[#E4E9F0] mb-3" />
                                     <div>
@@ -873,9 +880,9 @@ export default function IccWorldT20() {
                                                 <tbody className="divide-y divide-gray-200">
                                                     <tr>
                                                         <td className="md:px-2 py-3 text-[#217AF7] md:w-[260px]">
-                                                            <a href="#" style={{ cursor: "pointer" }}>
+                                                            <Link href="#" style={{ cursor: "pointer" }}>
                                                                 1932
-                                                            </a>
+                                                            </Link>
                                                         </td>
                                                         <td className="px-3 py-3">5</td>
                                                         <td className="px-3 py-3">5</td>
@@ -885,9 +892,9 @@ export default function IccWorldT20() {
                                                     </tr>
                                                     <tr>
                                                         <td className="md:px-2 py-3 text-[#217AF7]">
-                                                            <a href="#" style={{ cursor: "pointer" }}>
+                                                            <Link href="#" style={{ cursor: "pointer" }}>
                                                                 1933
-                                                            </a>
+                                                            </Link>
                                                         </td>
                                                         <td className="px-3 py-3">5</td>
                                                         <td className="px-3 py-3">5</td>
@@ -897,9 +904,9 @@ export default function IccWorldT20() {
                                                     </tr>
                                                     <tr>
                                                         <td className="md:px-2 py-3 text-[#217AF7]">
-                                                            <a href="#" style={{ cursor: "pointer" }}>
+                                                            <Link href="#" style={{ cursor: "pointer" }}>
                                                                 1934
-                                                            </a>
+                                                            </Link>
                                                         </td>
                                                         <td className="px-3 py-3">5</td>
                                                         <td className="px-3 py-3">5</td>
@@ -925,7 +932,7 @@ export default function IccWorldT20() {
                                     <div className="border-t border-[#E4E9F0] mb-3" />
                                     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
                                         {/* Card */}
-                                        <Link href="/team">
+                                        <Link href="/team/india/test">
                                             <div className="border-[1px] border-[##E2E2E2] rounded-md py-4 px-2 flex flex-col items-center">
                                                 <Image
                                                     src="/assets/img/flag/b-1.png"
@@ -936,7 +943,7 @@ export default function IccWorldT20() {
                                             </div>
                                             {/* Card */}
                                         </Link>
-                                        <Link href="/team">
+                                        <Link href="/team/india/test">
                                             <div className="border-[1px] border-[##E2E2E2] rounded-md py-4 px-2 flex flex-col items-center">
                                                 <Image
                                                     src="/assets/img/flag/b-2.png"
@@ -947,7 +954,7 @@ export default function IccWorldT20() {
                                             </div>
                                         </Link>
                                         {/* Card */}
-                                        <Link href="/team">
+                                        <Link href="/team/india/test">
                                             <div className="border-[1px] border-[##E2E2E2] rounded-md py-4 px-2 flex flex-col items-center">
                                                 <Image
                                                     src="/assets/img/flag/b-3.png"
@@ -958,7 +965,7 @@ export default function IccWorldT20() {
                                             </div>
                                         </Link>
                                         {/* Card */}
-                                        <Link href="/team">
+                                        <Link href="/team/india/test">
                                             <div className="border-[1px] border-[##E2E2E2] rounded-md py-4 px-2 flex flex-col items-center">
                                                 <Image
                                                     src="/assets/img/flag/b-4.png"
@@ -969,7 +976,7 @@ export default function IccWorldT20() {
                                             </div>
                                         </Link>
                                         {/* Card */}
-                                        <Link href="/team">
+                                        <Link href="/team/india/test">
                                             <div className="border-[1px] border-[##E2E2E2] rounded-md py-4 px-2 flex flex-col items-center">
                                                 <Image
                                                     src="/assets/img/flag/b-5.png"
@@ -1003,7 +1010,7 @@ export default function IccWorldT20() {
                                     width={40} height={40} alt="Sachin Tendulkar"
                                     className="rounded-full w-10 h-10"
                                 />
-                                <Link href="#">
+                                <Link href="/player/playername/overview">
                                     <h3 className="text-[14px] font-semibold text-gray-800">
                                         S Tendulkar
                                     </h3>
@@ -1030,7 +1037,7 @@ export default function IccWorldT20() {
                                     width={40} height={40} alt="Sachin Tendulkar"
                                     className="rounded-full w-10 h-10"
                                 />
-                                <Link href="#">
+                                <Link href="/player/playername/overview">
                                     <h3 className="text-[14px] font-semibold text-gray-800">A Kumar</h3>
                                 </Link>
                             </div>
@@ -1055,7 +1062,7 @@ export default function IccWorldT20() {
                                     width={40} height={40} alt="Sachin Tendulkar"
                                     className="rounded-full w-10 h-10"
                                 />
-                                <Link href="#">
+                                <Link href="/player/playername/overview">
                                     <h3 className="text-[14px] font-semibold text-gray-800">
                                         R Ashwin
                                     </h3>
@@ -1092,7 +1099,7 @@ export default function IccWorldT20() {
                                     width={40} height={40} alt="Sachin Tendulkar"
                                     className="rounded-full w-10 h-10"
                                 />
-                                <Link href="#">
+                                <Link href="/player/playername/overview">
                                     <h3 className="text-[14px] font-semibold text-gray-800">
                                         R Ashwin
                                     </h3>
@@ -1119,7 +1126,7 @@ export default function IccWorldT20() {
                                     width={40} height={40} alt="Sachin Tendulkar"
                                     className="rounded-full w-10 h-10"
                                 />
-                                <Link href="#">
+                                <Link href="/player/playername/overview">
                                     <h3 className="text-[14px] font-semibold text-gray-800">
                                         S Tendulkar
                                     </h3>
@@ -1146,7 +1153,7 @@ export default function IccWorldT20() {
                                     width={40} height={40} alt="Sachin Tendulkar"
                                     className="rounded-full w-10 h-10"
                                 />
-                                <Link href="#">
+                                <Link href="/player/playername/overview">
                                     <h3 className="text-[14px] font-semibold text-gray-800">
                                         V Sehwag
                                     </h3>
@@ -1173,7 +1180,7 @@ export default function IccWorldT20() {
                                     India Records
                                 </h3>
                             </div>
-                            <a href="#">
+                            <Link href="#">
                                 <div className="text-[#1A80F8] font-semibold flex items-center justify-center text-[13px] underline">
                                     View More{" "}
                                     <svg
@@ -1191,7 +1198,7 @@ export default function IccWorldT20() {
                                         />
                                     </svg>
                                 </div>
-                            </a>
+                            </Link>
                         </div>
                         <div className="rounded-lg bg-[#ffffff] p-4 mb-4">
                             <div className="cust-box-click-container">
@@ -1305,7 +1312,7 @@ export default function IccWorldT20() {
                                     Latest Cricket News
                                 </h3>
                             </div>
-                            <a href="#">
+                            <Link href="#">
                                 <div className="text-[#1A80F8] font-semibold flex items-center justify-center text-[13px] underline">
                                     View More{" "}
                                     <svg
@@ -1323,7 +1330,7 @@ export default function IccWorldT20() {
                                         />
                                     </svg>
                                 </div>
-                            </a>
+                            </Link>
                         </div>
                         <div className="rounded-lg bg-[#ffffff] p-4 mb-4">
                             {/* Single News Item */}

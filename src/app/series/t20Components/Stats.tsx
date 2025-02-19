@@ -234,7 +234,7 @@ export default function Stats() {
                                                     <tr>
                                                         <td className="md:px-2 pl-[14px] py-3 w-[10px]">1</td>
                                                         <td className="md:px-2 py-3 text-[#217AF7]">
-                                                            <Link href="/profile"> Virat Kohli</Link>
+                                                            <Link href="/player/playername/overview"> Virat Kohli</Link>
                                                         </td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
@@ -247,7 +247,7 @@ export default function Stats() {
                                                     <tr>
                                                         <td className="md:px-2 pl-[14px] py-3 w-[10px]">2</td>
                                                         <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                                            <Link href="/profile"> Rohit Sharma</Link>
+                                                            <Link href="/player/playername/overview"> Rohit Sharma</Link>
                                                         </td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
@@ -260,7 +260,7 @@ export default function Stats() {
                                                     <tr>
                                                         <td className="md:px-2 pl-[14px] py-3 w-[10px]">3</td>
                                                         <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                                            <Link href="/profile"> Rohit Sharma</Link>
+                                                            <Link href="/player/playername/overview"> Rohit Sharma</Link>
                                                         </td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
@@ -273,7 +273,7 @@ export default function Stats() {
                                                     <tr>
                                                         <td className="md:px-2 pl-[14px] py-3 w-[10px]">4</td>
                                                         <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                                            <Link href="/profile"> Rohit Sharma</Link>
+                                                            <Link href="/player/playername/overview"> Rohit Sharma</Link>
                                                         </td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
@@ -286,7 +286,7 @@ export default function Stats() {
                                                     <tr>
                                                         <td className="md:px-2 pl-[14px] py-3 w-[10px]">5</td>
                                                         <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                                            <Link href="/profile"> Rohit Sharma</Link>
+                                                            <Link href="/player/playername/overview"> Rohit Sharma</Link>
                                                         </td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
@@ -299,7 +299,7 @@ export default function Stats() {
                                                     <tr>
                                                         <td className="md:px-2 pl-[14px] py-3 w-[10px]">6</td>
                                                         <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                                            <Link href="/profile"> Rohit Sharma</Link>
+                                                            <Link href="/player/playername/overview"> Rohit Sharma</Link>
                                                         </td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
@@ -312,7 +312,7 @@ export default function Stats() {
                                                     <tr>
                                                         <td className="md:px-2 pl-[14px] py-3 w-[10px]">7</td>
                                                         <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                                            <Link href="/profile"> Rohit Sharma</Link>
+                                                            <Link href="/player/playername/overview"> Rohit Sharma</Link>
                                                         </td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
@@ -325,7 +325,7 @@ export default function Stats() {
                                                     <tr>
                                                         <td className="md:px-2 pl-[14px] py-3 w-[10px]">8</td>
                                                         <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                                            <Link href="/profile"> Rohit Sharma</Link>
+                                                            <Link href="/player/playername/overview"> Rohit Sharma</Link>
                                                         </td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
@@ -338,7 +338,7 @@ export default function Stats() {
                                                     <tr>
                                                         <td className="md:px-2 pl-[14px] py-3 w-[10px]">9</td>
                                                         <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                                            <Link href="/profile"> Rohit Sharma</Link>
+                                                            <Link href="/player/playername/overview"> Rohit Sharma</Link>
                                                         </td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
@@ -353,7 +353,7 @@ export default function Stats() {
                                                             10
                                                         </td>
                                                         <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                                            <Link href="/profile"> Rohit Sharma</Link>
+                                                            <Link href="/player/playername/overview"> Rohit Sharma</Link>
                                                         </td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
@@ -368,7 +368,7 @@ export default function Stats() {
                                                             11
                                                         </td>
                                                         <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                                            <Link href="/profile"> Rohit Sharma</Link>
+                                                            <Link href="/player/playername/overview"> Rohit Sharma</Link>
                                                         </td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
@@ -383,7 +383,7 @@ export default function Stats() {
                                                             12
                                                         </td>
                                                         <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                                            <Link href="/profile"> Rohit Sharma</Link>
+                                                            <Link href="/player/playername/overview"> Rohit Sharma</Link>
                                                         </td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
@@ -398,7 +398,7 @@ export default function Stats() {
                                                             13
                                                         </td>
                                                         <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                                            <Link href="/profile"> Rohit Sharma</Link>
+                                                            <Link href="/player/playername/overview"> Rohit Sharma</Link>
                                                         </td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
@@ -413,7 +413,7 @@ export default function Stats() {
                                                             14
                                                         </td>
                                                         <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                                            <Link href="/profile"> Rohit Sharma</Link>
+                                                            <Link href="/player/playername/overview"> Rohit Sharma</Link>
                                                         </td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
@@ -428,7 +428,7 @@ export default function Stats() {
                                                             15
                                                         </td>
                                                         <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                                            <Link href="/profile"> Rohit Sharma</Link>
+                                                            <Link href="/player/playername/overview"> Rohit Sharma</Link>
                                                         </td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
@@ -443,7 +443,7 @@ export default function Stats() {
                                                             16
                                                         </td>
                                                         <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                                            <Link href="/profile"> Rohit Sharma</Link>
+                                                            <Link href="/player/playername/overview"> Rohit Sharma</Link>
                                                         </td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>
                                                         <td className="md:px-2 pl-[14px] py-3">5</td>

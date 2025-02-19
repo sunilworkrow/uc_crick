@@ -46,6 +46,7 @@ export default function Stats() {
                         </Link>
                     </div>
                 </div>
+
                 <div id="tab-content">
                     <div id="stats">
                         <div className="cust-box-click-container">
@@ -104,7 +105,7 @@ export default function Stats() {
                                                         <tr>
                                                             <td className="px-3 py-3 w-[10px] font-medium">VS</td>
                                                             <td className="px-3 py-3">
-                                                                <a href="#">
+                                                                <Link href="/team/india/test">
                                                                     <div className="flex space-x-1 w-[114px]">
                                                                         <div className="flex items-center space-x-1 flex-col">
                                                                             <Image
@@ -119,7 +120,7 @@ export default function Stats() {
                                                                             </p>
                                                                         </div>
                                                                     </div>
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -135,7 +136,7 @@ export default function Stats() {
                                                         <tr>
                                                             <td className="px-3 py-3 w-[10px] font-medium">VS</td>
                                                             <td className="px-3 py-3">
-                                                                <a href="#">
+                                                                <Link href="/team/india/test">
                                                                     <div className="flex space-x-1 w-[114px]">
                                                                         <div className="flex items-center space-x-1 flex-col">
                                                                             <Image
@@ -150,7 +151,7 @@ export default function Stats() {
                                                                             </p>
                                                                         </div>
                                                                     </div>
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -166,7 +167,7 @@ export default function Stats() {
                                                         <tr>
                                                             <td className="px-3 py-3 w-[10px] font-medium">VS</td>
                                                             <td className="px-3 py-3">
-                                                                <a href="#">
+                                                                <Link href="/team/india/test">
                                                                     <div className="flex space-x-1 w-[114px]">
                                                                         <div className="flex items-center space-x-1 flex-col">
                                                                             <Image
@@ -181,7 +182,7 @@ export default function Stats() {
                                                                             </p>
                                                                         </div>
                                                                     </div>
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -197,7 +198,7 @@ export default function Stats() {
                                                         <tr>
                                                             <td className="px-3 py-3 w-[10px] font-medium">VS</td>
                                                             <td className="px-3 py-3">
-                                                                <a href="#">
+                                                                <Link href="/team/india/test">
                                                                     <div className="flex space-x-1 w-[114px]">
                                                                         <div className="flex items-center space-x-1 flex-col">
                                                                             <Image
@@ -212,7 +213,7 @@ export default function Stats() {
                                                                             </p>
                                                                         </div>
                                                                     </div>
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -228,7 +229,7 @@ export default function Stats() {
                                                         <tr>
                                                             <td className="px-3 py-3 w-[10px] font-medium">VS</td>
                                                             <td className="px-3 py-3">
-                                                                <a href="#">
+                                                                <Link href="/team/india/test">
                                                                     <div className="flex space-x-1 w-[114px]">
                                                                         <div className="flex items-center space-x-1 flex-col">
                                                                             <Image
@@ -243,7 +244,7 @@ export default function Stats() {
                                                                             </p>
                                                                         </div>
                                                                     </div>
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -259,7 +260,7 @@ export default function Stats() {
                                                         <tr>
                                                             <td className="px-3 py-3 w-[10px] font-medium">VS</td>
                                                             <td className="px-3 py-3">
-                                                                <a href="#">
+                                                                <Link href="/team/india/test">
                                                                     <div className="flex space-x-1 w-[114px]">
                                                                         <div className="flex items-center space-x-1 flex-col">
                                                                             <Image
@@ -274,7 +275,7 @@ export default function Stats() {
                                                                             </p>
                                                                         </div>
                                                                     </div>
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -290,7 +291,7 @@ export default function Stats() {
                                                         <tr>
                                                             <td className="px-3 py-3 w-[10px] font-medium">VS</td>
                                                             <td className="px-3 py-3">
-                                                                <a href="#">
+                                                                <Link href="/team/india/test">
                                                                     <div className="flex space-x-1 w-[114px]">
                                                                         <div className="flex items-center space-x-1 flex-col">
                                                                             <Image
@@ -305,7 +306,7 @@ export default function Stats() {
                                                                             </p>
                                                                         </div>
                                                                     </div>
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -321,7 +322,7 @@ export default function Stats() {
                                                         <tr>
                                                             <td className="px-3 py-3 w-[10px] font-medium">VS</td>
                                                             <td className="px-3 py-3">
-                                                                <a href="#">
+                                                                <Link href="/team/india/test">
                                                                     <div className="flex space-x-1 w-[114px]">
                                                                         <div className="flex items-center space-x-1 flex-col">
                                                                             <Image
@@ -336,7 +337,7 @@ export default function Stats() {
                                                                             </p>
                                                                         </div>
                                                                     </div>
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -352,7 +353,7 @@ export default function Stats() {
                                                         <tr>
                                                             <td className="px-3 py-3 w-[10px] font-medium">VS</td>
                                                             <td className="px-3 py-3">
-                                                                <a href="#">
+                                                                <Link href="/team/india/test">
                                                                     <div className="flex space-x-1 w-[114px]">
                                                                         <div className="flex items-center space-x-1 flex-col">
                                                                             <Image
@@ -367,7 +368,7 @@ export default function Stats() {
                                                                             </p>
                                                                         </div>
                                                                     </div>
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -383,7 +384,7 @@ export default function Stats() {
                                                         <tr>
                                                             <td className="px-3 py-3 w-[10px] font-medium">VS</td>
                                                             <td className="px-3 py-3">
-                                                                <a href="#">
+                                                                <Link href="/team/india/test">
                                                                     <div className="flex space-x-1 w-[114px]">
                                                                         <div className="flex items-center space-x-1 flex-col">
                                                                             <Image
@@ -398,7 +399,7 @@ export default function Stats() {
                                                                             </p>
                                                                         </div>
                                                                     </div>
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -414,7 +415,7 @@ export default function Stats() {
                                                         <tr>
                                                             <td className="px-3 py-3 w-[10px] font-medium">VS</td>
                                                             <td className="px-3 py-3">
-                                                                <a href="#">
+                                                                <Link href="/team/india/test">
                                                                     <div className="flex space-x-1 w-[114px]">
                                                                         <div className="flex items-center space-x-1 flex-col">
                                                                             <Image
@@ -429,7 +430,7 @@ export default function Stats() {
                                                                             </p>
                                                                         </div>
                                                                     </div>
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -445,11 +446,11 @@ export default function Stats() {
                                                         <tr className="bg-gray-100 font-semibold">
                                                             <td className="px-3 py-3 w-[10px] font-medium" />
                                                             <td className="px-3 py-3">
-                                                                <a href="#">
+                                                                <Link href="/team/india/test">
                                                                     <div className="flex space-x-1 w-[114px]">
                                                                         Total
                                                                     </div>
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-4 py-2">68</td>
                                                             <td className="px-4 py-2">11</td>
@@ -496,7 +497,7 @@ export default function Stats() {
                                                         <tr>
                                                             <td className="px-3 py-3 w-[10px] font-medium">VS</td>
                                                             <td className="px-3 py-3">
-                                                                <a href="#">
+                                                                <Link href="/team/india/test">
                                                                     <div className="flex space-x-1 w-[114px]">
                                                                         <div className="flex items-center space-x-1 flex-col">
                                                                             <Image
@@ -511,7 +512,7 @@ export default function Stats() {
                                                                             </p>
                                                                         </div>
                                                                     </div>
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -527,11 +528,11 @@ export default function Stats() {
                                                         <tr className="bg-gray-100 font-semibold">
                                                             <td className="px-3 py-3 w-[10px] font-medium" />
                                                             <td className="px-3 py-3">
-                                                                <a href="#">
+                                                                <Link href="#">
                                                                     <div className="flex space-x-1 w-[114px]">
                                                                         Total
                                                                     </div>
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-4 py-2">68</td>
                                                             <td className="px-4 py-2">11</td>

@@ -463,11 +463,13 @@ export default function ScheduleResults() {
                                             </p>
                                         </div>
                                         <div className="h-[100px] border-l-[1px] border-[#d0d3d7]" />
-                                        <div className="flex flex-col items-center">
-                                            <Image src="/assets/img/player/g-5.png" width={40} height={40} alt="" />
-                                            <p className=" font-semibold">Anneke Bosch</p>
-                                            <p>Man of the match</p>
-                                        </div>
+                                        <Link href="/player/playername/overview">
+                                            <div className="flex flex-col items-center">
+                                                <Image src="/assets/img/player/g-5.png" width={40} height={40} alt="" />
+                                                <p className=" font-semibold">Anneke Bosch</p>
+                                                <p>Man of the match</p>
+                                            </div>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -579,17 +581,19 @@ export default function ScheduleResults() {
                                             </div>
                                         </div>
                                         <div className="flex items-center justify-between">
-                                            <div className="flex items-center gap-1">
-                                                <Image
-                                                    src="/assets/img/player/g-5.png"
-                                                    className="h-[32px]"
-                                                    width={40} height={40} alt=""
-                                                />
-                                                <div>
-                                                    <p className=" font-semibold">Anneke Bosch</p>
-                                                    <p className="text-[11px]">Man of the match</p>
+                                            <Link href="/player/playername/overview">
+                                                <div className="flex items-center gap-1">
+                                                    <Image
+                                                        src="/assets/img/player/g-5.png"
+                                                        className="h-[32px]"
+                                                        width={40} height={40} alt=""
+                                                    />
+                                                    <div>
+                                                        <p className=" font-semibold">Anneke Bosch</p>
+                                                        <p className="text-[11px]">Man of the match</p>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
@@ -709,11 +713,13 @@ export default function ScheduleResults() {
                                             </p>
                                         </div>
                                         <div className="h-[100px] border-l-[1px] border-[#d0d3d7]" />
-                                        <div className="flex flex-col items-center">
-                                            <Image src="/assets/img/player/g-6.png" width={40} height={40} alt="" />
-                                            <p className=" font-semibold">Tazmin Brits</p>
-                                            <p>Man of the match</p>
-                                        </div>
+                                        <Link href="/player/playername/overview">
+                                            <div className="flex flex-col items-center">
+                                                <Image src="/assets/img/player/g-6.png" width={40} height={40} alt="" />
+                                                <p className=" font-semibold">Tazmin Brits</p>
+                                                <p>Man of the match</p>
+                                            </div>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -825,17 +831,19 @@ export default function ScheduleResults() {
                                             </div>
                                         </div>
                                         <div className="flex items-center justify-between">
-                                            <div className="flex items-center gap-1">
-                                                <Image
-                                                    src="/assets/img/player/g-6.png"
-                                                    className="h-[32px]"
-                                                    width={40} height={40} alt=""
-                                                />
-                                                <div>
-                                                    <p className=" font-semibold">Tazmin Brits</p>
-                                                    <p className="text-[11px]">Man of the match</p>
+                                            <Link href="/player/playername/overview">
+                                                <div className="flex items-center gap-1">
+                                                    <Image
+                                                        src="/assets/img/player/g-6.png"
+                                                        className="h-[32px]"
+                                                        width={40} height={40} alt=""
+                                                    />
+                                                    <div>
+                                                        <p className=" font-semibold">Tazmin Brits</p>
+                                                        <p className="text-[11px]">Man of the match</p>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
@@ -1214,11 +1222,13 @@ export default function ScheduleResults() {
                                             </p>
                                         </div>
                                         <div className="h-[100px] border-l-[1px] border-[#d0d3d7]" />
-                                        <div className="flex flex-col items-center">
-                                            <Image src="/assets/img/player/g-5.png" width={40} height={40} alt="" />
-                                            <p className=" font-semibold">Anneke Bosch</p>
-                                            <p>Man of the match</p>
-                                        </div>
+                                        <Link href="/player/playername/overview">
+                                            <div className="flex flex-col items-center">
+                                                <Image src="/assets/img/player/g-5.png" width={40} height={40} alt="" />
+                                                <p className=" font-semibold">Anneke Bosch</p>
+                                                <p>Man of the match</p>
+                                            </div>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -1330,17 +1340,19 @@ export default function ScheduleResults() {
                                             </div>
                                         </div>
                                         <div className="flex items-center justify-between">
-                                            <div className="flex items-center gap-1">
-                                                <Image
-                                                    src="/assets/img/player/g-5.png"
-                                                    className="h-[32px]"
-                                                    width={40} height={40} alt=""
-                                                />
-                                                <div>
-                                                    <p className=" font-semibold">Anneke Bosch</p>
-                                                    <p className="text-[11px]">Man of the match</p>
+                                            <Link href="/player/playername/overview">
+                                                <div className="flex items-center gap-1">
+                                                    <Image
+                                                        src="/assets/img/player/g-5.png"
+                                                        className="h-[32px]"
+                                                        width={40} height={40} alt=""
+                                                    />
+                                                    <div>
+                                                        <p className=" font-semibold">Anneke Bosch</p>
+                                                        <p className="text-[11px]">Man of the match</p>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
@@ -1460,11 +1472,13 @@ export default function ScheduleResults() {
                                             </p>
                                         </div>
                                         <div className="h-[100px] border-l-[1px] border-[#d0d3d7]" />
-                                        <div className="flex flex-col items-center">
-                                            <Image src="/assets/img/player/g-6.png" width={40} height={40} alt="" />
-                                            <p className=" font-semibold">Tazmin Brits</p>
-                                            <p>Man of the match</p>
-                                        </div>
+                                        <Link href="/player/playername/overview">
+                                            <div className="flex flex-col items-center">
+                                                <Image src="/assets/img/player/g-6.png" width={40} height={40} alt="" />
+                                                <p className=" font-semibold">Tazmin Brits</p>
+                                                <p>Man of the match</p>
+                                            </div>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -1576,17 +1590,19 @@ export default function ScheduleResults() {
                                             </div>
                                         </div>
                                         <div className="flex items-center justify-between">
-                                            <div className="flex items-center gap-1">
-                                                <Image
-                                                    src="/assets/img/player/g-6.png"
-                                                    className="h-[32px]"
-                                                    width={40} height={40} alt=""
-                                                />
-                                                <div>
-                                                    <p className=" font-semibold">Tazmin Brits</p>
-                                                    <p className="text-[11px]">Man of the match</p>
+                                            <Link href="/player/playername/overview">
+                                                <div className="flex items-center gap-1">
+                                                    <Image
+                                                        src="/assets/img/player/g-6.png"
+                                                        className="h-[32px]"
+                                                        width={40} height={40} alt=""
+                                                    />
+                                                    <div>
+                                                        <p className=" font-semibold">Tazmin Brits</p>
+                                                        <p className="text-[11px]">Man of the match</p>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>

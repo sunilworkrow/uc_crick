@@ -6134,7 +6134,7 @@ export default async function Home(props: { params: Params }) {
                       "linear-gradient(to right, rgba(20, 67, 158, 1), #14429e7a), url(img/home/bg-1.png)",
                   }}
                 >
-                  <Link href="/team">
+                  <Link href="/team/india/test">
                     <div className=" flex items-center space-x-2 justify-center">
                       <Image
                         src="/assets/img/flag/17.png"
@@ -6155,7 +6155,7 @@ export default async function Home(props: { params: Params }) {
                       "linear-gradient(to right, rgba(20, 67, 158, 1), #14429e7a),url(img/home/bg-2.png)",
                   }}
                 >
-                  <Link href="/team">
+                  <Link href="/team/india/test">
                     <div className=" flex items-center space-x-2 justify-center">
                       <Image
                         src="/assets/img/flag/2.png"
@@ -6176,7 +6176,7 @@ export default async function Home(props: { params: Params }) {
                       "linear-gradient(to right, rgba(20, 67, 158, 1), #14429e7a), url(img/home/bg-3.png)",
                   }}
                 >
-                  <Link href="/team">
+                  <Link href="/team/india/test">
                     <div className=" flex items-center space-x-2 justify-center">
                       <Image
                         src="/assets/img/flag/16.png"
@@ -6197,7 +6197,7 @@ export default async function Home(props: { params: Params }) {
                       "linear-gradient(to right, rgba(20, 67, 158, 1), #14429e7a),url(img/home/bg-4.png)",
                   }}
                 >
-                  <Link href="/team">
+                  <Link href="/team/india/test">
                     <div className=" flex items-center space-x-2 justify-center">
                       <Image
                         src="/assets/img/flag/11.png"
@@ -6218,7 +6218,7 @@ export default async function Home(props: { params: Params }) {
                       "linear-gradient(to right, rgba(20, 67, 158, 1), #14429e7a),url(img/home/bg-5.png)",
                   }}
                 >
-                  <Link href="/team">
+                  <Link href="/team/india/test">
                     <div className=" flex items-center space-x-2 justify-center">
                       <Image
                         src="/assets/img/flag/12.png"
@@ -6240,7 +6240,7 @@ export default async function Home(props: { params: Params }) {
                       "linear-gradient(to right, rgba(20, 67, 158, 1), #14429e7a),url(img/home/bg-6.png)",
                   }}
                 >
-                  <Link href="/team">
+                  <Link href="/team/india/test">
                     <div className=" flex items-center space-x-2 justify-center">
                       <Image
                         src="/assets/img/flag/13.png"
@@ -6261,7 +6261,7 @@ export default async function Home(props: { params: Params }) {
                       "linear-gradient(to right, rgba(20, 67, 158, 1), #14429e7a),url(img/home/bg-7.png)",
                   }}
                 >
-                  <Link href="/team">
+                  <Link href="/team/india/test">
                     <div className=" flex items-center space-x-2 justify-center">
                       <Image
                         src="/assets/img/flag/10.png"
@@ -6282,7 +6282,7 @@ export default async function Home(props: { params: Params }) {
                       "linear-gradient(to right, rgba(20, 67, 158, 1), #14429e7a),url(img/home/bg-8.png)",
                   }}
                 >
-                  <Link href="/team">
+                  <Link href="/team/india/test">
                     <div className=" flex items-center space-x-2 justify-center">
                       <Image
                         src="/assets/img/flag/17.png"
@@ -6303,7 +6303,7 @@ export default async function Home(props: { params: Params }) {
                       "linear-gradient(to right, rgba(20, 67, 158, 1), #14429e7a),url(img/home/bg-9.png)",
                   }}
                 >
-                  <Link href="/team">
+                  <Link href="/team/india/test">
                     <div className=" flex items-center space-x-2 justify-center">
                       <Image
                         src="/assets/img/flag/13.png"
@@ -6324,7 +6324,7 @@ export default async function Home(props: { params: Params }) {
                       "linear-gradient(to right, rgba(20, 67, 158, 1), #14429e7a),url(img/home/bg-10.png)",
                   }}
                 >
-                  <Link href="/team">
+                  <Link href="/team/india/test">
                     <div className=" flex items-center space-x-2 justify-center">
                       <Image
                         src="/assets/img/flag/14.png"

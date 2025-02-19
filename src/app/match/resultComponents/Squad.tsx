@@ -96,348 +96,348 @@ export default function Squad() {
             </div>
 
             <div className="lg:col-span-8 md:col-span-7">
-                <div id="south-team" className="team-content ">
-                    <div className="max-w-7xl mx-auto bg-white rounded-lg p-6">
-                        <div className="flex items-center space-x-4 mb-6">
-                            <Image
-                                src="/assets/img/flag/b-5.png"
-                                width={45} height={45} alt="South Africa Flag"
-                                className="h-[45px] rounded-full"
-                            />
-                            <h1 className="text-[16px] font-semibold text-gray-800">
-                                South Africa Women{" "}
-                                <span className="text-gray-500">(15 players)</span>
-                            </h1>
-                        </div>
-                        {/* Categories */}
-                        <div className="space-y-6">
-                            {/* Batsman Section */}
-                            <div>
-                                <h2 className="text-1xl font-semibold pl-[5px] border-l-[3px] border-[#1a80f8] mb-4">
-                                    Batsman
-                                </h2>
-                                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                                    <a href="#">
-                                        <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                            <div className="relative">
-                                                <Image
-                                                    src="/assets/img/player/g-7.png"
-                                                    width={80} height={80} alt="Player Image"
-                                                    className="w-16 h-16 mx-auto rounded-full mb-2"
-                                                />
-                                                <Image
-                                                    src="/assets/img/player/bat.png"
-                                                    className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
-                                                    width={27} height={27} alt=""
-                                                />
+            <div id="south-team" className="team-content ">
+                                <div className="max-w-7xl mx-auto bg-white rounded-lg p-6">
+                                    <div className="flex items-center space-x-4 mb-6">
+                                        <Image
+                                            src="/assets/img/flag/b-5.png"
+                                            width={45} height={45} alt="South Africa Flag"
+                                            className="h-[45px] rounded-full"
+                                        />
+                                        <h1 className="text-[16px] font-semibold text-gray-800">
+                                            South Africa Women{" "}
+                                            <span className="text-gray-500">(15 players)</span>
+                                        </h1>
+                                    </div>
+                                    
+                                    <div className="space-y-6">
+                                        
+                                        <div>
+                                            <h2 className="text-1xl font-semibold pl-[5px] border-l-[3px] border-[#1a80f8] mb-4">
+                                                Batsman
+                                            </h2>
+                                            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                                                <Link href="/player/playername/overview">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
+                                                            <Image
+                                                                src="/assets/img/player/g-7.png"
+                                                                width={80} height={80} alt="Player Image"
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2"
+                                                            />
+                                                            <Image
+                                                                src="/assets/img/player/bat.png"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                width={27} height={27} alt=""
+                                                            />
+                                                        </div>
+                                                        <h3 className="text-sm font-semibold text-blue-500 ">
+                                                            L Wolvaardt<span className="text-blue-500">(c)</span>
+                                                        </h3>
+                                                        <p className="text-xs text-gray-600">Batsman</p>
+                                                    </div>
+                                                </Link>
+                                                <Link href="/player/playername/overview">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
+                                                            <Image
+                                                                src="/assets/img/player/g-8.png"
+                                                                width={80} height={80} alt="Player Image"
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2"
+                                                            />
+                                                            <Image
+                                                                src="/assets/img/player/bat.png"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                width={27} height={27} alt=""
+                                                            />
+                                                        </div>
+                                                        <h3 className="text-sm font-semibold text-gray-800">
+                                                            T Brits
+                                                        </h3>
+                                                        <p className="text-xs text-gray-600">Batsman</p>
+                                                    </div>
+                                                </Link>
+                                                <Link href="/player/playername/overview">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
+                                                            <Image
+                                                                src="/assets/img/player/g-9.png"
+                                                                width={80} height={80} alt="Player Image"
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2"
+                                                            />
+                                                            <Image
+                                                                src="/assets/img/player/bat.png"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                width={27} height={27} alt=""
+                                                            />
+                                                        </div>
+                                                        <h3 className="text-sm font-semibold text-blue-500">
+                                                            M Ridder<span className="text-blue-500">(wk)</span>
+                                                        </h3>
+                                                        <p className="text-xs text-gray-600">Batsman</p>
+                                                    </div>
+                                                </Link>
+                                                <Link href="/player/playername/overview">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
+                                                            <Image
+                                                                src="/assets/img/player/g-10.png"
+                                                                width={80} height={80} alt="Player Image"
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2"
+                                                            />
+                                                            <Image
+                                                                src="/assets/img/player/bat.png"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                width={27} height={27} alt=""
+                                                            />
+                                                        </div>
+                                                        <h3 className="text-sm font-semibold text-gray-800">
+                                                            S Jafta<span className="text-blue-500">(wk)</span>
+                                                        </h3>
+                                                        <p className="text-xs text-gray-600">Batsman</p>
+                                                    </div>
+                                                </Link>
                                             </div>
-                                            <h3 className="text-sm font-semibold text-blue-500 ">
-                                                L Wolvaardt<span className="text-blue-500">(c)</span>
-                                            </h3>
-                                            <p className="text-xs text-gray-600">Batsman</p>
                                         </div>
-                                    </a>
-                                    <a href="#">
-                                        <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                            <div className="relative">
-                                                <Image
-                                                    src="/assets/img/player/g-8.png"
-                                                    width={80} height={80} alt="Player Image"
-                                                    className="w-16 h-16 mx-auto rounded-full mb-2"
-                                                />
-                                                <Image
-                                                    src="/assets/img/player/bat.png"
-                                                    className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
-                                                    width={27} height={27} alt=""
-                                                />
+                                        {/* Bowler Section */}
+                                        <div>
+                                            <h2 className="text-1xl font-semibold pl-[5px] border-l-[3px] border-[#1a80f8] mb-4">
+                                                Bowler
+                                            </h2>
+                                            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                                                <Link href="/player/playername/overview">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
+                                                            <Image
+                                                                src="/assets/img/player/g-11.png"
+                                                                width={80} height={80} alt="Player Image"
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2"
+                                                            />
+                                                            <Image
+                                                                src="/assets/img/player/ball.png"
+                                                                className="h-[24px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                width={24} height={24} alt=""
+                                                            />
+                                                        </div>
+                                                        <h3 className="text-sm font-semibold text-gray-800">
+                                                            A Hlubi
+                                                        </h3>
+                                                        <p className="text-xs text-gray-600">Bowler</p>
+                                                    </div>
+                                                </Link>
+                                                <Link href="/player/playername/overview">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
+                                                            <Image
+                                                                src="/assets/img/player/g-12.png"
+                                                                width={80} height={80} alt="Player Image"
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2"
+                                                            />
+                                                            <Image
+                                                                src="/assets/img/player/ball.png"
+                                                                className="h-[24px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                width={24} height={24} alt=""
+                                                            />
+                                                        </div>
+                                                        <h3 className="text-sm font-semibold text-gray-800">
+                                                            A Khaka
+                                                        </h3>
+                                                        <p className="text-xs text-gray-600">Bowler</p>
+                                                    </div>
+                                                </Link>
+                                                <Link href="/player/playername/overview">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
+                                                            <Image
+                                                                src="/assets/img/player/g-13.png"
+                                                                width={80} height={80} alt="Player Image"
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2"
+                                                            />
+                                                            <Image
+                                                                src="/assets/img/player/ball.png"
+                                                                className="h-[24px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                width={24} height={24} alt=""
+                                                            />
+                                                        </div>
+                                                        <h3 className="text-sm font-semibold text-gray-800">
+                                                            N Mlaba
+                                                        </h3>
+                                                        <p className="text-xs text-gray-600">Bowler</p>
+                                                    </div>
+                                                </Link>
+                                                <Link href="/player/playername/overview">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
+                                                            <Image
+                                                                src="/assets/img/player/g-14.png"
+                                                                width={80} height={80} alt="Player Image"
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2"
+                                                            />
+                                                            <Image
+                                                                src="/assets/img/player/ball.png"
+                                                                className="h-[24px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                width={24} height={24} alt=""
+                                                            />
+                                                        </div>
+                                                        <h3 className="text-sm font-semibold text-gray-800">
+                                                            T Sekhukhune
+                                                        </h3>
+                                                        <p className="text-xs text-gray-600">Bowler</p>
+                                                    </div>
+                                                </Link>
                                             </div>
-                                            <h3 className="text-sm font-semibold text-gray-800">
-                                                T Brits
-                                            </h3>
-                                            <p className="text-xs text-gray-600">Batsman</p>
                                         </div>
-                                    </a>
-                                    <a href="#">
-                                        <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                            <div className="relative">
-                                                <Image
-                                                    src="/assets/img/player/g-9.png"
-                                                    width={80} height={80} alt="Player Image"
-                                                    className="w-16 h-16 mx-auto rounded-full mb-2"
-                                                />
-                                                <Image
-                                                    src="/assets/img/player/bat.png"
-                                                    className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
-                                                    width={27} height={27} alt=""
-                                                />
+                                        {/* All-Rounder Section */}
+                                        <div>
+                                            <h2 className="text-1xl font-semibold pl-[5px] border-l-[3px] border-[#1a80f8] mb-4">
+                                                All-Rounder
+                                            </h2>
+                                            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                                                <Link href="/player/playername/overview">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
+                                                            <Image
+                                                                src="/assets/img/player/g-15.png"
+                                                                width={80} height={80} alt="Player Image"
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2"
+                                                            />
+                                                            <Image
+                                                                src="/assets/img/player/bat-ball.png"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                width={27} height={27} alt=""
+                                                            />
+                                                        </div>
+                                                        <h3 className="text-sm font-semibold text-gray-800">
+                                                            A Bosch
+                                                        </h3>
+                                                        <p className="text-xs text-gray-600">All-Rounder</p>
+                                                    </div>
+                                                </Link>
+                                                <Link href="/player/playername/overview">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
+                                                            <Image
+                                                                src="/assets/img/player/g-16.png"
+                                                                width={80} height={80} alt="Player Image"
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2"
+                                                            />
+                                                            <Image
+                                                                src="/assets/img/player/bat-ball.png"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                width={27} height={27} alt=""
+                                                            />
+                                                        </div>
+                                                        <h3 className="text-sm font-semibold text-gray-800">
+                                                            N Klerk
+                                                        </h3>
+                                                        <p className="text-xs text-gray-600">All-Rounder</p>
+                                                    </div>
+                                                </Link>
+                                                <Link href="/player/playername/overview">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
+                                                            <Image
+                                                                src="/assets/img/player/g-17.png"
+                                                                width={80} height={80} alt="Player Image"
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2"
+                                                            />
+                                                            <Image
+                                                                src="/assets/img/player/bat-ball.png"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                width={27} height={27} alt=""
+                                                            />
+                                                        </div>
+                                                        <h3 className="text-sm font-semibold text-gray-800">
+                                                            A Dercksen
+                                                        </h3>
+                                                        <p className="text-xs text-gray-600">All-Rounder</p>
+                                                    </div>
+                                                </Link>
+                                                <Link href="/player/playername/overview">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
+                                                            <Image
+                                                                src="/assets/img/player/g-18.png"
+                                                                width={80} height={80} alt="Player Image"
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2"
+                                                            />
+                                                            <Image
+                                                                src="/assets/img/player/bat-ball.png"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                width={27} height={27} alt=""
+                                                            />
+                                                        </div>
+                                                        <h3 className="text-sm font-semibold text-gray-800">
+                                                            M Kapp
+                                                        </h3>
+                                                        <p className="text-xs text-gray-600">All-Rounder</p>
+                                                    </div>
+                                                </Link>
+                                                <Link href="/player/playername/overview">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
+                                                            <Image
+                                                                src="/assets/img/player/g-19.png"
+                                                                width={80} height={80} alt="Player Image"
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2"
+                                                            />
+                                                            <Image
+                                                                src="/assets/img/player/bat-ball.png"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                width={27} height={27} alt=""
+                                                            />
+                                                        </div>
+                                                        <h3 className="text-sm font-semibold text-gray-800">
+                                                            M Kapp
+                                                        </h3>
+                                                        <p className="text-xs text-gray-600">All-Rounder</p>
+                                                    </div>
+                                                </Link>
+                                                <Link href="/player/playername/overview">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
+                                                            <Image
+                                                                src="/assets/img/player/g-20.png"
+                                                                width={80} height={80} alt="Player Image"
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2"
+                                                            />
+                                                            <Image
+                                                                src="/assets/img/player/bat-ball.png"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                width={27} height={27} alt=""
+                                                            />
+                                                        </div>
+                                                        <h3 className="text-sm font-semibold text-gray-800">
+                                                            M Kapp
+                                                        </h3>
+                                                        <p className="text-xs text-gray-600">All-Rounder</p>
+                                                    </div>
+                                                </Link>
+                                                <Link href="/player/playername/overview">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
+                                                            <Image
+                                                                src="/assets/img/player/g-21.png"
+                                                                width={80} height={80} alt="Player Image"
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2"
+                                                            />
+                                                            <Image
+                                                                src="/assets/img/player/bat-ball.png"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                width={27} height={27} alt=""
+                                                            />
+                                                        </div>
+                                                        <h3 className="text-sm font-semibold text-gray-800">
+                                                            M Kapp
+                                                        </h3>
+                                                        <p className="text-xs text-gray-600">All-Rounder</p>
+                                                    </div>
+                                                </Link>
                                             </div>
-                                            <h3 className="text-sm font-semibold text-blue-500">
-                                                M Ridder<span className="text-blue-500">(wk)</span>
-                                            </h3>
-                                            <p className="text-xs text-gray-600">Batsman</p>
                                         </div>
-                                    </a>
-                                    <a href="#">
-                                        <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                            <div className="relative">
-                                                <Image
-                                                    src="/assets/img/player/g-10.png"
-                                                    width={80} height={80} alt="Player Image"
-                                                    className="w-16 h-16 mx-auto rounded-full mb-2"
-                                                />
-                                                <Image
-                                                    src="/assets/img/player/bat.png"
-                                                    className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
-                                                    width={27} height={27} alt=""
-                                                />
-                                            </div>
-                                            <h3 className="text-sm font-semibold text-gray-800">
-                                                S Jafta<span className="text-blue-500">(wk)</span>
-                                            </h3>
-                                            <p className="text-xs text-gray-600">Batsman</p>
-                                        </div>
-                                    </a>
+                                    </div>
                                 </div>
                             </div>
-                            {/* Bowler Section */}
-                            <div>
-                                <h2 className="text-1xl font-semibold pl-[5px] border-l-[3px] border-[#1a80f8] mb-4">
-                                    Bowler
-                                </h2>
-                                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                                    <a href="#">
-                                        <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                            <div className="relative">
-                                                <Image
-                                                    src="/assets/img/player/g-11.png"
-                                                    width={80} height={80} alt="Player Image"
-                                                    className="w-16 h-16 mx-auto rounded-full mb-2"
-                                                />
-                                                <Image
-                                                    src="/assets/img/player/ball.png"
-                                                    className="h-[24px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
-                                                    width={24} height={24} alt=""
-                                                />
-                                            </div>
-                                            <h3 className="text-sm font-semibold text-gray-800">
-                                                A Hlubi
-                                            </h3>
-                                            <p className="text-xs text-gray-600">Bowler</p>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                            <div className="relative">
-                                                <Image
-                                                    src="/assets/img/player/g-12.png"
-                                                    width={80} height={80} alt="Player Image"
-                                                    className="w-16 h-16 mx-auto rounded-full mb-2"
-                                                />
-                                                <Image
-                                                    src="/assets/img/player/ball.png"
-                                                    className="h-[24px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
-                                                    width={24} height={24} alt=""
-                                                />
-                                            </div>
-                                            <h3 className="text-sm font-semibold text-gray-800">
-                                                A Khaka
-                                            </h3>
-                                            <p className="text-xs text-gray-600">Bowler</p>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                            <div className="relative">
-                                                <Image
-                                                    src="/assets/img/player/g-13.png"
-                                                    width={80} height={80} alt="Player Image"
-                                                    className="w-16 h-16 mx-auto rounded-full mb-2"
-                                                />
-                                                <Image
-                                                    src="/assets/img/player/ball.png"
-                                                    className="h-[24px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
-                                                    width={24} height={24} alt=""
-                                                />
-                                            </div>
-                                            <h3 className="text-sm font-semibold text-gray-800">
-                                                N Mlaba
-                                            </h3>
-                                            <p className="text-xs text-gray-600">Bowler</p>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                            <div className="relative">
-                                                <Image
-                                                    src="/assets/img/player/g-14.png"
-                                                    width={80} height={80} alt="Player Image"
-                                                    className="w-16 h-16 mx-auto rounded-full mb-2"
-                                                />
-                                                <Image
-                                                    src="/assets/img/player/ball.png"
-                                                    className="h-[24px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
-                                                    width={24} height={24} alt=""
-                                                />
-                                            </div>
-                                            <h3 className="text-sm font-semibold text-gray-800">
-                                                T Sekhukhune
-                                            </h3>
-                                            <p className="text-xs text-gray-600">Bowler</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            {/* All-Rounder Section */}
-                            <div>
-                                <h2 className="text-1xl font-semibold pl-[5px] border-l-[3px] border-[#1a80f8] mb-4">
-                                    All-Rounder
-                                </h2>
-                                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                                    <a href="#">
-                                        <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                            <div className="relative">
-                                                <Image
-                                                    src="/assets/img/player/g-15.png"
-                                                    width={80} height={80} alt="Player Image"
-                                                    className="w-16 h-16 mx-auto rounded-full mb-2"
-                                                />
-                                                <Image
-                                                    src="/assets/img/player/bat-ball.png"
-                                                    className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
-                                                    width={27} height={27} alt=""
-                                                />
-                                            </div>
-                                            <h3 className="text-sm font-semibold text-gray-800">
-                                                A Bosch
-                                            </h3>
-                                            <p className="text-xs text-gray-600">All-Rounder</p>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                            <div className="relative">
-                                                <Image
-                                                    src="/assets/img/player/g-16.png"
-                                                    width={80} height={80} alt="Player Image"
-                                                    className="w-16 h-16 mx-auto rounded-full mb-2"
-                                                />
-                                                <Image
-                                                    src="/assets/img/player/bat-ball.png"
-                                                    className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
-                                                    width={27} height={27} alt=""
-                                                />
-                                            </div>
-                                            <h3 className="text-sm font-semibold text-gray-800">
-                                                N Klerk
-                                            </h3>
-                                            <p className="text-xs text-gray-600">All-Rounder</p>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                            <div className="relative">
-                                                <Image
-                                                    src="/assets/img/player/g-17.png"
-                                                    width={80} height={80} alt="Player Image"
-                                                    className="w-16 h-16 mx-auto rounded-full mb-2"
-                                                />
-                                                <Image
-                                                    src="/assets/img/player/bat-ball.png"
-                                                    className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
-                                                    width={27} height={27} alt=""
-                                                />
-                                            </div>
-                                            <h3 className="text-sm font-semibold text-gray-800">
-                                                A Dercksen
-                                            </h3>
-                                            <p className="text-xs text-gray-600">All-Rounder</p>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                            <div className="relative">
-                                                <Image
-                                                    src="/assets/img/player/g-18.png"
-                                                    width={80} height={80} alt="Player Image"
-                                                    className="w-16 h-16 mx-auto rounded-full mb-2"
-                                                />
-                                                <Image
-                                                    src="/assets/img/player/bat-ball.png"
-                                                    className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
-                                                    width={27} height={27} alt=""
-                                                />
-                                            </div>
-                                            <h3 className="text-sm font-semibold text-gray-800">
-                                                M Kapp
-                                            </h3>
-                                            <p className="text-xs text-gray-600">All-Rounder</p>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                            <div className="relative">
-                                                <Image
-                                                    src="/assets/img/player/g-19.png"
-                                                    width={80} height={80} alt="Player Image"
-                                                    className="w-16 h-16 mx-auto rounded-full mb-2"
-                                                />
-                                                <Image
-                                                    src="/assets/img/player/bat-ball.png"
-                                                    className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
-                                                    width={27} height={27} alt=""
-                                                />
-                                            </div>
-                                            <h3 className="text-sm font-semibold text-gray-800">
-                                                M Kapp
-                                            </h3>
-                                            <p className="text-xs text-gray-600">All-Rounder</p>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                            <div className="relative">
-                                                <Image
-                                                    src="/assets/img/player/g-20.png"
-                                                    width={80} height={80} alt="Player Image"
-                                                    className="w-16 h-16 mx-auto rounded-full mb-2"
-                                                />
-                                                <Image
-                                                    src="/assets/img/player/bat-ball.png"
-                                                    className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
-                                                    width={27} height={27} alt=""
-                                                />
-                                            </div>
-                                            <h3 className="text-sm font-semibold text-gray-800">
-                                                M Kapp
-                                            </h3>
-                                            <p className="text-xs text-gray-600">All-Rounder</p>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                            <div className="relative">
-                                                <Image
-                                                    src="/assets/img/player/g-21.png"
-                                                    width={80} height={80} alt="Player Image"
-                                                    className="w-16 h-16 mx-auto rounded-full mb-2"
-                                                />
-                                                <Image
-                                                    src="/assets/img/player/bat-ball.png"
-                                                    className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
-                                                    width={27} height={27} alt=""
-                                                />
-                                            </div>
-                                            <h3 className="text-sm font-semibold text-gray-800">
-                                                M Kapp
-                                            </h3>
-                                            <p className="text-xs text-gray-600">All-Rounder</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 
             </div>
         </div>

@@ -480,7 +480,7 @@ export default function T20() {
                                 </div>
                             </div>
                             <div>
-                                <div className="rounded-lg bg-[#ffffff] p-4 mb-4">
+                            <div className="rounded-lg bg-[#ffffff] p-4 mb-4">
                                     <div className="flex justify-between items-center pb-2">
                                         <div>
                                             <h3 className="text-1xl font-semibold pl-[4px] border-l-[3px] border-[#2182F8]">
@@ -523,7 +523,7 @@ export default function T20() {
                                                             width={40} height={40} alt="Sachin Tendulkar"
                                                             className="rounded-full w-10 h-10"
                                                         />
-                                                        <Link href="#">
+                                                        <Link href="/player/playername/overview">
                                                             <h3 className="text-1xl font-semibold text-gray-800">
                                                                 Anil Kumble
                                                             </h3>
@@ -535,8 +535,10 @@ export default function T20() {
                                                                 <p className="text-[#18A6ED] font-bold">10/74</p>
                                                                 <p>Wicket</p>
                                                             </div>
+
                                                             <div className="md:px-4 px-2 text-center">
                                                                 <p>Against</p>
+                                                                <Link href="/team/india/test">
                                                                 <div className="flex items-center space-x-1">
                                                                     <Image
                                                                         src="/assets/img/flag/16.png"
@@ -547,6 +549,7 @@ export default function T20() {
                                                                         Pak
                                                                     </span>
                                                                 </div>
+                                                                </Link>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -561,7 +564,7 @@ export default function T20() {
                                                             width={40} height={40} alt="Sachin Tendulkar"
                                                             className="rounded-full w-10 h-10"
                                                         />
-                                                        <Link href="#">
+                                                        <Link href="/player/playername/overview">
                                                             <h3 className="text-1xl font-semibold text-gray-800">
                                                                 Jasubhai Patel
                                                             </h3>
@@ -575,6 +578,7 @@ export default function T20() {
                                                             </div>
                                                             <div className="md:px-4 px-2 text-center">
                                                                 <p>Against</p>
+                                                                <Link href="/team/india/test">
                                                                 <div className="flex items-center space-x-1">
                                                                     <Image
                                                                         src="/assets/img/flag/12.png"
@@ -585,6 +589,7 @@ export default function T20() {
                                                                         Aus
                                                                     </span>
                                                                 </div>
+                                                                </Link>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -599,7 +604,7 @@ export default function T20() {
                                                             width={40} height={40} alt="Sachin Tendulkar"
                                                             className="rounded-full w-10 h-10"
                                                         />
-                                                        <Link href="#">
+                                                        <Link href="/player/playername/overview">
                                                             <h3 className="text-1xl font-semibold text-gray-800">
                                                                 Kapil Dev
                                                             </h3>
@@ -613,6 +618,7 @@ export default function T20() {
                                                             </div>
                                                             <div className="md:px-4 px-2 text-center">
                                                                 <p>Against</p>
+                                                                <Link href="/team/india/test">
                                                                 <div className="flex items-center space-x-1">
                                                                     <Image
                                                                         src="/assets/img/flag/b-2.png"
@@ -623,6 +629,7 @@ export default function T20() {
                                                                         WI
                                                                     </span>
                                                                 </div>
+                                                                </Link>
                                                             </div>
                                                         </div>
                                                     </div>

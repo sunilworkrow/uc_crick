@@ -1322,7 +1322,7 @@ export default function MoreInfo() {
                                         </h3>
                                         <div className="border-t-[1px] border-[#E4E9F0]" />
                                         <div className="py-4 text-1xl flex justify-between items-center">
-                                            <Link href="">
+                                            <Link href="/team/india/test">
                                                 <div className="font-bold uppercase flex items-center">
                                                     <Image className="h-[30px]" src="/assets/img/flg-1.png" width={30} height={30} alt="" />
                                                     <p className="mx-2 font-semibold uppercase">IND</p>
@@ -1333,7 +1333,7 @@ export default function MoreInfo() {
                                                     10 <span className="text-[#009900]">- 10</span>
                                                 </p>
                                             </div>
-                                            <Link href="">
+                                            <Link href="/team/india/test">
                                                 <div className="font-bold uppercase flex items-center">
                                                     <p className="mx-2 font-semibold uppercase">BAN</p>
                                                     <Image className="h-[30px]" src="/assets/img/ban.png" width={30} height={30} alt="ban" />
@@ -1850,9 +1850,9 @@ export default function MoreInfo() {
 
                             <div className="lg:col-span-4 md:col-span-5">
 
-                            <div className="rounded-lg bg-[#ffffff] mb-4">
+                                <div className="rounded-lg bg-[#ffffff] mb-4">
                                     <div className="p-4">
-                                        <a href="#">
+                                        <Link href="/player/playername/overview">
                                             <div className="flex items-center justify-between">
                                                 <div className="flex items-center space-x-3 md:py-3">
                                                     <div>
@@ -1865,7 +1865,7 @@ export default function MoreInfo() {
                                                 </div>
                                                 <Image src="/assets/img/home/win-2.png" width={40} height={40} alt="" />
                                             </div>
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
 
@@ -1882,7 +1882,7 @@ export default function MoreInfo() {
                                             >
                                                 <span>India</span>
                                             </button>
-                                            <Link href="/playing-bangladesh">
+                                            <Link href="#">
                                                 <button
                                                     className="cust-box-click-button bg-[#ffffff] font-medium text-[#6A7586] px-5 py-1 rounded-full"
                                                 >
@@ -1893,7 +1893,7 @@ export default function MoreInfo() {
                                         <div className="border-t-[1px] border-[#E4E9F0]" />
                                         <div className="cust-box-click-content cust-box-click-india mt-4">
                                             <div>
-                                                <Link href="/profile">
+                                                <Link href="/player/playername/overview">
                                                     <div className="flex items-center space-x-3 py-3 border-b-[1px] border-border-gray-700">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="R sharma (c)" />
@@ -1904,7 +1904,7 @@ export default function MoreInfo() {
                                                         </div>
                                                     </div>
                                                 </Link>
-                                                <Link href="/profile">
+                                                <Link href="/player/playername/overview">
                                                     <div className="flex items-center space-x-3 py-3 border-b-[1px] border-border-gray-700">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="S Gill" />
@@ -1915,7 +1915,7 @@ export default function MoreInfo() {
                                                         </div>
                                                     </div>
                                                 </Link>
-                                                <Link href="/profile">
+                                                <Link href="/player/playername/overview">
                                                     <div className="flex items-center space-x-3 py-3 border-b-[1px] border-border-gray-700">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="L Rahul" />
@@ -1926,7 +1926,7 @@ export default function MoreInfo() {
                                                         </div>
                                                     </div>
                                                 </Link>
-                                                <Link href="/profile">
+                                                <Link href="/player/playername/overview">
                                                     <div className="flex items-center space-x-3 py-3 border-b-[1px] border-border-gray-700">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="R Jadeja" />
@@ -1937,7 +1937,7 @@ export default function MoreInfo() {
                                                         </div>
                                                     </div>
                                                 </Link>
-                                                <Link href="/profile">
+                                                <Link href="/player/playername/overview">
                                                     <div className="flex items-center space-x-3 py-3 border-b-[1px] border-border-gray-700">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="J Bumrah" />
@@ -1948,7 +1948,7 @@ export default function MoreInfo() {
                                                         </div>
                                                     </div>
                                                 </Link>
-                                                <Link href="/profile">
+                                                <Link href="/player/playername/overview">
                                                     <div className="flex items-center space-x-3 py-3 border-b-[1px] border-border-gray-700">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="A Deep" />
@@ -1959,7 +1959,7 @@ export default function MoreInfo() {
                                                         </div>
                                                     </div>
                                                 </Link>
-                                                <Link href="/profile">
+                                                <Link href="/player/playername/overview">
                                                     <div className="flex items-center space-x-3 py-3 border-b-[1px] border-border-gray-700">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="Y Jaiswal" />
@@ -1970,7 +1970,7 @@ export default function MoreInfo() {
                                                         </div>
                                                     </div>
                                                 </Link>
-                                                <Link href="/profile">
+                                                <Link href="/player/playername/overview">
                                                     <div className="flex items-center space-x-3 py-3 border-b-[1px] border-border-gray-700">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="V Kholi" />
@@ -1981,7 +1981,7 @@ export default function MoreInfo() {
                                                         </div>
                                                     </div>
                                                 </Link>
-                                                <Link href="/profile">
+                                                <Link href="/player/playername/overview">
                                                     <div className="flex items-center space-x-3 py-3 border-b-[1px] border-border-gray-700">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="M Siraj" />
@@ -1992,7 +1992,7 @@ export default function MoreInfo() {
                                                         </div>
                                                     </div>
                                                 </Link>
-                                                <Link href="/profile">
+                                                <Link href="/player/playername/overview">
                                                     <div className="flex items-center space-x-3 py-3 border-b-[1px] border-border-gray-700">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="R Pant (WK)" />
@@ -2003,7 +2003,7 @@ export default function MoreInfo() {
                                                         </div>
                                                     </div>
                                                 </Link>
-                                                <Link href="/profile">
+                                                <Link href="/player/playername/overview">
                                                     <div className="flex items-center space-x-3 py-3 pb-0">
                                                         <div>
                                                             <Image src="/assets/img/player/1.png" width={40} height={40} alt="R Ashwin" />

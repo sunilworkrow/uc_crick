@@ -143,7 +143,7 @@ export default function PointsTable() {
                                     <tr className="hover:bg-[#fffae5]">
                                         <td className="md:px-2 pl-[14px] py-3 w-[10px]">1</td>
                                         <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                            <Link href="/kkrseries">
+                                            <Link href="/team/kkr/overview">
                                                 <div className="flex items-center gap-[5px] w-[120px]">
                                                     <div>
                                                         <Image
@@ -206,7 +206,7 @@ export default function PointsTable() {
                                     <tr>
                                         <td className="md:px-2 pl-[14px] py-3 w-[10px]">2</td>
                                         <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                            <Link href="/kkrseries">
+                                            <Link href="/team/kkr/overview">
                                                 <div className="flex items-center gap-[5px]">
                                                     <div>
                                                         <Image
@@ -269,7 +269,7 @@ export default function PointsTable() {
                                     <tr>
                                         <td className="md:px-2 pl-[14px] py-3 w-[10px]">3</td>
                                         <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                            <Link href="/kkrseries">
+                                            <Link href="/team/kkr/overview">
                                                 <div className="flex items-center gap-[5px]">
                                                     <div>
                                                         <Image
@@ -332,7 +332,7 @@ export default function PointsTable() {
                                     <tr>
                                         <td className="md:px-2 pl-[14px] py-3 w-[10px]">4</td>
                                         <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                            <Link href="/kkrseries">
+                                            <Link href="/team/kkr/overview">
                                                 <div className="flex items-center gap-[5px]">
                                                     <div>
                                                         <Image
@@ -395,7 +395,7 @@ export default function PointsTable() {
                                     <tr>
                                         <td className="md:px-2 pl-[14px] py-3 w-[10px]">5</td>
                                         <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                            <Link href="/kkrseries">
+                                            <Link href="/team/kkr/overview">
                                                 <div className="flex items-center gap-[5px]">
                                                     <div>
                                                         <Image
@@ -456,7 +456,7 @@ export default function PointsTable() {
                                     <tr>
                                         <td className="md:px-2 pl-[14px] py-3 w-[10px]">6</td>
                                         <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                            <Link href="/kkrseries">
+                                            <Link href="/team/kkr/overview">
                                                 <div className="flex items-center gap-[5px]">
                                                     <div>
                                                         <Image
@@ -517,7 +517,7 @@ export default function PointsTable() {
                                     <tr>
                                         <td className="md:px-2 pl-[14px] py-3 w-[10px]">7</td>
                                         <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                            <Link href="/kkrseries">
+                                            <Link href="/team/kkr/overview">
                                                 <div className="flex items-center gap-[5px]">
                                                     <div>
                                                         <Image
@@ -578,7 +578,7 @@ export default function PointsTable() {
                                     <tr>
                                         <td className="md:px-2 pl-[14px] py-3 w-[10px]">8</td>
                                         <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                            <Link href="/kkrseries">
+                                            <Link href="/team/kkr/overview">
                                                 <div className="flex items-center gap-[5px]">
                                                     <div>
                                                         <Image
@@ -639,7 +639,7 @@ export default function PointsTable() {
                                     <tr>
                                         <td className="md:px-2 pl-[14px] py-3 w-[10px]">9</td>
                                         <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                            <Link href="/kkrseries">
+                                            <Link href="/team/kkr/overview">
                                                 <div className="flex items-center gap-[5px]">
                                                     <div>
                                                         <Image
@@ -700,7 +700,7 @@ export default function PointsTable() {
                                     <tr>
                                         <td className="md:px-2 pl-[14px] py-3 w-[10px]">10</td>
                                         <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                            <Link href="/kkrseries">
+                                            <Link href="/team/kkr/overview">
                                                 <div className="flex items-center gap-[5px]">
                                                     <div>
                                                         <Image
