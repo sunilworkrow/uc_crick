@@ -6,9 +6,6 @@ export async function upcomingMatches() {
   const CACHE_KEY = "upcoming_matches";
   const CACHE_TTL = 60;
   const API_URL =  "https://rest.entitysport.com/exchange/matches?token=35f1701edeebeabc332e2a1825a022e7&status=1&per_page=10";
-  const matches =  [];
-
-  return matches;
 
   const cachedData = await redis.get(CACHE_KEY);
   if (cachedData) {
@@ -18,7 +15,7 @@ export async function upcomingMatches() {
 
 
   const data = await httpGet(API_URL);
- 
+  const matches = data?.response?.items || [];
   if (matches.length > 0) {
     await redis.setex(CACHE_KEY, CACHE_TTL, JSON.stringify(matches));
   }
@@ -31,10 +28,6 @@ export async function liveMatches() {
   const CACHE_TTL = 60;
   const API_URL = "https://rest.entitysport.com/exchange/matches?token=35f1701edeebeabc332e2a1825a022e7&status=3&per_page=10";
 
-  const matches =  [];
-
-  return matches;
-
   const cachedData = await redis.get(CACHE_KEY);
   if (cachedData) {
     console.log("coming from cache live_matches");
@@ -43,7 +36,7 @@ export async function liveMatches() {
 
   
   const data = await httpGet(API_URL);
-  // const matches = data?.response?.items || [];
+  const matches = data?.response?.items || [];
   if (matches.length > 0) {
     await redis.setex(CACHE_KEY, CACHE_TTL, JSON.stringify(matches));
   }
@@ -56,11 +49,6 @@ export async function completedMatches() {
   const CACHE_TTL = 60;
   const API_URL = "https://rest.entitysport.com/exchange/matches?token=35f1701edeebeabc332e2a1825a022e7&status=2&per_page=10";
 
-
-  const matches =  [];
-
-  return matches;
-
   const cachedData = await redis.get(CACHE_KEY);
   if (cachedData) {
     console.log("coming from cache completed matches");
@@ -69,7 +57,7 @@ export async function completedMatches() {
 
   
   const data = await httpGet(API_URL);
-  // const matches = data?.response?.items || [];
+  const matches = data?.response?.items || [];
   if (matches.length > 0) {
     await redis.setex(CACHE_KEY, CACHE_TTL, JSON.stringify(matches));
   }
