@@ -34,7 +34,7 @@ class MatchWebSocket extends Component<object, MatchData> { // Changed from {} t
   componentDidMount() {
     // Open WebSocket connection
     this.socket = new WebSocket(
-      "ws://webhook.entitysport.com:8087/connect?token=35f1701edeebeabc332e2a1825a022e7"
+      "wss://webhook.entitysport.com:8087/connect?token=35f1701edeebeabc332e2a1825a022e7"
     );
 
     this.socket.onmessage = (event) => {
