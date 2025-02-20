@@ -264,7 +264,7 @@ export default async function Home(props: { params: Params }) {
                       <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
                       <div className="py-4 px-3">
-                        <Link href="/match-live-now">
+                        <Link href="/match/live/live">
                           <div className="flex justify-between items-center text-[14px]">
                             <div className="">
                               <p className="text-[#586577] text-[12px] mb-4 font-medium">
@@ -455,7 +455,7 @@ export default async function Home(props: { params: Params }) {
 
                     <div className="border-t-[1px] border-[#E7F2F4]"></div>
                     <div className="open-Performance-data">
-                      <Link href="/match-live-now">
+                      <Link href="/match/live/live">
                         <div className="py-2 pb-3">
                           <p className="text-[#586577] text-[11px] mb-4 font-normal">
                             1st TEST day 1 , MA Chidambaram Stadium, Chennai
@@ -984,7 +984,7 @@ export default async function Home(props: { params: Params }) {
                       </div>
 
                       <div className="border-t-[1px] border-[#E7F2F4]"></div>
-                      <Link href="/scheduled/infoUpcoming-match">
+                      <Link href="/match/scheduled/info">
                         <div className="py-4 px-3">
                           <div className="flex justify-between items-center text-[14px]">
                             <div className="">
@@ -1101,7 +1101,7 @@ export default async function Home(props: { params: Params }) {
                     </div>
 
                     <div className="border-t-[1px] border-[#E7F2F4]"></div>
-                    <Link href="/scheduled/infoUpcoming-match">
+                    <Link href="/match/scheduled/info">
                       <div className="open-Performance-data">
                         <div className="py-2 pb-3">
                           <p className="text-[#586577] text-[12px] mb-4 font-medium">
@@ -1318,7 +1318,7 @@ export default async function Home(props: { params: Params }) {
                     </div>
 
                     <div className="border-t-[1px] border-[#E7F2F4]"></div>
-                    <Link href="/scheduled/infoUpcoming-match">
+                    <Link href="/match/scheduled/info">
                       <div className="py-4 px-3">
                         <div className="flex justify-between items-center text-[14px]">
                           <div className="">
@@ -1429,7 +1429,7 @@ export default async function Home(props: { params: Params }) {
                     <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
                     <div className="open-Performance-data">
-                      <Link href="/scheduled/infoUpcoming-match">
+                      <Link href="/match/scheduled/info">
                         <div className="py-2 pb-3">
                           <p className="text-[#586577] text-[12px] mb-4 font-medium">
                             2nd ODI , Sharjah Cricket Stadium, Sharjah
@@ -1665,7 +1665,7 @@ export default async function Home(props: { params: Params }) {
                       <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
                       <div className="py-4 px-3">
-                        <Link href="/match-live-now">
+                        <Link href="/match/live/live">
                           <div className="flex justify-between items-center text-[14px]">
                             <div className="">
                               <p className="text-[#586577] text-[12px] mb-4 font-medium">
@@ -1858,7 +1858,7 @@ export default async function Home(props: { params: Params }) {
 
                     <div className="border-t-[1px] border-[#E7F2F4]"></div>
                     <div className="open-Performance-data">
-                      <Link href="/match-live-now">
+                      <Link href="/match/live/live">
                         <div className="py-2 pb-3">
                           <p className="text-[#586577] text-[11px] mb-4 font-normal">
                             1st TEST day 1 , MA Chidambaram Stadium, Chennai
@@ -2404,7 +2404,7 @@ export default async function Home(props: { params: Params }) {
                       </div>
 
                       <div className="border-t-[1px] border-[#E7F2F4]"></div>
-                      <Link href="/scheduled/infoUpcoming-match">
+                      <Link href="/match/scheduled/info">
                         <div className="py-4 px-3">
                           <div className="flex justify-between items-center text-[14px]">
                             <div className="">
@@ -2522,7 +2522,7 @@ export default async function Home(props: { params: Params }) {
 
                     <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                    <Link href="/scheduled/infoUpcoming-match">
+                    <Link href="/match/scheduled/info">
                       <div className="open-Performance-data">
                         <div className="py-2 pb-3">
                           <p className="text-[#586577] text-[12px] mb-4 font-medium">
@@ -2739,7 +2739,7 @@ export default async function Home(props: { params: Params }) {
                     </div>
 
                     <div className="border-t-[1px] border-[#E7F2F4]"></div>
-                    <Link href="/scheduled/infoUpcoming-match">
+                    <Link href="/match/scheduled/info">
                       <div className="py-4 px-3">
                         <div className="flex justify-between items-center text-[14px]">
                           <div className="">
@@ -2850,7 +2850,7 @@ export default async function Home(props: { params: Params }) {
                     <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
                     <div className="open-Performance-data">
-                      <Link href="/scheduled/infoUpcoming-match">
+                      <Link href="/match/scheduled/info">
                         <div className="py-2 pb-3">
                           <p className="text-[#586577] text-[12px] mb-4 font-medium">
                             2nd ODI , Sharjah Cricket Stadium, Sharjah
@@ -6459,7 +6459,7 @@ export default async function Home(props: { params: Params }) {
               </div>
 
               <div className="border-t-[1px] border-[#E7F2F4]"></div>
-              <Link href="/scheduled/infoUpcoming-match">
+              <Link href="/match/scheduled/info">
                 <div className="py-4 px-3">
                   <div className="flex justify-between items-center text-[14px]">
                     <div className="">
