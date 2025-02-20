@@ -30,7 +30,7 @@ export default function Banner() {
                                     <span>India - 37 yrs</span>
                                 </div>
                                 <div className="md:flex items-center md:space-x-2 m-0">
-                                    <a href="#careerstats">
+                                    <Link href="#careerstats">
                                         <span className="flex items-center bg-[#E3E9FF12] hover:bg-[#a8bbff45] rounded-full py-[5px] px-[20px] my-2 md:my-0">
                                             <Image
                                                 src="/assets/img/bat.png"
@@ -40,8 +40,8 @@ export default function Banner() {
                                             />{" "}
                                             Right Handed Batter
                                         </span>
-                                    </a>
-                                    <a href="#careerstats">
+                                    </Link>
+                                    <Link href="#careerstats">
                                         <span className="flex items-center bg-[#E3E9FF12] hover:bg-[#a8bbff45] rounded-full py-[5px] px-[20px]	">
                                             <Image
                                                 src="/assets/img/ball.png"
@@ -51,7 +51,7 @@ export default function Banner() {
                                             />{" "}
                                             Right Arm Medium Bowler
                                         </span>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

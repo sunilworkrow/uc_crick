@@ -139,9 +139,9 @@ export default function T20Banner() {
                                 >
                                     {images.map((image, index) => (
                                         <div key={index} className="flex-none w-1/5">
-                                            <a href={image.url} target="_blank" rel="noopener noreferrer">
+                                            <Link href={image.url} target="_blank" rel="noopener noreferrer">
                                                 <Image src={image.src} width={40} height={40} alt={`series-${index + 1}`} />
-                                            </a>
+                                            </Link>
                                         </div>
                                     ))}
                                 </div>

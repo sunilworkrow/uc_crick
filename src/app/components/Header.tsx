@@ -162,8 +162,8 @@ const Header = () => {
             <Link href="#" className="hover:text-yellow-400"></Link>
             <div className="group">
               <Link href="" className="hover:text-yellow-400"></Link>
-              <a
-                // href="#!"
+              <Link
+                 href="#!"
                 className="hover:text-yellow-400 flex items-center"
                 // id="drop-series-trigger"
                 onClick={toggleDropdown}
@@ -183,7 +183,7 @@ const Header = () => {
                     d="M19 9l-7 7-7-7"
                   />
                 </svg>
-              </a>
+              </Link>
             </div>
             <Link href="" className="hover:text-yellow-400">
               Teams

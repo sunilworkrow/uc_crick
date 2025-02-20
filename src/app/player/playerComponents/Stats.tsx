@@ -581,9 +581,9 @@ export default function Stats() {
                                                     <tbody className="divide-y divide-gray-200">
                                                         <tr>
                                                             <td className="md:px-2 py-3 text-[#217AF7]">
-                                                                <a href="#" style={{ cursor: "pointer" }}>
+                                                                <Link href="#" style={{ cursor: "pointer" }}>
                                                                     Indian Premier League
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -599,9 +599,9 @@ export default function Stats() {
                                                         </tr>
                                                         <tr>
                                                             <td className="md:px-2 py-3 text-[#217AF7]">
-                                                                <a href="#" style={{ cursor: "pointer" }}>
+                                                                <Link href="#" style={{ cursor: "pointer" }}>
                                                                     Ranji Trophy
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -617,9 +617,9 @@ export default function Stats() {
                                                         </tr>
                                                         <tr>
                                                             <td className="md:px-2 py-3 text-[#217AF7]">
-                                                                <a href="#" style={{ cursor: "pointer" }}>
+                                                                <Link href="#" style={{ cursor: "pointer" }}>
                                                                     ICC Mens T20 World Cup
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -635,9 +635,9 @@ export default function Stats() {
                                                         </tr>
                                                         <tr>
                                                             <td className="md:px-2 py-3 text-[#217AF7]">
-                                                                <a href="#" style={{ cursor: "pointer" }}>
+                                                                <Link href="#" style={{ cursor: "pointer" }}>
                                                                     Vijay Hazare Trophy
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -653,9 +653,9 @@ export default function Stats() {
                                                         </tr>
                                                         <tr>
                                                             <td className="md:px-2 py-3 text-[#217AF7]">
-                                                                <a href="#" style={{ cursor: "pointer" }}>
+                                                                <Link href="#" style={{ cursor: "pointer" }}>
                                                                     Syed Mushtaq Ali Trophy
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -671,9 +671,9 @@ export default function Stats() {
                                                         </tr>
                                                         <tr>
                                                             <td className="md:px-2 py-3 text-[#217AF7]">
-                                                                <a href="#" style={{ cursor: "pointer" }}>
+                                                                <Link href="#" style={{ cursor: "pointer" }}>
                                                                     Asia Cup
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -689,9 +689,9 @@ export default function Stats() {
                                                         </tr>
                                                         <tr>
                                                             <td className="md:px-2 py-3 text-[#217AF7]">
-                                                                <a href="#" style={{ cursor: "pointer" }}>
+                                                                <Link href="#" style={{ cursor: "pointer" }}>
                                                                     ICC Cricket World Cup
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -707,9 +707,9 @@ export default function Stats() {
                                                         </tr>
                                                         <tr>
                                                             <td className="md:px-2 py-3 text-[#217AF7]">
-                                                                <a href="#" style={{ cursor: "pointer" }}>
+                                                                <Link href="#" style={{ cursor: "pointer" }}>
                                                                     Deodhar Trophy
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -725,9 +725,9 @@ export default function Stats() {
                                                         </tr>
                                                         <tr>
                                                             <td className="md:px-2 py-3 text-[#217AF7]">
-                                                                <a href="#" style={{ cursor: "pointer" }}>
+                                                                <Link href="#" style={{ cursor: "pointer" }}>
                                                                     Asia Cup T201
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -773,9 +773,9 @@ export default function Stats() {
                                                     <tbody className="divide-y divide-gray-200">
                                                         <tr>
                                                             <td className="md:px-2 py-3 text-[#217AF7]">
-                                                                <a href="#" style={{ cursor: "pointer" }}>
+                                                                <Link href="#" style={{ cursor: "pointer" }}>
                                                                     Indian Premier League
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -791,9 +791,9 @@ export default function Stats() {
                                                         </tr>
                                                         <tr>
                                                             <td className="md:px-2 py-3 text-[#217AF7]">
-                                                                <a href="#" style={{ cursor: "pointer" }}>
+                                                                <Link href="#" style={{ cursor: "pointer" }}>
                                                                     Ranji Trophy
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -808,9 +808,9 @@ export default function Stats() {
                                                         </tr>
                                                         <tr>
                                                             <td className="md:px-2 py-3 text-[#217AF7]">
-                                                                <a href="#" style={{ cursor: "pointer" }}>
+                                                                <Link href="#" style={{ cursor: "pointer" }}>
                                                                     ICC Mens T20 World Cup
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -825,9 +825,9 @@ export default function Stats() {
                                                         </tr>
                                                         <tr>
                                                             <td className="md:px-2 py-3 text-[#217AF7]">
-                                                                <a href="#" style={{ cursor: "pointer" }}>
+                                                                <Link href="#" style={{ cursor: "pointer" }}>
                                                                     Vijay Hazare Trophy
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -842,9 +842,9 @@ export default function Stats() {
                                                         </tr>
                                                         <tr>
                                                             <td className="md:px-2 py-3 text-[#217AF7]">
-                                                                <a href="#" style={{ cursor: "pointer" }}>
+                                                                <Link href="#" style={{ cursor: "pointer" }}>
                                                                     Syed Mushtaq Ali Trophy
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -859,9 +859,9 @@ export default function Stats() {
                                                         </tr>
                                                         <tr>
                                                             <td className="md:px-2 py-3 text-[#217AF7]">
-                                                                <a href="#" style={{ cursor: "pointer" }}>
+                                                                <Link href="#" style={{ cursor: "pointer" }}>
                                                                     Asia Cup
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -876,9 +876,9 @@ export default function Stats() {
                                                         </tr>
                                                         <tr>
                                                             <td className="md:px-2 py-3 text-[#217AF7]">
-                                                                <a href="#" style={{ cursor: "pointer" }}>
+                                                                <Link href="#" style={{ cursor: "pointer" }}>
                                                                     ICC Cricket World Cup
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -893,9 +893,9 @@ export default function Stats() {
                                                         </tr>
                                                         <tr>
                                                             <td className="md:px-2 py-3 text-[#217AF7]">
-                                                                <a href="#" style={{ cursor: "pointer" }}>
+                                                                <Link href="#" style={{ cursor: "pointer" }}>
                                                                     Deodhar Trophy
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -910,9 +910,9 @@ export default function Stats() {
                                                         </tr>
                                                         <tr>
                                                             <td className="md:px-2 py-3 text-[#217AF7]">
-                                                                <a href="#" style={{ cursor: "pointer" }}>
+                                                                <Link href="#" style={{ cursor: "pointer" }}>
                                                                     Asia Cup T201
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -956,9 +956,9 @@ export default function Stats() {
                                                     <tbody className="divide-y divide-gray-200">
                                                         <tr>
                                                             <td className="md:px-2 py-3 text-[#217AF7]">
-                                                                <a href="#" style={{ cursor: "pointer" }}>
+                                                                <Link href="#" style={{ cursor: "pointer" }}>
                                                                     Indian Premier League
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -972,9 +972,9 @@ export default function Stats() {
                                                         </tr>
                                                         <tr>
                                                             <td className="md:px-2 py-3 text-[#217AF7]">
-                                                                <a href="#" style={{ cursor: "pointer" }}>
+                                                                <Link href="#" style={{ cursor: "pointer" }}>
                                                                     Ranji Trophy
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -988,9 +988,9 @@ export default function Stats() {
                                                         </tr>
                                                         <tr>
                                                             <td className="md:px-2 py-3 text-[#217AF7]">
-                                                                <a href="#" style={{ cursor: "pointer" }}>
+                                                                <Link href="#" style={{ cursor: "pointer" }}>
                                                                     ICC Mens T20 World Cup
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -1004,9 +1004,9 @@ export default function Stats() {
                                                         </tr>
                                                         <tr>
                                                             <td className="md:px-2 py-3 text-[#217AF7]">
-                                                                <a href="#" style={{ cursor: "pointer" }}>
+                                                                <Link href="#" style={{ cursor: "pointer" }}>
                                                                     Vijay Hazare Trophy
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -1020,9 +1020,9 @@ export default function Stats() {
                                                         </tr>
                                                         <tr>
                                                             <td className="md:px-2 py-3 text-[#217AF7]">
-                                                                <a href="#" style={{ cursor: "pointer" }}>
+                                                                <Link href="#" style={{ cursor: "pointer" }}>
                                                                     Syed Mushtaq Ali Trophy
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -1036,9 +1036,9 @@ export default function Stats() {
                                                         </tr>
                                                         <tr>
                                                             <td className="md:px-2 py-3 text-[#217AF7]">
-                                                                <a href="#" style={{ cursor: "pointer" }}>
+                                                                <Link href="#" style={{ cursor: "pointer" }}>
                                                                     Asia Cup
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -1052,9 +1052,9 @@ export default function Stats() {
                                                         </tr>
                                                         <tr>
                                                             <td className="md:px-2 py-3 text-[#217AF7]">
-                                                                <a href="#" style={{ cursor: "pointer" }}>
+                                                                <Link href="#" style={{ cursor: "pointer" }}>
                                                                     ICC Cricket World Cup
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -1068,9 +1068,9 @@ export default function Stats() {
                                                         </tr>
                                                         <tr>
                                                             <td className="md:px-2 py-3 text-[#217AF7]">
-                                                                <a href="#" style={{ cursor: "pointer" }}>
+                                                                <Link href="#" style={{ cursor: "pointer" }}>
                                                                     Deodhar Trophy
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>
@@ -1084,9 +1084,9 @@ export default function Stats() {
                                                         </tr>
                                                         <tr>
                                                             <td className="md:px-2 py-3 text-[#217AF7]">
-                                                                <a href="#" style={{ cursor: "pointer" }}>
+                                                                <Link href="#" style={{ cursor: "pointer" }}>
                                                                     Asia Cup T201
-                                                                </a>
+                                                                </Link>
                                                             </td>
                                                             <td className="px-3 py-3">5</td>
                                                             <td className="px-3 py-3">5</td>

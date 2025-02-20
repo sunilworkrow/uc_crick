@@ -50,7 +50,6 @@ export default function Stats() {
                 Stats
               </button>
             </Link>
-            
           </div>
         </div>
 

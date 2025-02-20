@@ -120,7 +120,7 @@ export default function Squad() {
                                     Batsman
                                 </h2>
                                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                                    <a href="#">
+                                    <Link href="#">
                                         <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
                                             <div className="relative">
                                                 <Image
@@ -139,8 +139,8 @@ export default function Squad() {
                                             </h3>
                                             <p className="text-xs text-gray-600">Batsman</p>
                                         </div>
-                                    </a>
-                                    <a href="#">
+                                    </Link>
+                                    <Link href="#">
                                         <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
                                             <div className="relative">
                                                 <Image
@@ -159,8 +159,8 @@ export default function Squad() {
                                             </h3>
                                             <p className="text-xs text-gray-600">Batsman</p>
                                         </div>
-                                    </a>
-                                    <a href="#">
+                                    </Link>
+                                    <Link href="#">
                                         <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
                                             <div className="relative">
                                                 <Image
@@ -179,8 +179,8 @@ export default function Squad() {
                                             </h3>
                                             <p className="text-xs text-gray-600">Batsman</p>
                                         </div>
-                                    </a>
-                                    <a href="#">
+                                    </Link>
+                                    <Link href="#">
                                         <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
                                             <div className="relative">
                                                 <Image
@@ -199,7 +199,7 @@ export default function Squad() {
                                             </h3>
                                             <p className="text-xs text-gray-600">Batsman</p>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                             {/* Bowler Section */}
@@ -208,7 +208,7 @@ export default function Squad() {
                                     Bowler
                                 </h2>
                                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                                    <a href="#">
+                                    <Link href="#">
                                         <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
                                             <div className="relative">
                                                 <Image
@@ -227,8 +227,8 @@ export default function Squad() {
                                             </h3>
                                             <p className="text-xs text-gray-600">Bowler</p>
                                         </div>
-                                    </a>
-                                    <a href="#">
+                                    </Link>
+                                    <Link href="#">
                                         <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
                                             <div className="relative">
                                                 <Image
@@ -247,8 +247,8 @@ export default function Squad() {
                                             </h3>
                                             <p className="text-xs text-gray-600">Bowler</p>
                                         </div>
-                                    </a>
-                                    <a href="#">
+                                    </Link>
+                                    <Link href="#">
                                         <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
                                             <div className="relative">
                                                 <Image
@@ -267,8 +267,8 @@ export default function Squad() {
                                             </h3>
                                             <p className="text-xs text-gray-600">Bowler</p>
                                         </div>
-                                    </a>
-                                    <a href="#">
+                                    </Link>
+                                    <Link href="#">
                                         <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
                                             <div className="relative">
                                                 <Image
@@ -287,7 +287,7 @@ export default function Squad() {
                                             </h3>
                                             <p className="text-xs text-gray-600">Bowler</p>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                             {/* All-Rounder Section */}
@@ -296,7 +296,7 @@ export default function Squad() {
                                     All-Rounder
                                 </h2>
                                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                                    <a href="#">
+                                    <Link href="#">
                                         <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
                                             <div className="relative">
                                                 <Image
@@ -315,8 +315,8 @@ export default function Squad() {
                                             </h3>
                                             <p className="text-xs text-gray-600">All-Rounder</p>
                                         </div>
-                                    </a>
-                                    <a href="#">
+                                    </Link>
+                                    <Link href="#">
                                         <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
                                             <div className="relative">
                                                 <Image
@@ -335,8 +335,8 @@ export default function Squad() {
                                             </h3>
                                             <p className="text-xs text-gray-600">All-Rounder</p>
                                         </div>
-                                    </a>
-                                    <a href="#">
+                                    </Link>
+                                    <Link href="#">
                                         <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
                                             <div className="relative">
                                                 <Image
@@ -355,8 +355,8 @@ export default function Squad() {
                                             </h3>
                                             <p className="text-xs text-gray-600">All-Rounder</p>
                                         </div>
-                                    </a>
-                                    <a href="#">
+                                    </Link>
+                                    <Link href="#">
                                         <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
                                             <div className="relative">
                                                 <Image
@@ -375,8 +375,8 @@ export default function Squad() {
                                             </h3>
                                             <p className="text-xs text-gray-600">All-Rounder</p>
                                         </div>
-                                    </a>
-                                    <a href="#">
+                                    </Link>
+                                    <Link href="#">
                                         <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
                                             <div className="relative">
                                                 <Image
@@ -395,8 +395,8 @@ export default function Squad() {
                                             </h3>
                                             <p className="text-xs text-gray-600">All-Rounder</p>
                                         </div>
-                                    </a>
-                                    <a href="#">
+                                    </Link>
+                                    <Link href="#">
                                         <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
                                             <div className="relative">
                                                 <Image
@@ -415,8 +415,8 @@ export default function Squad() {
                                             </h3>
                                             <p className="text-xs text-gray-600">All-Rounder</p>
                                         </div>
-                                    </a>
-                                    <a href="#">
+                                    </Link>
+                                    <Link href="#">
                                         <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
                                             <div className="relative">
                                                 <Image
@@ -435,7 +435,7 @@ export default function Squad() {
                                             </h3>
                                             <p className="text-xs text-gray-600">All-Rounder</p>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

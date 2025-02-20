@@ -203,9 +203,9 @@ export default function Overview() {
                             Current Team(s)
                           </th>
                           <td className="px-6 py-2 text-[#2F335C]">
-                            <a className="text-[#217AF7]" href="#">
+                            <Link className="text-[#217AF7]" href="#">
                               Indian Cricket Team,Mumbai Indians
-                            </a>
+                            </Link>
                           </td>
                         </tr>
                         <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
@@ -774,7 +774,7 @@ export default function Overview() {
                       </div>
                     </form>
                     <div className="text-right md:mt-0 mt-2 w-full md:w-[auto]">
-                      <a href="#">
+                      <Link href="#">
                         <p className="text-[#1A80F8] font-semibold flex items-center justify-end text-[13px]">
                           Recent Form
                           <svg
@@ -792,7 +792,7 @@ export default function Overview() {
                             />
                           </svg>
                         </p>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="grid md:grid-cols-4 grid-cols-2 gap-4">
@@ -904,7 +904,7 @@ export default function Overview() {
                     tournament received excellent response from the fans
                     worldwide...
                   </p>
-                  <a href="#">
+                  <Link href="#">
                     <p className="text-[#1A80F8] font-semibold flex items-center text-[13px] pt-2 underline">
                       Read more{" "}
                       <svg
@@ -922,7 +922,7 @@ export default function Overview() {
                         />
                       </svg>
                     </p>
-                  </a>
+                  </Link>
                 </div>
                 <div className="rounded-lg bg-[#ffffff] p-4 mb-4">
                   <h3 className="text-1xl font-semibold mb-2 pl-[7px] border-l-[3px] border-[#229ED3]">
@@ -1211,7 +1211,7 @@ export default function Overview() {
                       </h3>
                     </div>
                     <div className="">
-                      <a href="#">
+                      <Link href="#">
                         <div className="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3 mb-2">
                           <div>
                             <Image src="/assets/img/1.png" width={20} height={20} alt="" />
@@ -1220,8 +1220,8 @@ export default function Overview() {
                             ICC World cup
                           </div>
                         </div>
-                      </a>
-                      <a href="#">
+                      </Link>
+                      <Link href="#">
                         <div className="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3 mb-2 ">
                           <div>
                             <Image src="/assets/img/2.png" width={20} height={20} alt="" />
@@ -1230,8 +1230,8 @@ export default function Overview() {
                             ICC Champion Trophy
                           </div>
                         </div>
-                      </a>
-                      <a href="#">
+                      </Link>
+                      <Link href="#">
                         <div className="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3 mb-2 ">
                           <div>
                             <Image src="/assets/img/3.png" width={20} height={20} alt="" />
@@ -1240,8 +1240,8 @@ export default function Overview() {
                             T20 World Cup
                           </div>
                         </div>
-                      </a>
-                      <a href="#">
+                      </Link>
+                      <Link href="#">
                         <div className="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3 mb-2 ">
                           <div>
                             <Image src="/assets/img/4.png" width={20} height={20} alt="" />
@@ -1250,8 +1250,8 @@ export default function Overview() {
                             Indian Premium League
                           </div>
                         </div>
-                      </a>
-                      <a href="#">
+                      </Link>
+                      <Link href="#">
                         <div className="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3 mb-2 ">
                           <div>
                             <Image src="/assets/img/5.png" width={20} height={20} alt="" />
@@ -1260,8 +1260,8 @@ export default function Overview() {
                             Pakistan Super League
                           </div>
                         </div>
-                      </a>
-                      <a href="#">
+                      </Link>
+                      <Link href="#">
                         <div className="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3 mb-2 ">
                           <div>
                             <Image src="/assets/img/6.png" width={20} height={20} alt="" />
@@ -1270,8 +1270,8 @@ export default function Overview() {
                             Bangladesh Premium Leaguge
                           </div>
                         </div>
-                      </a>
-                      <a href="#">
+                      </Link>
+                      <Link href="#">
                         <div className="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3 mb-2 ">
                           <div>
                             <Image src="/assets/img/7.png" width={20} height={20} alt="" />
@@ -1280,8 +1280,8 @@ export default function Overview() {
                             Big Bash Leaguge
                           </div>
                         </div>
-                      </a>
-                      <a href="#">
+                      </Link>
+                      <Link href="#">
                         <div className="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3">
                           <div>
                             <Image src="/assets/img/8.png" width={20} height={20} alt="" />
@@ -1290,7 +1290,7 @@ export default function Overview() {
                             Super Smash
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

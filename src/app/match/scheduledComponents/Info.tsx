@@ -1943,7 +1943,7 @@ export default function Info() {
                                     <div className="hidden lg:block">
                                         <div className="py-4 flex justify-between items-center">
                                             <div className="font-medium	w-full">
-                                                <a href="#">
+                                                <Link href="#">
                                                     <div className="flex items-center space-x-2">
                                                         <div className="flex items-center space-x-1">
                                                             <Image
@@ -1955,7 +1955,7 @@ export default function Info() {
                                                         </div>
                                                         <p className="">274/10 &amp; 170/10</p>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </div>
                                             <div className=" font-semibold text-center w-full">
                                                 <p className="text-[#3D4DCF]">IND Won</p>
@@ -1964,7 +1964,7 @@ export default function Info() {
                                                 </p>
                                             </div>
                                             <div className="font-medium text-right w-full">
-                                                <a href="#">
+                                                <Link href="#">
                                                     <div className="flex items-center space-x-2 font-medium	justify-end">
                                                         <p>280/10 &amp; 190/10</p>
                                                         <div className="flex items-center space-x-1">
@@ -1976,13 +1976,13 @@ export default function Info() {
                                                             />
                                                         </div>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </div>
                                         </div>
                                         <div className="border-t-[1px] border-[#E4E9F0]" />
                                         <div className="py-4 flex justify-between items-center">
                                             <div className=" font-medium	w-full">
-                                                <a href="#">
+                                                <Link href="#">
                                                     <div className="flex items-center space-x-2">
                                                         <div className="flex items-center space-x-1">
                                                             <Image
@@ -1994,7 +1994,7 @@ export default function Info() {
                                                         </div>
                                                         <p className="">274/10 &amp; 170/10</p>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </div>
                                             <div className=" font-semibold text-center w-full">
                                                 <p className=" text-[#3D4DCF]">IND Won</p>
@@ -2003,7 +2003,7 @@ export default function Info() {
                                                 </p>
                                             </div>
                                             <div className="font-medium text-right w-full">
-                                                <a href="#">
+                                                <Link href="#">
                                                     <div className="flex items-center space-x-2 font-medium	justify-end">
                                                         <p>280/10 &amp; 190/10</p>
                                                         <div className="flex items-center space-x-1">
@@ -2015,13 +2015,13 @@ export default function Info() {
                                                             />
                                                         </div>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </div>
                                         </div>
                                         <div className="border-t-[1px] border-[#E4E9F0]" />
                                         <div className="py-4 flex justify-between items-center">
                                             <div className=" font-medium	w-full">
-                                                <a href="#">
+                                                <Link href="#">
                                                     <div className="flex items-center space-x-2">
                                                         <div className="flex items-center space-x-1">
                                                             <Image
@@ -2033,7 +2033,7 @@ export default function Info() {
                                                         </div>
                                                         <p className="">548/10 &amp; 170/10</p>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </div>
                                             <div className=" font-semibold text-center w-full">
                                                 <p className="text-[#FF9C12] uppercase">up won</p>
@@ -2042,7 +2042,7 @@ export default function Info() {
                                                 </p>
                                             </div>
                                             <div className="font-medium text-right w-full">
-                                                <a href="#">
+                                                <Link href="#">
                                                     <div className="flex items-center space-x-2 font-medium	justify-end">
                                                         <p>318/10 &amp; 190/10</p>
                                                         <div className="flex items-center space-x-1">
@@ -2050,13 +2050,13 @@ export default function Info() {
                                                             <Image src="/assets/img/asm.png" className="h-[24px]" width={25} height={25} alt="asm" />
                                                         </div>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </div>
                                         </div>
                                         <div className="border-t-[1px] border-[#E4E9F0]" />
                                         <div className="py-4 flex justify-between items-center">
                                             <div className=" font-medium	w-full">
-                                                <a href="#">
+                                                <Link href="#">
                                                     <div className="flex items-center space-x-2">
                                                         <div className="flex items-center space-x-1">
                                                             <Image
@@ -2068,7 +2068,7 @@ export default function Info() {
                                                         </div>
                                                         <p className="">253/10 &amp; 548/10</p>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </div>
                                             <div className=" font-semibold text-center w-full">
                                                 <p className=" text-[#FF9C12] uppercase">up won</p>
@@ -2077,7 +2077,7 @@ export default function Info() {
                                                 </p>
                                             </div>
                                             <div className="font-medium text-right w-full">
-                                                <a href="#">
+                                                <Link href="#">
                                                     <div className="flex items-center space-x-2 font-medium	justify-end">
                                                         <p>417/10 &amp; 264/10</p>
                                                         <div className="flex items-center space-x-1">
@@ -2085,13 +2085,13 @@ export default function Info() {
                                                             <Image src="/assets/img/asm.png" className="h-[24px]" width={25} height={25} alt="asm" />
                                                         </div>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </div>
                                         </div>
                                         <div className="border-t-[1px] border-[#E4E9F0]" />
                                         <div className="py-4 flex justify-between items-center">
                                             <div className=" font-medium w-full">
-                                                <a href="#">
+                                                <Link href="#">
                                                     <div className="flex items-center space-x-2">
                                                         <div className="flex items-center space-x-1">
                                                             <Image
@@ -2103,7 +2103,7 @@ export default function Info() {
                                                         </div>
                                                         <p className="">274/10 &amp; 170/10</p>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </div>
                                             <div className=" font-semibold text-center w-full">
                                                 <p className=" text-[#FF9C12] uppercase">up won</p>
@@ -2112,7 +2112,7 @@ export default function Info() {
                                                 </p>
                                             </div>
                                             <div className="font-medium text-right w-full">
-                                                <a href="#">
+                                                <Link href="#">
                                                     <div className="flex items-center space-x-2 font-medium	justify-end">
                                                         <p>172/10 &amp; 135/10</p>
                                                         <div className="flex items-center space-x-1">
@@ -2120,7 +2120,7 @@ export default function Info() {
                                                             <Image src="/assets/img/utk.png" className="h-[24px]" width={25} height={25} alt="ukt" />
                                                         </div>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>

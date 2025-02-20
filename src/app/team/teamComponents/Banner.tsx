@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function kkrBanner() {
   return (
@@ -103,29 +104,29 @@ export default function kkrBanner() {
                                         style={{ transform: "translateX(0px)" }}
                                     >
                                         <div className="flex-none w-1/5">
-                                            <a href="#">
+                                            <Link href="#">
                                                 <Image src="/assets/img/series/series-1.png" width={70} height={70} className="" alt="" />
-                                            </a>
+                                            </Link>
                                         </div>
                                         <div className="flex-none w-1/5">
-                                            <a href="#">
+                                            <Link href="#">
                                                 <Image src="/assets/img/series/series-1.png" width={70} height={70} className="" alt="" />
-                                            </a>
+                                            </Link>
                                         </div>
                                         <div className="flex-none w-1/5">
-                                            <a href="#">
+                                            <Link href="#">
                                                 <Image src="/assets/img/series/series-1.png" width={70} height={70} className="" alt="" />
-                                            </a>
+                                            </Link>
                                         </div>
                                         <div className="flex-none w-1/5">
-                                            <a href="#">
+                                            <Link href="#">
                                                 <Image src="/assets/img/series/series-1.png" width={70} height={70} className="" alt="" />
-                                            </a>
+                                            </Link>
                                         </div>
                                         <div className="flex-none w-1/5">
-                                            <a href="#">
+                                            <Link href="#">
                                                 <Image src="/assets/img/series/series-1.png" className="" width={70} height={70} alt="" />
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
                                     {/* Right Arrow */}
@@ -161,9 +162,9 @@ export default function kkrBanner() {
                                     </p>
                                 </div>
                                 <h2 className="text-[17px] font-semibold">Kolkata Knight Riders</h2>
-                                <a href="#" className="text-green-400 hover:underline mt-2">
+                                <Link href="#" className="text-green-400 hover:underline mt-2">
                                     More Seasons »
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         {/* Right Arrow */}

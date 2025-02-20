@@ -81,7 +81,7 @@ export default function T20() {
                             <div className="grid md:grid-cols-2 grid-cols-1 gap-4 mb-4">
                                
                                 <div className="bg-white rounded-lg p-4">
-                                    <a href="#">
+                                    <Link href="#">
                                         <div className="flex items-center space-x-3">
                                             <div>
                                                 <Image
@@ -100,10 +100,10 @@ export default function T20() {
                                                 </h2>
                                             </div>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </div>
                                 <div className="bg-white rounded-lg p-4">
-                                    <a href="#">
+                                    <Link href="#">
                                         <div className="flex items-center space-x-3">
                                             <div>
                                                 <Image
@@ -122,7 +122,7 @@ export default function T20() {
                                                 </h2>
                                             </div>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="rounded-lg bg-[#ffffff] p-4 mb-4">
@@ -294,11 +294,11 @@ export default function T20() {
                                                 Overall Team India
                                             </h3>
                                         </div>
-                                        <a href="#">
+                                        <Link href="#">
                                             <div className="md:font-semibold flex items-center justify-center md:text-[13px] text-[12px]">
                                                 Last updated on&nbsp;06 Dec 2024
                                             </div>
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="border-t border-[#E4E9F0] mb-3" />
                                     <div className="grid grid-cols-12 gap-4 justify-between">
@@ -844,7 +844,7 @@ export default function T20() {
                                                 Team India Best Scores/Figures in an Inning
                                             </h3>
                                         </div>
-                                        <a href="#">
+                                        <Link href="#">
                                             <div className="text-[#1A80F8] font-semibold flex items-center justify-center text-[13px] underline">
                                                 View More{" "}
                                                 <svg
@@ -862,7 +862,7 @@ export default function T20() {
                                                     />
                                                 </svg>
                                             </div>
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="border-t border-[#E4E9F0] mb-3" />
                                     <div>
@@ -881,9 +881,9 @@ export default function T20() {
                                                 <tbody className="divide-y divide-gray-200">
                                                     <tr>
                                                         <td className="md:px-2 py-3 text-[#217AF7] md:w-[260px]">
-                                                            <a href="#" style={{ cursor: "pointer" }}>
+                                                            <Link href="#" style={{ cursor: "pointer" }}>
                                                                 1932
-                                                            </a>
+                                                            </Link>
                                                         </td>
                                                         <td className="px-3 py-3">5</td>
                                                         <td className="px-3 py-3">5</td>
@@ -893,9 +893,9 @@ export default function T20() {
                                                     </tr>
                                                     <tr>
                                                         <td className="md:px-2 py-3 text-[#217AF7]">
-                                                            <a href="#" style={{ cursor: "pointer" }}>
+                                                            <Link href="#" style={{ cursor: "pointer" }}>
                                                                 1933
-                                                            </a>
+                                                            </Link>
                                                         </td>
                                                         <td className="px-3 py-3">5</td>
                                                         <td className="px-3 py-3">5</td>
@@ -905,9 +905,9 @@ export default function T20() {
                                                     </tr>
                                                     <tr>
                                                         <td className="md:px-2 py-3 text-[#217AF7]">
-                                                            <a href="#" style={{ cursor: "pointer" }}>
+                                                            <Link href="#" style={{ cursor: "pointer" }}>
                                                                 1934
-                                                            </a>
+                                                            </Link>
                                                         </td>
                                                         <td className="px-3 py-3">5</td>
                                                         <td className="px-3 py-3">5</td>
@@ -1181,7 +1181,7 @@ export default function T20() {
                                     India Records
                                 </h3>
                             </div>
-                            <a href="#">
+                            <Link href="#">
                                 <div className="text-[#1A80F8] font-semibold flex items-center justify-center text-[13px] underline">
                                     View More{" "}
                                     <svg
@@ -1199,7 +1199,7 @@ export default function T20() {
                                         />
                                     </svg>
                                 </div>
-                            </a>
+                            </Link>
                         </div>
                         <div className="rounded-lg bg-[#ffffff] p-4 mb-4">
                             <div className="cust-box-click-container">
@@ -1313,7 +1313,7 @@ export default function T20() {
                                     Latest Cricket News
                                 </h3>
                             </div>
-                            <a href="#">
+                            <Link href="#">
                                 <div className="text-[#1A80F8] font-semibold flex items-center justify-center text-[13px] underline">
                                     View More{" "}
                                     <svg
@@ -1331,7 +1331,7 @@ export default function T20() {
                                         />
                                     </svg>
                                 </div>
-                            </a>
+                            </Link>
                         </div>
                         <div className="rounded-lg bg-[#ffffff] p-4 mb-4">
                             {/* Single News Item */}

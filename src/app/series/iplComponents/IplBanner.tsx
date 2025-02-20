@@ -142,9 +142,9 @@ export default function IplBanner() {
                   >
                     {images.map((image, index) => (
                       <div key={index} className="flex-none w-1/5">
-                        <a href={image.url} target="_blank" rel="noopener noreferrer">
+                        <Link href={image.url} target="_blank" rel="noopener noreferrer">
                           <Image src={image.src} alt={`series-${index + 1}`} width={70} height={70} />
-                        </a>
+                        </Link>
                       </div>
                     ))}
                   </div>
