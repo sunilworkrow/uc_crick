@@ -1200,14 +1200,14 @@ export default function Page() {
                                             </div>
                                             <div className=" pb-2 mb-4 border-b-[1px] border-border-gray-700 ">
                                                 <p className="text-[13px] font-semibold">
-                                                    Probably Took Wrong Risk': Alyssa Healy Regrets Sitting Out
+                                                    Probably Took Wrong Risk: Alyssa Healy Regrets Sitting Out
                                                     As SA Stuns AUS In T20 WC
                                                 </p>
                                                 <p className="text-[#586577] pt-2">17 hrs ago</p>
                                             </div>
                                             <div className=" pb-2 mb-4 border-b-[1px] border-border-gray-700 ">
                                                 <p className="text-[13px] font-semibold">
-                                                    Women's T20 World Cup, NZ vs WI: Unchanged New Zealand Opt
+                                                    Womens T20 World Cup, NZ vs WI: Unchanged New Zealand Opt
                                                     To Bat; Check Out The Playing XIs
                                                 </p>
                                                 <p className="text-[#586577] pt-2">19 hrs ago</p>
@@ -1221,7 +1221,7 @@ export default function Page() {
                                             </div>
                                             <div className=" pb-2 mb-2">
                                                 <p className="text-[13px] font-semibold">
-                                                    'Probably Took Wrong Risk': Alyssa Healy Regrets Sitting Out
+                                                    Probably Took Wrong Risk: Alyssa Healy Regrets Sitting Out
                                                     As SA Stuns AUS In T20 WC
                                                 </p>
                                                 <p className="text-[#586577] pt-2">18 Oct 2024</p>
